@@ -3,21 +3,14 @@ function complexity_trend(div, data) {
         chart: { type: 'spline' },
         title: { text: 'Total method complexity' },
         subtitle: { text: 'Per git commit' },
-        xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-                month: '%e. %b',
-                year: '%b'
-            },
-            title: { text: 'Date' }
-        },
+        xAxis: { type: 'datetime' },
         yAxis: {
             title: { text: 'Complexity' },
             min: 0
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
-            pointFormat: '{point.x:%e. %b}: {point.y:.2f}'
+            pointFormat: '{point.x:%e-%b}: {point.y:.2f}'
         },
 
         series: [{
