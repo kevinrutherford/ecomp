@@ -1,49 +1,58 @@
-$(function () {
-        $('#container').highcharts({
-            title: {
-                text: 'Monthly Average Temperature',
-                x: -20 //center
+function complexity_trend(div, data) {
+    $(div).highcharts({
+        chart: { type: 'spline' },
+        title: { text: 'Total method complexity' },
+        subtitle: { text: 'Per git commit' },
+        xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: { // don't display the dummy year
+                month: '%e. %b',
+                year: '%b'
             },
-            subtitle: {
-                text: 'Source: WorldClimate.com',
-                x: -20
-            },
-            xAxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            },
-            yAxis: {
-                title: {
-                    text: 'Temperature (°C)'
-                },
-                plotLines: [{
-                    value: 0,
-                    width: 1,
-                    color: '#808080'
-                }]
-            },
-            tooltip: {
-                valueSuffix: '°C'
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle',
-                borderWidth: 0
-            },
-            series: [{
-                name: 'Tokyo',
-                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-            }, {
-                name: 'New York',
-                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-            }, {
-                name: 'Berlin',
-                data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-            }, {
-                name: 'London',
-                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-            }]
-        });
+            title: { text: 'Date' }
+        },
+        yAxis: {
+            title: { text: 'Complexity' },
+            min: 0
+        },
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x:%e. %b}: {point.y:.2f}'
+        },
+
+        series: [{
+            name: 'Complexity',
+            data: data
+        }]
     });
-    
+};
+
+var data = [
+    [Date.UTC(1970,  9, 27), 0   ],
+    [Date.UTC(1970, 10, 10), 0.6 ],
+    [Date.UTC(1970, 10, 18), 0.7 ],
+    [Date.UTC(1970, 11,  2), 0.8 ],
+    [Date.UTC(1970, 11,  9), 0.6 ],
+    [Date.UTC(1970, 11, 16), 0.6 ],
+    [Date.UTC(1970, 11, 28), 0.67],
+    [Date.UTC(1971,  0,  1), 0.81],
+    [Date.UTC(1971,  0,  8), 0.78],
+    [Date.UTC(1971,  0, 12), 0.98],
+    [Date.UTC(1971,  0, 27), 1.84],
+    [Date.UTC(1971,  1, 10), 1.80],
+    [Date.UTC(1971,  1, 18), 1.80],
+    [Date.UTC(1971,  1, 24), 1.92],
+    [Date.UTC(1971,  2,  4), 2.49],
+    [Date.UTC(1971,  2, 11), 2.79],
+    [Date.UTC(1971,  2, 15), 2.73],
+    [Date.UTC(1971,  2, 25), 2.61],
+    [Date.UTC(1971,  3,  2), 2.76],
+    [Date.UTC(1971,  3,  6), 2.82],
+    [Date.UTC(1971,  3, 13), 2.8 ],
+    [Date.UTC(1971,  4,  3), 2.1 ],
+    [Date.UTC(1971,  4, 26), 1.1 ],
+    [Date.UTC(1971,  5,  9), 0.25],
+    [Date.UTC(1971,  5, 12), 0   ]
+];
+
+$(complexity_trend('#container', data));
