@@ -1,9 +1,8 @@
 function complexity_plot(target, data) {
     var points = [];
     $.each(data, function(i, item) {
-        var date = Date.parse(item.date);
         points.push({
-            x: date,
+            x: Date.parse(item.date),
             y: item.complexity,
             radius: 2 * (item.complexity + 1)
         });
@@ -14,8 +13,8 @@ function complexity_plot(target, data) {
 function draw_complexity_chart(div, data) {
     $(div).highcharts({
         chart: { type: 'spline' },
-        title: { text: 'Total method complexity' },
-        subtitle: { text: 'Per git commit' },
+        title: { text: null },
+        subtitle: { text: null },
         xAxis: {
             type: 'datetime',
             dateTimeLabelFormats: {
