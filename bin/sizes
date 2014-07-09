@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+#
+# Collects commit size data for a git repo
+#
+
+require 'json'
+
+OUTPUT_FILE = 'public/data/commit_sizes.json'
+
+log = `git log --pretty="%aN/%ci" --shortstat`
+commits = []
+log.split("\n").each_slice(3) do |a|
+  author, date = a[0].split('/')
+  size = a[2].to_i
+  commits << [author, date, size]
+end
+
+File.open(OUTPUT_FILE, 'w') { |f| f.write(commits.to_json) }
