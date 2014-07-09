@@ -17,13 +17,20 @@
 
 require 'json'
 
-OUTPUT_FILE = 'public/data/commit_sizes.json'
-
-log = `git log --pretty="%aN/%ci" --shortstat`
+raw_log = `git log --pretty="%aN/%ci" --shortstat`
 commits = Hash.new { |h,k| h[k] = Array.new }
-log.split("\n").each_slice(3) do |a|
-  author, date = a[0].split('/')
-  size = a[2].to_i
+lines = raw_log.split("\n")
+
+logs = []
+(0..(lines.length-1)).each do |i|
+  if lines[i].empty?
+    logs << "#{lines[i-1]}/#{lines[i+1]}"
+  end
+end
+
+logs.each do |a|
+  author, date, count = a.split('/')
+  size = count.to_i
   commits[author] << { date: date, size: size }
 end
 
@@ -32,4 +39,4 @@ commits.each do |author, commits|
   data << { author: author, commits: commits }
 end
 
-File.open(OUTPUT_FILE, 'w') { |f| f.write(data.to_json) }
+$stdout.puts data.to_json
