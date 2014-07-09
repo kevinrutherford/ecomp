@@ -5,7 +5,11 @@ function complexity_trend(div, data) {
         subtitle: { text: 'Per git commit' },
         xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { week: '%b %e' },
+            dateTimeLabelFormats: {
+                hour: '%b %e %H:%M',
+                day: '%b %e',
+                week: '%b %e'
+            },
         },
         yAxis: {
             title: { text: 'Complexity' },
