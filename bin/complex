@@ -8,6 +8,8 @@ require 'json'
 OUTPUT_FILE = 'public/data/complexity.json'
 
 dates=`git log --pretty="%ci"`
-dates = dates.split("\n").map {|d| [d, rand(10)]}
+dates = dates.split("\n").map {|d|
+  { date: d, complexity: rand(10) }
+}
 
 File.open(OUTPUT_FILE, 'w') { |f| f.write(dates.to_json) }

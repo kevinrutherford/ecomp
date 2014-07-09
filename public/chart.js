@@ -1,11 +1,11 @@
 function complexity_plot(target, data) {
     var points = [];
     $.each(data, function(i, item) {
-        var date = Date.parse(item[0]);
+        var date = Date.parse(item.date);
         points.push({
             x: date,
-            y: item[1],
-            radius: 2*(item[1]+1)
+            y: item.complexity,
+            radius: 2 * (item.complexity + 1)
         });
     });
     draw_complexity_chart(target, points);

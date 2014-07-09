@@ -12,7 +12,7 @@ commits = []
 log.split("\n").each_slice(3) do |a|
   author, date = a[0].split('/')
   size = a[2].to_i
-  commits << [author, date, size]
+  commits << { author: author, date: date, size: size }
 end
 
 File.open(OUTPUT_FILE, 'w') { |f| f.write(commits.to_json) }
