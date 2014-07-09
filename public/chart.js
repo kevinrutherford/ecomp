@@ -32,7 +32,11 @@ $(document).ready(function() {
     var points = [];
     $.each(data, function(i, item) {
         var date = Date.parse(item[0]);
-        points.push([date, item[1]]);
+        points.push({
+            x: date,
+            y: item[1],
+            radius: 2*(item[1]+1)
+        });
     });
     complexity_trend('#complexity_trend', points);
   });
