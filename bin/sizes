@@ -1,6 +1,18 @@
 #!/usr/bin/env ruby
 #
 # Collects commit size data for a git repo
+# Produces a JSON object of the form
+#
+# [
+#   {
+#      author: Someone's name,
+#      commits: [
+#        { date: 2014-05-12, size: 2 },
+#        { date: 2014-05-13, size: 4 }
+#      ]
+#   },
+#   ...
+# ]
 #
 
 require 'json'
@@ -8,11 +20,16 @@ require 'json'
 OUTPUT_FILE = 'public/data/commit_sizes.json'
 
 log = `git log --pretty="%aN/%ci" --shortstat`
-commits = []
+commits = Hash.new { |h,k| h[k] = Array.new }
 log.split("\n").each_slice(3) do |a|
   author, date = a[0].split('/')
   size = a[2].to_i
-  commits << { author: author, date: date, size: size }
+  commits[author] << { date: date, size: size }
 end
 
-File.open(OUTPUT_FILE, 'w') { |f| f.write(commits.to_json) }
+data = []
+commits.each do |author, commits|
+  data << { author: author, commits: commits }
+end
+
+File.open(OUTPUT_FILE, 'w') { |f| f.write(data.to_json) }
