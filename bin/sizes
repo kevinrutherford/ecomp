@@ -34,9 +34,8 @@ logs.each do |a|
   commits[author] << { date: date, size: size }
 end
 
-data = []
-commits.each do |author, commits|
-  data << { author: author, commits: commits }
+data = commits.keys.map do |author|
+  { author: author, commits: commits[author] }
 end
 
 $stdout.puts data.to_json
