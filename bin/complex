@@ -8,7 +8,7 @@ require 'json'
 OUTPUT_FILE = 'public/data/complexity.json'
 
 ecomp = [
-  ["1970-9-27", 0   ],
+  ["1970-sep-27", 0   ],
   ["1970-10-10", 10.6 ],
   ["1970-10-18", 0.7 ],
   ["1970-11-2", 0.8 ],
@@ -34,5 +34,7 @@ ecomp = [
   ["1971-5-9", 0.25],
   ["1971-5-12", 0   ]
 ]
+
+dates=`git log --pretty="%ci"`
 
 File.open(OUTPUT_FILE, 'w') { |f| f.write(ecomp.to_json) }

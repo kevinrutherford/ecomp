@@ -22,6 +22,11 @@ function complexity_trend(div, data) {
 
 $(document).ready(function() {
   $.getJSON('/data/complexity.json', function(data) {
-    complexity_trend('#complexity_trend', data);
+    var points = [];
+    $.each(data, function(i, item) {
+        var date = Date.parse(item[0]);
+        points.push([date, item[1]]);
+    });
+    complexity_trend('#complexity_trend', points);
   });
 });
