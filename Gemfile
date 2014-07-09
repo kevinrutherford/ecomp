@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
-ruby '1.9.2'
+ruby '2.1.2'
 
 gem 'rake'
 gem 'sinatra'
 gem 'haml'
+
+gem 'ruby_parser'

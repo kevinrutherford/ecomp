@@ -7,6 +7,9 @@ GEM
     rack-protection (1.5.3)
       rack
     rake (10.3.2)
+    ruby_parser (3.6.1)
+      sexp_processor (~> 4.1)
+    sexp_processor (4.4.3)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -19,4 +22,5 @@ PLATFORMS
 DEPENDENCIES
   haml
   rake
+  ruby_parser
   sinatra
