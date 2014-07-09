@@ -19,3 +19,9 @@ function complexity_trend(div, data) {
         }]
     });
 };
+
+$(document).ready(function() {
+  $.getJSON('/data/complexity.json', function(data) {
+    complexity_trend('#complexity_trend', data);
+  });
+});
