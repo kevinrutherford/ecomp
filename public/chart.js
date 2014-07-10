@@ -84,6 +84,41 @@ function draw_churn_vs_complexity_chart(div, data) {
     });
 };
 
+function ctrend_plot(target, data) {
+    var points = [];
+    $.each(data, function(i, item) {
+        points.push({
+            x: Date.parse(item.date),
+            y: item.complexity,
+            name: item.hash
+        });
+    });
+    draw_complexity_trend_chart(target, points);
+};
+
+function draw_complexity_trend_chart(div, data) {
+    $(div).highcharts({
+        chart: {
+            type: 'spline',
+            zoomType: 'xy'
+        },
+        title: { text: null },
+        subtitle: { text: null },
+        xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+                hour: '%b %e %H:%M',
+                day: '%b %e',
+                week: '%b %e'
+            },
+        },
+        series: [{
+            data: data,
+            name: 'Complexity'
+        }]
+    });
+};
+
 function draw_chart(filename, target_div, charting_function) {
   $.getJSON("/data/" + filename + ".json", function(data) {
     charting_function(target_div, data);
@@ -93,4 +128,5 @@ function draw_chart(filename, target_div, charting_function) {
 $(document).ready(function() {
     draw_chart('commit_sizes', '#commit_sizes', sizes_plot);
     draw_chart('churn_vs_complexity', '#churn_vs_complexity', churn_vs_complexity_plot);
+    draw_chart('ctrend', '#complexity_trend', ctrend_plot);
 });
