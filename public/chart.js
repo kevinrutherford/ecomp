@@ -16,7 +16,10 @@ function sizes_plot(target, data) {
 
 function draw_size_chart(div, data) {
     $(div).highcharts({
-        chart: { type: 'bubble' },
+        chart: {
+            type: 'bubble',
+            zoomType: 'xy'
+        },
         title: { text: null },
         subtitle: { text: null },
         xAxis: {
@@ -45,7 +48,10 @@ function churn_vs_complexity_plot(target, data) {
 
 function draw_churn_vs_complexity_chart(div, data) {
     $(div).highcharts({
-        chart: { type: 'scatter' },
+        chart: {
+            type: 'scatter',
+            zoomType: 'xy'
+        },
         title: { text: null },
         subtitle: { text: null },
         xAxis: { title: { text: 'Complexity' } },
@@ -53,7 +59,28 @@ function draw_churn_vs_complexity_chart(div, data) {
             title: { text: 'Churn' },
             min: 0
         },
-        series: [{ data: data }]
+        plotOptions: {
+            scatter: {
+                marker: {
+                    radius: 5,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                    }
+                },
+                states: { hover: { marker: { enabled: false } } },
+                tooltip: {
+                    headerFormat: '<b>{point.key}</b><br>',
+                    pointFormat: 'Complexity: {point.x}<br>Churn: {point.y}'
+                }
+            }
+        },
+        series: [{
+            name: 'Source files',
+            data: data
+        }]
     });
 };
 
