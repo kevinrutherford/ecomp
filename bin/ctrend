@@ -87,12 +87,16 @@ class Complexity
 
 end
 
+def git_commits
+  `git log --pretty=%h`.split("\n")
+end
+
 glob = ARGV[0]
 
-hashes = `git log --pretty=%h | head -n 60`.split("\n").reverse
+commits = git_commits.take(20)
 
 trend = []
-hashes.each do |hash|
+commits.reverse.each do |hash|
   `git checkout #{hash} >/dev/null 2>&1`
   files = Dir[glob]
   report = []
@@ -102,7 +106,8 @@ hashes.each do |hash|
     comp.calc
     report << comp.report[:complexity][:emaxcc]
   end
-  trend << report.inject(:+).to_f / report.length
+  comp = (report.inject(:+).to_f / report.length).round(3)
+  trend << comp
 end
 
 puts trend.inspect
