@@ -17,25 +17,28 @@
 
 require 'json'
 
-raw_log = `git log --pretty="%aN/%ci" --shortstat`
-commits = Hash.new { |h,k| h[k] = Array.new }
-lines = raw_log.split("\n")
+def commits_by_author
+  raw_log = `git log --pretty="%aN/%ci" --shortstat`
+  lines = raw_log.split("\n")
 
-logs = []
-(0..(lines.length-1)).each do |i|
-  if lines[i].empty?
-    logs << "#{lines[i-1]}/#{lines[i+1]}"
+  logs = []
+  (0..(lines.length-1)).each do |i|
+    if lines[i].empty?
+      logs << "#{lines[i-1]}/#{lines[i+1]}"
+    end
   end
+
+  commits = Hash.new { |h,k| h[k] = Array.new }
+  logs.each do |a|
+    author, date, count = a.split('/')
+    size = count.to_i
+    commits[author] << { date: date, size: size }
+  end
+  commits
 end
 
-logs.each do |a|
-  author, date, count = a.split('/')
-  size = count.to_i
-  commits[author] << { date: date, size: size }
-end
-
-data = commits.keys.map do |author|
-  { author: author, commits: commits[author] }
+data = commits_by_author.map do |author, commits|
+  { author: author, commits: commits }
 end
 
 $stdout.puts data.to_json
