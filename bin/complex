@@ -11,21 +11,39 @@ class Complexity
     @comp = 0
     @requires = 1
     @source_code = source_code
+    @method_comps = []
   end
 
   def calc
     ast = RubyParser.for_current_ruby.parse(@source_code)
-    process_ast(ast)
+    @comp = process_ast(ast)
     @comp * @requires
+  end
+
+  def report
+    maxcc = @method_comps.max
+    {
+      sumcc: @comp,
+      maxcc: maxcc,
+      esumcc: @comp * @requires,
+      emaxcc: @requires * maxcc
+    }
   end
 
   private
 
   def process_ast(node)
-    return unless has_children?(node)
-    @comp = @comp + 1 if is_branch_point?(node)
-    @requires = @requires + 1 if is_require?(node)
-    node[1..-1].each {|n| process_ast(n) if n }
+    return 0 unless has_children?(node)
+    if is_method?(node)
+      my = 1 + process_children(node)
+      @method_comps << my
+      my
+    else
+      @requires = @requires + 1 if is_require?(node)
+      comp = process_children(node)
+      comp = comp + 1 if is_branch_point?(node)
+      comp
+    end
   end
 
   def has_children?(node)
@@ -36,8 +54,17 @@ class Complexity
     complex_nodes.include?(node[0])
   end
 
+  def is_method?(node)
+    [:defn, :defs].include?(node[0])
+  end
+
   def is_require?(node)
     node[0] == :call && node[2] == :require
+  end
+
+  def process_children(node)
+    return 0 unless node && node.size > 1
+    node[1..-1].select {|n| n }.map {|n| process_ast(n) }.inject(:+)
   end
 
   def complex_nodes
@@ -56,6 +83,7 @@ end
 source_path = ARGV[0]
 source_code = IO.readlines(source_path).join
 
-comp = Complexity.new(source_code).calc
+comp = Complexity.new(source_code)
+comp.calc
 
-puts "#{source_path}: #{comp}"
+puts "#{source_path}: #{comp.report.to_json}"
