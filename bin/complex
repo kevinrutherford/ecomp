@@ -22,16 +22,22 @@ class Complexity
   private
 
   def process_ast(node)
-    @comp = @comp + 1 if complex_nodes.include?(node[0])
-    @requires = @requires + 1 if node[0] == :call && node[2] == :require
-
-    if node.is_a? Array
+    if node.is_a?(Array) && node[0] != :lit
+      @comp = @comp + 1 if complex_nodes.include?(node[0])
+      @requires = @requires + 1 if node[0] == :call && node[2] == :require
       node[1..-1].each {|n| process_ast(n) if n }
     end
   end
 
   def complex_nodes
-    [:defn, :defs, :if]
+    [
+      :defn, :defs,
+      :if, :case, :when,
+      :and, :or,
+      :for, :while, :until,
+      :rescue, :ensure,
+      :iter
+    ]
   end
 
 end
