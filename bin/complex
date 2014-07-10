@@ -22,11 +22,14 @@ class Complexity
 
   def report
     maxcc = @method_comps.max || @comp
+    meancc = @method_comps.length > 0 ? @comp / @method_comps.length : @comp
     {
       sumcc: @comp,
       maxcc: maxcc,
-      esumcc: @comp * @requires,
-      emaxcc: @requires * maxcc
+      meancc: meancc,
+      esumcc: @requires * @comp,
+      emaxcc: @requires * maxcc,
+      emeancc: @requires * meancc
     }
   end
 
