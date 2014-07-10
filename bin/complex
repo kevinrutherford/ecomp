@@ -4,12 +4,41 @@
 #
 
 require 'json'
+require 'ruby_parser'
 
-OUTPUT_FILE = 'public/data/complexity.json'
+class Complexity
+  def initialize(source_code)
+    @comp = 0
+    @requires = 1
+    @source_code = source_code
+  end
 
-dates=`git log --pretty="%ci"`
-dates = dates.split("\n").map {|d|
-  { date: d, complexity: rand(10) }
-}
+  def calc
+    ast = RubyParser.for_current_ruby.parse(@source_code)
+    process_ast(ast)
+    @comp * @requires
+  end
 
-File.open(OUTPUT_FILE, 'w') { |f| f.write(dates.to_json) }
+  private
+
+  def process_ast(node)
+    @comp = @comp + 1 if complex_nodes.include?(node[0])
+    @requires = @requires + 1 if node[0] == :call && node[2] == :require
+
+    if node.is_a? Array
+      node[1..-1].each {|n| process_ast(n) if n }
+    end
+  end
+
+  def complex_nodes
+    [:defn, :defs, :if]
+  end
+
+end
+
+source_path = ARGV[0]
+source_code = IO.readlines(source_path).join
+
+comp = Complexity.new(source_code).calc
+
+puts "#{source_path}: #{comp}"
