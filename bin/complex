@@ -21,7 +21,7 @@ class Complexity
   end
 
   def report
-    maxcc = @method_comps.max
+    maxcc = @method_comps.max || @comp
     {
       sumcc: @comp,
       maxcc: maxcc,
