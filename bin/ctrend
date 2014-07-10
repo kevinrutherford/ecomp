@@ -88,16 +88,23 @@ class Complexity
 end
 
 def git_commits
-  `git log --pretty=%h`.split("\n")
+  lines = `git log --pretty=%h/%aN/%ci`.split("\n")
+  lines.map { |line|
+    hash, author, date = line.split('/')
+    {
+      hash: hash,
+      date: date,
+      author: author
+    }
+  }
 end
 
 glob = ARGV[0]
 
-commits = git_commits.take(20)
+commits = git_commits.take(20).reverse
 
-trend = []
-commits.reverse.each do |hash|
-  `git checkout #{hash} >/dev/null 2>&1`
+commits.each do |commit|
+  `git checkout #{commit[:hash]} >/dev/null 2>&1`
   files = Dir[glob]
   report = []
   files.each do |path|
@@ -107,7 +114,7 @@ commits.reverse.each do |hash|
     report << comp.report[:complexity][:emaxcc]
   end
   comp = (report.inject(:+).to_f / report.length).round(3)
-  trend << comp
+  commit[:complexity] = comp
 end
 
-puts trend.inspect
+puts commits.to_json
