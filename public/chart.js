@@ -38,7 +38,7 @@ function churn_vs_complexity_plot(target, data) {
     var points = [];
     $.each(data, function(i, item) {
         points.push({
-            x: item.complexity.emaxcc,
+            x: +(item.complexity.emeancc).toFixed(2),
             y: item.churn,
             name: item.filename
         });
