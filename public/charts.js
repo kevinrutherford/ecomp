@@ -142,7 +142,7 @@ function draw_chart(filename, target_div, charting_function) {
 };
 
 $(document).ready(function() {
-    draw_chart('commit_sizes', '#commit_sizes', sizes_plot);
+    draw_chart('commits_by_author', '#commit_sizes', sizes_plot);
     draw_chart('churn_vs_complexity', '#churn_vs_complexity', churn_vs_complexity_plot);
-    draw_chart('ctrend', '#complexity_trend', ctrend_plot);
+    draw_chart('commits', '#complexity_trend', ctrend_plot);
 });
