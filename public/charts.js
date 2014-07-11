@@ -4,7 +4,12 @@ function sizes_plot(target, data) {
     $.each(data, function(i, item) {
         var pts = [];
         $.each(item.commits, function(i, c) {
-            pts.push([Date.parse(c.date), c.size, c.size]);
+            pts.push({
+                name: c.ref,
+                x: Date.parse(c.date),
+                y: c.num_files_touched,
+                z: c.num_files_touched
+            });
         });
         series.push({
             data: pts,
@@ -29,6 +34,13 @@ function draw_size_chart(div, data) {
                 day: '%b %e',
                 week: '%b %e'
             },
+        },
+        tooltip: {
+            formatter: function() {
+                var header = '<b>'+ this.point.name + ' by ' + this.series.name + '</b><br>';
+                var detail = 'Files touched: ' + this.point.y + '<br>' + 'Complexity delta: ' + this.point.z;
+                return header + detail;
+            }
         },
         series: data
     });
