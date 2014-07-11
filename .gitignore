@@ -1,2 +1,2 @@
 .ecomp.sublime-workspace
-public/data/*.json
+public/data/**/*.json
