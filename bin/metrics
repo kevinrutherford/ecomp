@@ -25,11 +25,16 @@ class Complexity
     @comp * @requires
   end
 
+  def churn(path)
+    `git log --pretty=%h #{path} | wc -l`.to_i
+  end
+
   def report
     maxcc = @method_comps.max || @comp
     meancc = @method_comps.length > 0 ? @comp.to_f / @method_comps.length : @comp
     {
       filename: @path,
+      churn: churn(@path),
       complexity: {
         esumcc: @requires * @comp,
         emaxcc: @requires * maxcc,
@@ -112,23 +117,25 @@ def complexity_report(path)
   source_code = IO.readlines(path).join
   comp = Complexity.new(path, source_code)
   comp.calc
-  comp.report[:complexity]
+  comp.report
 end
 
 def update_with_complexity(commits, files_glob)
   commits.each do |commit|
     `git checkout #{commit[:ref]} >/dev/null 2>&1`
+    $stderr.print '.'
     files = Dir[files_glob]
     report = files.map {|path| complexity_report(path) }
     commit[:complexity] = {
-      sumesumcc: report.map {|e| e[:esumcc] }.inject(:+),
-      maxesumcc: report.map {|e| e[:esumcc] }.max,
-      sumemaxcc: report.map {|e| e[:emaxcc] }.inject(:+),
-      maxemaxcc: report.map {|e| e[:emaxcc] }.max,
-      sumemeancc: report.map {|e| e[:emeancc] }.inject(:+).round(2),
-      maxemeancc: report.map {|e| e[:emeancc] }.max.round(2)
+      maxesumcc: report.map {|e| e[:complexity][:esumcc] }.max,
+      maxemaxcc: report.map {|e| e[:complexity][:emaxcc] }.max,
+      maxemeancc: report.map {|e| e[:complexity][:emeancc] }.max.round(2)
     }
   end
+end
+
+def files_report(files_glob)
+  Dir[files_glob].map {|path| complexity_report(path) }
 end
 
 def reset_current_repo
@@ -150,10 +157,15 @@ outdir = ARGV[0]
 files_glob = ARGV[1]
 
 commits_file_path = "#{outdir}/commits.json"
+current_files_path = "#{outdir}/current_files.json"
 
 reset_current_repo
 prepare_output_folder(outdir)
+
+File.open(current_files_path, 'w') {|f| f.puts files_report(files_glob).to_json }
+
 commits = all_commits
 update_with_complexity(commits, files_glob)
 File.open(commits_file_path, 'w') {|f| f.puts commits.to_json }
+
 exit 0

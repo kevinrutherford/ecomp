@@ -101,7 +101,7 @@ function ctrend_plot(target, data) {
     $.each(data, function(i, item) {
         points.push({
             x: Date.parse(item.date),
-            y: item.complexity,
+            y: item.complexity.maxemaxcc,
             name: item.ref + " by " + item.author
         });
     });
@@ -136,13 +136,13 @@ function draw_complexity_trend_chart(div, data) {
 };
 
 function draw_chart(filename, target_div, charting_function) {
-  $.getJSON("/data/" + filename + ".json", function(data) {
+  $.getJSON("/data/reek/" + filename + ".json", function(data) {
     charting_function(target_div, data);
   });
 };
 
 $(document).ready(function() {
     draw_chart('commits_by_author', '#commit_sizes', sizes_plot);
-    draw_chart('churn_vs_complexity', '#churn_vs_complexity', churn_vs_complexity_plot);
+    draw_chart('current_files', '#churn_vs_complexity', churn_vs_complexity_plot);
     draw_chart('commits', '#complexity_trend', ctrend_plot);
 });
