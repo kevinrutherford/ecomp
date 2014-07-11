@@ -90,7 +90,7 @@ function ctrend_plot(target, data) {
         points.push({
             x: Date.parse(item.date),
             y: item.complexity,
-            name: item.hash
+            name: item.ref
         });
     });
     draw_complexity_trend_chart(target, points);
@@ -111,6 +111,10 @@ function draw_complexity_trend_chart(div, data) {
                 day: '%b %e',
                 week: '%b %e'
             },
+        },
+        yAxis: {
+            title: { text: 'Most complex method' },
+            min: 0
         },
         series: [{
             data: data,

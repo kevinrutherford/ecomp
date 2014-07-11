@@ -90,9 +90,9 @@ end
 def git_commits
   lines = `git log --pretty=%h/%aN/%ci`.split("\n")
   lines.map { |line|
-    hash, author, date = line.split('/')
+    ref, author, date = line.split('/')
     {
-      hash: hash,
+      ref: ref,
       date: date,
       author: author
     }
@@ -101,10 +101,10 @@ end
 
 glob = ARGV[0]
 
-commits = git_commits.take(20).reverse
+commits = git_commits.reverse
 
 commits.each do |commit|
-  `git checkout #{commit[:hash]} >/dev/null 2>&1`
+  `git checkout #{commit[:ref]} >/dev/null 2>&1`
   files = Dir[glob]
   report = []
   files.each do |path|
@@ -113,7 +113,7 @@ commits.each do |commit|
     comp.calc
     report << comp.report[:complexity][:emaxcc]
   end
-  comp = (report.inject(:+).to_f / report.length).round(3)
+  comp = (report.max).round(3)
   commit[:complexity] = comp
 end
 
