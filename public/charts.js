@@ -90,7 +90,7 @@ function ctrend_plot(target, data) {
         points.push({
             x: Date.parse(item.date),
             y: item.complexity,
-            name: item.ref
+            name: item.ref + " by " + item.author
         });
     });
     draw_complexity_trend_chart(target, points);
