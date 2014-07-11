@@ -31,9 +31,6 @@ class Complexity
     {
       filename: @path,
       complexity: {
-        sumcc: @comp,
-        maxcc: maxcc,
-        meancc: meancc,
         esumcc: @requires * @comp,
         emaxcc: @requires * maxcc,
         emeancc: @requires * meancc
@@ -94,13 +91,12 @@ end
 def all_commits
   raw_log = `git log --pretty="%h/%aN/%ci/%s" --shortstat`
   lines = raw_log.split("\n")
-
-  logs = []
+  result = []
   (0..(lines.length-1)).each do |i|
     if lines[i].empty?
       fields = lines[i-1].split('/')
       count = lines[i+1].to_i
-      logs << {
+      result << {
         ref: fields[0],
         author: fields[1],
         date: fields[2],
@@ -109,8 +105,30 @@ def all_commits
       }
     end
   end
+  result.reverse
+end
 
-  logs.reverse
+def complexity_report(path)
+  source_code = IO.readlines(path).join
+  comp = Complexity.new(path, source_code)
+  comp.calc
+  comp.report[:complexity]
+end
+
+def update_with_complexity(commits, files_glob)
+  commits.each do |commit|
+    `git checkout #{commit[:ref]} >/dev/null 2>&1`
+    files = Dir[files_glob]
+    report = files.map {|path| complexity_report(path) }
+    commit[:complexity] = {
+      sumesumcc: report.map {|e| e[:esumcc] }.inject(:+),
+      maxesumcc: report.map {|e| e[:esumcc] }.max,
+      sumemaxcc: report.map {|e| e[:emaxcc] }.inject(:+),
+      maxemaxcc: report.map {|e| e[:emaxcc] }.max,
+      sumemeancc: report.map {|e| e[:emeancc] }.inject(:+).round(2),
+      maxemeancc: report.map {|e| e[:emeancc] }.max.round(2)
+    }
+  end
 end
 
 def reset_current_repo
@@ -123,36 +141,19 @@ end
 
 #- - - Main program - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-if ARGV.length < 2
-  $stderr.puts "Usage: #{File.basename($0)} output_folder files..."
+if ARGV.length != 2
+  $stderr.puts "Usage: #{File.basename($0)} output_folder files_glob"
   exit 1
 end
 
 outdir = ARGV[0]
-source_files = ARGV[1..-1]
+files_glob = ARGV[1]
 
 commits_file_path = "#{outdir}/commits.json"
 
 reset_current_repo
 prepare_output_folder(outdir)
 commits = all_commits
+update_with_complexity(commits, files_glob)
 File.open(commits_file_path, 'w') {|f| f.puts commits.to_json }
 exit 0
-
-glob = ARGV[0]
-
-commits.each do |commit|
-  `git checkout #{commit[:ref]} >/dev/null 2>&1`
-  files = Dir[glob]
-  report = []
-  files.each do |path|
-    source_code = IO.readlines(path).join
-    comp = Complexity.new(path, source_code)
-    comp.calc
-    report << comp.report[:complexity][:emaxcc]
-  end
-  comp = (report.max).round(3)
-  commit[:complexity] = comp
-end
-
-puts commits.to_json
