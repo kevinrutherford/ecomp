@@ -92,25 +92,25 @@ class Complexity
 end
 
 def all_commits
-  raw_log = `git log --pretty="%h/%aN/%ci" --shortstat`
+  raw_log = `git log --pretty="%h/%aN/%ci/%s" --shortstat`
   lines = raw_log.split("\n")
 
   logs = []
   (0..(lines.length-1)).each do |i|
     if lines[i].empty?
-      logs << "#{lines[i-1]}/#{lines[i+1]}"
+      fields = lines[i-1].split('/')
+      count = lines[i+1].to_i
+      logs << {
+        ref: fields[0],
+        author: fields[1],
+        date: fields[2],
+        comment: fields[3..-1].join,
+        num_files_touched: count
+      }
     end
   end
 
-  logs.reverse.map do |a|
-    ref, author, date, count = a.split('/')
-    {
-      ref: ref,
-      author: author,
-      date: date,
-      num_files_touched: count.to_i
-    }
-  end
+  logs.reverse
 end
 
 def reset_current_repo
