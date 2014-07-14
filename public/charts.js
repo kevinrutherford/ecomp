@@ -21,6 +21,7 @@ function recent_commits_plot(target, data) {
 
 function draw_recent_commits_chart(div, data) {
     $(div).highcharts({
+        credits: { enabled: false },
         chart: {
             type: 'bubble',
             zoomType: 'xy'
@@ -63,6 +64,7 @@ function churn_vs_complexity_plot(target, data) {
 
 function draw_churn_vs_complexity_chart(div, data, max_churn) {
     $(div).highcharts({
+        credits: { enabled: false },
         chart: { zoomType: 'xy' },
         title: { text: null },
         subtitle: { text: null },
@@ -116,6 +118,7 @@ function ctrend_plot(target, data) {
 
 function draw_complexity_trend_chart(div, data) {
     $(div).highcharts({
+        credits: { enabled: false },
         chart: {
             type: 'spline',
             zoomType: 'xy'

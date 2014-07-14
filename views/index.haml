@@ -16,11 +16,12 @@
     .container-fluid
       .row
         .col-md-6
-          %h2 Recent commits <small>Contribution to total complexity</small>
+          %h2
+            Recent commits <small>Contribution to total complexity</small>
           .chart-area#recent_commits
             %img#loading-image(src='/images/ajax-loader.gif')
         .col-md-6
-          %h2 Churn vs Complexity
+          %h2 Source files
           .chart-area#churn_vs_complexity
             %img#loading-image(src='/images/ajax-loader.gif')
       .row
