@@ -8,6 +8,7 @@
 require 'date'
 require 'json'
 
+BIN = File.dirname($0)
 DELTA_CUTOFF_DAYS = 365
 
 #- - - Helpers - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -39,9 +40,9 @@ end
 def complexity_report(path)
   json =  case path
           when /.*\.rb$/
-            `rubycc #{path}`
+            `#{BIN}/rubycc #{path}`
           when /.*\.java$/
-            `javacc #{path}`
+            `#{BIN}/javacc #{path}`
           end
   result = JSON.parse(json)
   result[:churn] = churn(path)

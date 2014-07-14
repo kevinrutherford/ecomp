@@ -97,6 +97,7 @@ function draw_churn_vs_complexity_chart(div, data, max_churn) {
             data: data
         }, {
             type: 'line',
+            name: 'Threshold',
             color: '#bbbbbb',
             dashStyle: 'DashDot',
             data: [[1, max_churn], [5, 0]]
