@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Script to start JavaNCSS. (Parts are copied from jakarta-ant
+# startup script.)
+
+JAVA_HOME=`which java 2>/dev/null || whence java`
+JAVA_HOME=`dirname "$JAVA_HOME"`/..
+
+JAVANCSS_HOME=`dirname "$0"`/..
+
+CLASSPATH=${JAVANCSS_HOME}/lib/javancss.jar:${JAVANCSS_HOME}/lib/ccl.jar:${CLASSPATH}
+
+$JAVA_HOME/bin/java -classpath $CLASSPATH javancss.Main $@

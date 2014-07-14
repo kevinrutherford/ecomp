@@ -13,18 +13,17 @@ def complexity_report(path)
   comps = raw.split("\n").select {|l| /\(/ === l }.map do |line|
     line.split[2].to_i
   end
-  puts comps.inspect
   sumcc = comps.inject(:+)
   maxcc = comps.max
   meancc = sumcc.to_f / comps.length
   {
-      filename: path,
-      complexity: {
-        esumcc: imports * sumcc,
-        emaxcc: imports * maxcc,
-        emeancc: imports * meancc
-      }
+    filename: path,
+    complexity: {
+      esumcc: imports * sumcc,
+      emaxcc: imports * maxcc,
+      emeancc: imports * meancc
     }
+  }
 end
 
 if ARGV.length != 1
