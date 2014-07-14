@@ -7,7 +7,7 @@ function recent_commits_plot(target, data) {
             pts.push({
                 name: c.ref,
                 x: Date.parse(c.date),
-                y: c.num_files_touched,
+                y: c.delta_sumesumcc,
                 z: c.num_files_touched
             });
         });
@@ -38,7 +38,7 @@ function draw_recent_commits_chart(div, data) {
         tooltip: {
             formatter: function() {
                 var header = '<b>'+ this.point.name + ' by ' + this.series.name + '</b><br>';
-                var detail = 'Files touched: ' + this.point.y + '<br>' + 'Complexity delta: ' + this.point.z;
+                var detail = 'Files touched: ' + this.point.z + '<br>' + 'Complexity delta: ' + this.point.y;
                 return header + detail;
             }
         },
