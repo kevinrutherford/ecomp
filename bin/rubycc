@@ -26,16 +26,11 @@ class Complexity
     @comp * @requires
   end
 
-  def churn(path)
-    `git log --pretty=%h #{path} | wc -l`.to_i
-  end
-
   def report
     maxcc = @method_comps.max || @comp
     meancc = @method_comps.length > 0 ? @comp.to_f / @method_comps.length : @comp
     {
       filename: @path,
-      churn: churn(@path),
       complexity: {
         esumcc: @requires * @comp,
         emaxcc: @requires * maxcc,
