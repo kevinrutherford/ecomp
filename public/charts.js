@@ -67,9 +67,9 @@ function draw_churn_vs_complexity_chart(div, data) {
         },
         title: { text: null },
         subtitle: { text: null },
-        xAxis: { title: { text: 'Complexity' } },
+        xAxis: { title: { text: 'Mean method complexity' } },
         yAxis: {
-            title: { text: 'Churn' },
+            title: { text: 'Number of times changed' },
             min: 0
         },
         plotOptions: {

@@ -9,6 +9,8 @@ require 'date'
 require 'json'
 require 'ruby_parser'
 
+DELTA_CUTOFF_DAYS = 365
+
 #- - - Helpers - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 class Complexity
@@ -143,7 +145,7 @@ def group_by_author(commits)
 end
 
 def select_recent_commits(commits)
-  cutoff = DateTime.now - 90
+  cutoff = DateTime.now - DELTA_CUTOFF_DAYS
   recent = commits.select {|c| DateTime.parse(c[:date]) > cutoff }
   recent.each_with_index do |commit, i|
     delta = commit[:complexity][:sumesumcc] - (i > 0 ? recent[i-1][:complexity][:sumesumcc] : 0)
@@ -188,7 +190,7 @@ prepare_output_folder(outdir)
 
 write_json_file(CURRENT_FILES_PATH, files_report(files_glob))
 
-commits = all_commits[-50..-1]
+commits = all_commits
 update_with_complexity(commits, files_glob)
 write_json_file(COMMITS_FILE_PATH, commits)
 
