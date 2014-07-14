@@ -15,14 +15,16 @@
   %body
     .container-fluid
       .row
-        .col-md-8
-          %h2 Complexity trend
-          .chart-area#complexity_trend
+        .col-md-6
+          %h2 Recent commits
+          .chart-area#recent_commits
             %img#loading-image(src='/images/ajax-loader.gif')
-          %h2 Commit sizes
-          .chart-area#commit_sizes
-            %img#loading-image(src='/images/ajax-loader.gif')
-        .col-md-4
+        .col-md-6
           %h2 Churn vs Complexity
           .chart-area#churn_vs_complexity
+            %img#loading-image(src='/images/ajax-loader.gif')
+      .row
+        .col-md-12
+          %h2 Complexity trend
+          .chart-area#complexity_trend
             %img#loading-image(src='/images/ajax-loader.gif')
