@@ -7,7 +7,7 @@ function recent_commits_plot(target, data) {
             pts.push({
                 name: c.ref,
                 x: Date.parse(c.date),
-                y: c.delta_sumesumcc,
+                y: c.complexity.delta_sumesumcc,
                 z: c.num_files_touched
             });
         });
@@ -35,6 +35,7 @@ function draw_recent_commits_chart(div, data) {
                 week: '%b %e'
             },
         },
+        yAxis: { title: { text: 'Complexity delta' } },
         tooltip: {
             formatter: function() {
                 var header = '<b>'+ this.point.name + ' by ' + this.series.name + '</b><br>';

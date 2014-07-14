@@ -5,6 +5,7 @@
 # Usage: $0 output_folder files
 #
 
+require 'date'
 require 'json'
 require 'ruby_parser'
 
@@ -135,6 +136,23 @@ def update_with_complexity(commits, files_glob)
   end
 end
 
+def group_by_author(commits)
+  commits.group_by {|commit| commit[:author] }.map do |author, commits|
+    { author: author, commits: commits }
+  end
+end
+
+def select_recent_commits(commits)
+  cutoff = DateTime.now - 90
+  recent = commits.select {|c| DateTime.parse(c[:date]) > cutoff }
+  recent.each_with_index do |commit, i|
+    delta = commit[:complexity][:sumesumcc] - (i > 0 ? recent[i-1][:complexity][:sumesumcc] : 0)
+    commit[:complexity][:delta_sumesumcc] = delta
+  end
+
+  group_by_author(recent[1..-1])
+end
+
 def files_report(files_glob)
   Dir[files_glob].map {|path| complexity_report(path) }
 end
@@ -147,6 +165,10 @@ def prepare_output_folder(folder)
   `mkdir -p #{folder}`
 end
 
+def write_json_file(path, data)
+  File.open(path, 'w') {|f| f.puts data.to_json }
+end
+
 #- - - Main program - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 if ARGV.length != 2
@@ -157,16 +179,21 @@ end
 outdir = ARGV[0]
 files_glob = ARGV[1]
 
-commits_file_path = "#{outdir}/commits.json"
-current_files_path = "#{outdir}/current_files.json"
+COMMITS_FILE_PATH = "#{outdir}/commits.json"
+CURRENT_FILES_PATH = "#{outdir}/current_files.json"
+RECENT_COMMITS_PATH = "#{outdir}/recent_commits_by_author.json"
 
 reset_current_repo
 prepare_output_folder(outdir)
 
-File.open(current_files_path, 'w') {|f| f.puts files_report(files_glob).to_json }
+write_json_file(CURRENT_FILES_PATH, files_report(files_glob))
 
-commits = all_commits
+commits = all_commits[-50..-1]
 update_with_complexity(commits, files_glob)
-File.open(commits_file_path, 'w') {|f| f.puts commits.to_json }
+write_json_file(COMMITS_FILE_PATH, commits)
 
+recent = select_recent_commits(commits)
+write_json_file(RECENT_COMMITS_PATH, recent)
+
+$stderr.puts ''
 exit 0
