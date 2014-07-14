@@ -35,7 +35,7 @@ function draw_recent_commits_chart(div, data) {
                 week: '%b %e'
             },
         },
-        yAxis: { title: { text: 'Complexity delta' } },
+        yAxis: { title: { text: 'Change in total project complexity' } },
         tooltip: {
             formatter: function() {
                 var header = '<b>'+ this.point.name + ' by ' + this.series.name + '</b><br>';
@@ -49,22 +49,21 @@ function draw_recent_commits_chart(div, data) {
 
 function churn_vs_complexity_plot(target, data) {
     var points = [];
+    max_churn = 0;
     $.each(data, function(i, item) {
         points.push({
             x: +(item.complexity.emeancc).toFixed(2),
             y: item.churn,
             name: item.filename
         });
+        max_churn = Math.max(max_churn, item.churn)
     });
-    draw_churn_vs_complexity_chart(target, points);
+    draw_churn_vs_complexity_chart(target, points, max_churn+5);
 };
 
-function draw_churn_vs_complexity_chart(div, data) {
+function draw_churn_vs_complexity_chart(div, data, max_churn) {
     $(div).highcharts({
-        chart: {
-            type: 'scatter',
-            zoomType: 'xy'
-        },
+        chart: { zoomType: 'xy' },
         title: { text: null },
         subtitle: { text: null },
         xAxis: { title: { text: 'Mean method complexity' } },
@@ -86,13 +85,19 @@ function draw_churn_vs_complexity_chart(div, data) {
                 states: { hover: { marker: { enabled: false } } },
                 tooltip: {
                     headerFormat: '<b>{point.key}</b><br>',
-                    pointFormat: 'Complexity: {point.x}<br>Churn: {point.y}'
+                    pointFormat: 'Mean method complexity: {point.x}<br>Number of commits: {point.y}'
                 }
             }
         },
         series: [{
+            type: 'scatter',
             name: 'Source files',
             data: data
+        }, {
+            type: 'line',
+            color: '#bbbbbb',
+            dashStyle: 'DashDot',
+            data: [[1, max_churn], [5, 0]]
         }]
     });
 };
