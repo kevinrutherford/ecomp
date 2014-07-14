@@ -7,7 +7,6 @@
 
 require 'date'
 require 'json'
-require 'ruby_parser'
 
 DELTA_CUTOFF_DAYS = 365
 
@@ -38,8 +37,13 @@ def all_commits
 end
 
 def complexity_report(path)
-  source_code = IO.readlines(path).join
-  result = JSON.parse(`rubycc #{path}`)
+  json =  case path
+          when /.*\.rb$/
+            `rubycc #{path}`
+          when /.*\.java$/
+            `javacc #{path}`
+          end
+  result = JSON.parse(json)
   result[:churn] = churn(path)
   result
 end
