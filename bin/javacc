@@ -7,9 +7,11 @@
 
 require 'json'
 
+BIN = File.dirname($0)
+
 def complexity_report(path)
   imports = IO.readlines(path).select {|l| /^\s*import\s/ === l }.length + 1
-  raw = `~/Working/javancss/bin/javancss -function #{path}`
+  raw = `#{BIN}/javancss -function #{path}`
   comps = raw.split("\n").select {|l| /\(/ === l }.map do |line|
     line.split[2].to_i
   end
