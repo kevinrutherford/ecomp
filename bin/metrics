@@ -56,10 +56,10 @@ def update_with_complexity(commits, files_glob)
     files = Dir[files_glob]
     report = files.map {|path| complexity_report(path) }
     commit[:complexity] = {
-      sumesumcc: report.map {|e| e[:complexity][:esumcc] }.inject(:+),
-      maxesumcc: report.map {|e| e[:complexity][:esumcc] }.max,
-      maxemaxcc: report.map {|e| e[:complexity][:emaxcc] }.max,
-      maxemeancc: report.map {|e| e[:complexity][:emeancc] }.max.round(2)
+      sumesumcc: report.map {|e| e['complexity']['esumcc'] }.inject(:+),
+      maxesumcc: report.map {|e| e['complexity']['esumcc'] }.max,
+      maxemaxcc: report.map {|e| e['complexity']['emaxcc'] }.max,
+      maxemeancc: report.map {|e| e['complexity']['emeancc'] }.max.round(2)
     }
   end
 end
