@@ -60,17 +60,23 @@ def update_with_complexity(commits, files_glob)
         sumesumcc: 0,
         maxesumcc: 0,
         maxemaxcc: 0,
-        maxemeancc: 0.0
+        maxemeancc: 0.0,
+        meanesumcc: 0.0
       }
     else
       commit[:complexity] = {
         sumesumcc: report.map {|e| e['complexity']['esumcc'] }.inject(:+),
         maxesumcc: report.map {|e| e['complexity']['esumcc'] }.max,
         maxemaxcc: report.map {|e| e['complexity']['emaxcc'] }.max,
-        maxemeancc: report.map {|e| e['complexity']['emeancc'] }.max.round(2)
+        maxemeancc: report.map {|e| e['complexity']['emeancc'] }.max.round(2),
+        meanesumcc: mean_of(report.map {|e| e['complexity']['esumcc']}).round(2)
       }
     end
   end
+end
+
+def mean_of(nums)
+  nums.inject(:+).to_f / nums.length
 end
 
 def group_by_author(commits)

@@ -110,7 +110,7 @@ function ctrend_plot(target, data) {
     $.each(data, function(i, item) {
         points.push({
             x: Date.parse(item.date),
-            y: item.complexity.maxemaxcc,
+            y: item.complexity.meanesumcc,
             name: item.ref + " by " + item.author
         });
     });
@@ -135,7 +135,7 @@ function draw_complexity_trend_chart(div, data) {
             },
         },
         yAxis: {
-            title: { text: 'Most complex method' },
+            title: { text: 'Mean complexity per source file' },
             min: 0
         },
         series: [{
