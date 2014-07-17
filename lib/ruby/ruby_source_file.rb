@@ -1,9 +1,9 @@
 require 'ruby_parser'
 
 class RubySourceFile
-  def initialize(path, source_code)
+  def initialize(path)
     @path = path
-    @source_code = source_code
+    @source_code = IO.readlines(path).join
   end
 
   def complexity

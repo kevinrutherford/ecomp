@@ -13,8 +13,7 @@ require_relative '../lib/ruby/ruby_source_file'
 #- - - Helpers - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 def complexity_report(path)
-  source_code = IO.readlines(path).join
-  report = RubySourceFile.new(path, source_code).complexity
+  report = RubySourceFile.new(path).complexity
   function_complexities = report[:functions].map {|f| f[:complexity] }
   sumcc = function_complexities.inject(:+)
   maxcc = function_complexities.max || 0
@@ -23,7 +22,7 @@ def complexity_report(path)
   report[:complexity] = {
     esumcc: sumcc * efferent_multiplier,
     emaxcc: maxcc * efferent_multiplier,
-    emeancc: meancc * efferent_multiplier
+    emeancc: (meancc * efferent_multiplier).round(2)
   }
   report
 end
