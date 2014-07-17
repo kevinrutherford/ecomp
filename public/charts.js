@@ -48,15 +48,91 @@ function draw_recent_commits_chart(div, data) {
     });
 };
 
-var heat_colours = [
-    '#00ffff', '#00AEF9', '#0061F4', '#0017EF',
-    '#2E00EA', '#7200E5', '#B300E0', '#DB00C5',
-    '#D60080', '#D1003E', '#cc0000'
-];
+function hsvToRgb(h, s, v) {
+    var r, g, b;
+    var i;
+    var f, p, q, t;
+    
+    // Make sure our arguments stay in-range
+    h = Math.max(0, Math.min(360, h));
+    s = Math.max(0, Math.min(100, s));
+    v = Math.max(0, Math.min(100, v));
+    
+    // We accept saturation and value arguments from 0 to 100 because that's
+    // how Photoshop represents those values. Internally, however, the
+    // saturation and value are calculated from a range of 0 to 1. We make
+    // That conversion here.
+    s /= 100;
+    v /= 100;
+    
+    if(s == 0) {
+        // Achromatic (grey)
+        r = g = b = v;
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+    }
+    
+    h /= 60; // sector 0 to 5
+    i = Math.floor(h);
+    f = h - i; // factorial part of h
+    p = v * (1 - s);
+    q = v * (1 - s * f);
+    t = v * (1 - s * (1 - f));
 
-function colour_for(x, y, max_churn, max_complexity) {
-    var distance = 5 * ((x/max_complexity) + (y/max_churn))
-    return heat_colours[Math.floor(distance)];
+    switch(i) {
+        case 0:
+            r = v;
+            g = t;
+            b = p;
+            break;
+            
+        case 1:
+            r = q;
+            g = v;
+            b = p;
+            break;
+            
+        case 2:
+            r = p;
+            g = v;
+            b = t;
+            break;
+            
+        case 3:
+            r = p;
+            g = q;
+            b = v;
+            break;
+            
+        case 4:
+            r = t;
+            g = p;
+            b = v;
+            break;
+            
+        default: // case 5:
+            r = v;
+            g = p;
+            b = q;
+    }
+    
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+};
+
+function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+};
+
+function colour_for(x, y, max_x, max_y) {
+    var cold = [90, 80, 100];
+    var hot = [0, 100, 60];
+    var p = ((x/max_x) + (y/max_y)) / 2;
+
+    var h = (1 - p) * cold[0] + p * hot[0];
+    var s = (1 - p) * cold[1] + p * hot[1];
+    var v = (1 - p) * cold[2] + p * hot[2];
+    var rgb = hsvToRgb(h, s, v);
+
+    return rgbToHex(rgb[0], rgb[1], rgb[2]);
 };
 
 function churn_vs_complexity_plot(target, data) {
@@ -73,7 +149,7 @@ function churn_vs_complexity_plot(target, data) {
         points.push({
             x: x,
             y: y,
-            color: colour_for(x, y, max_churn, max_complexity),
+            color: colour_for(x, y, max_complexity, max_churn),
             name: item.filename
         });
     });
