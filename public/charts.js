@@ -48,16 +48,34 @@ function draw_recent_commits_chart(div, data) {
     });
 };
 
+var heat_colours = [
+    '#00ffff', '#00AEF9', '#0061F4', '#0017EF',
+    '#2E00EA', '#7200E5', '#B300E0', '#DB00C5',
+    '#D60080', '#D1003E', '#cc0000'
+];
+
+function colour_for(x, y, max_churn, max_complexity) {
+    var distance = 5 * ((x/max_complexity) + (y/max_churn))
+    return heat_colours[Math.floor(distance)];
+};
+
 function churn_vs_complexity_plot(target, data) {
-    var points = [];
-    max_churn = 0;
+    var max_churn = 0,
+        max_complexity = 0;
     $.each(data, function(i, item) {
+        max_churn = Math.max(max_churn, item.churn);
+        max_complexity = Math.max(max_complexity, item.complexity.emeancc);
+    });
+    var points = [];
+    $.each(data, function(i, item) {
+        var x = +(item.complexity.emeancc).toFixed(2);
+        var y = item.churn;
         points.push({
-            x: +(item.complexity.emeancc).toFixed(2),
-            y: item.churn,
+            x: x,
+            y: y,
+            color: colour_for(x, y, max_churn, max_complexity),
             name: item.filename
         });
-        max_churn = Math.max(max_churn, item.churn)
     });
     draw_churn_vs_complexity_chart(target, points, max_churn+5);
 };
@@ -95,12 +113,6 @@ function draw_churn_vs_complexity_chart(div, data, max_churn) {
             type: 'scatter',
             name: 'Source files',
             data: data
-        }, {
-            type: 'line',
-            name: 'Threshold',
-            color: '#bbbbbb',
-            dashStyle: 'DashDot',
-            data: [[1, max_churn], [5, 0]]
         }]
     });
 };
