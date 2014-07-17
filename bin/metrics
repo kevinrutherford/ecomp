@@ -109,7 +109,7 @@ def prepare_output_folder(folder)
 end
 
 def write_json_file(path, data)
-  File.open(path, 'w') {|f| f.puts data.to_json }
+  File.open(path, 'w') {|f| f.puts JSON.pretty_generate(data) }
 end
 
 #- - - Main program - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

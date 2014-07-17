@@ -234,7 +234,7 @@ function draw_complexity_trend_chart(div, data) {
 };
 
 function draw_chart(filename, target_div, charting_function) {
-  $.getJSON("/data/reek/" + filename + ".json", function(data) {
+  $.getJSON("/data/bday/" + filename + ".json", function(data) {
     charting_function(target_div, data);
   });
 };

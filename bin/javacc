@@ -33,5 +33,5 @@ if ARGV.length != 1
   exit 1
 end
 
-puts complexity_report(ARGV[0]).to_json
+puts JSON.pretty_generate complexity_report(ARGV[0])
 exit 0

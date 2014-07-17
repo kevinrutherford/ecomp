@@ -1,1 +1,128 @@
-[{"filename":"java/src/Employee.java","complexity":{"esumcc":4,"emaxcc":1,"emeancc":1.0},"churn":3},{"filename":"java/src/Greeter.java","complexity":{"esumcc":3,"emaxcc":2,"emeancc":1.5},"churn":2},{"filename":"java/src/BirthdayService.java","complexity":{"esumcc":2,"emaxcc":1,"emeancc":1.0},"churn":9},{"filename":"java/src/AcceptanceTest.java","complexity":{"esumcc":28,"emaxcc":7,"emeancc":7.0},"churn":7},{"filename":"java/src/EmployeeTest.java","complexity":{"esumcc":3,"emaxcc":3,"emeancc":3.0},"churn":2},{"filename":"java/src/EmployeeFile.java","complexity":{"esumcc":20,"emaxcc":16,"emeancc":10.0},"churn":2},{"filename":"java/src/OurDate.java","complexity":{"esumcc":32,"emaxcc":12,"emeancc":6.4},"churn":3},{"filename":"java/src/PersonnelException.java","complexity":{"esumcc":1,"emaxcc":1,"emeancc":1.0},"churn":1},{"filename":"java/src/TestDataFile.java","complexity":{"esumcc":15,"emaxcc":15,"emeancc":15.0},"churn":2},{"filename":"java/src/OurDateTest.java","complexity":{"esumcc":3,"emaxcc":3,"emeancc":3.0},"churn":2},{"filename":"java/src/MessageSenderException.java","complexity":{"esumcc":1,"emaxcc":1,"emeancc":1.0},"churn":1},{"filename":"java/src/Emailer.java","complexity":{"esumcc":49,"emaxcc":21,"emeancc":16.333333333333336},"churn":1},{"filename":"java/src/EmployeeAction.java","complexity":{"esumcc":1,"emaxcc":1,"emeancc":1.0},"churn":1},{"filename":"java/src/BirthdayApp.java","complexity":{"esumcc":2,"emaxcc":2,"emeancc":2.0},"churn":1}]
+[
+  {
+    "filename": "java/src/Employee.java",
+    "complexity": {
+      "esumcc": 4,
+      "emaxcc": 1,
+      "emeancc": 1.0
+    },
+    "churn": 3
+  },
+  {
+    "filename": "java/src/Greeter.java",
+    "complexity": {
+      "esumcc": 3,
+      "emaxcc": 2,
+      "emeancc": 1.5
+    },
+    "churn": 2
+  },
+  {
+    "filename": "java/src/BirthdayService.java",
+    "complexity": {
+      "esumcc": 2,
+      "emaxcc": 1,
+      "emeancc": 1.0
+    },
+    "churn": 9
+  },
+  {
+    "filename": "java/src/AcceptanceTest.java",
+    "complexity": {
+      "esumcc": 28,
+      "emaxcc": 7,
+      "emeancc": 7.0
+    },
+    "churn": 7
+  },
+  {
+    "filename": "java/src/EmployeeTest.java",
+    "complexity": {
+      "esumcc": 3,
+      "emaxcc": 3,
+      "emeancc": 3.0
+    },
+    "churn": 2
+  },
+  {
+    "filename": "java/src/EmployeeFile.java",
+    "complexity": {
+      "esumcc": 20,
+      "emaxcc": 16,
+      "emeancc": 10.0
+    },
+    "churn": 2
+  },
+  {
+    "filename": "java/src/OurDate.java",
+    "complexity": {
+      "esumcc": 32,
+      "emaxcc": 12,
+      "emeancc": 6.4
+    },
+    "churn": 3
+  },
+  {
+    "filename": "java/src/PersonnelException.java",
+    "complexity": {
+      "esumcc": 1,
+      "emaxcc": 1,
+      "emeancc": 1.0
+    },
+    "churn": 1
+  },
+  {
+    "filename": "java/src/TestDataFile.java",
+    "complexity": {
+      "esumcc": 15,
+      "emaxcc": 15,
+      "emeancc": 15.0
+    },
+    "churn": 2
+  },
+  {
+    "filename": "java/src/OurDateTest.java",
+    "complexity": {
+      "esumcc": 3,
+      "emaxcc": 3,
+      "emeancc": 3.0
+    },
+    "churn": 2
+  },
+  {
+    "filename": "java/src/MessageSenderException.java",
+    "complexity": {
+      "esumcc": 1,
+      "emaxcc": 1,
+      "emeancc": 1.0
+    },
+    "churn": 1
+  },
+  {
+    "filename": "java/src/Emailer.java",
+    "complexity": {
+      "esumcc": 49,
+      "emaxcc": 21,
+      "emeancc": 16.333333333333336
+    },
+    "churn": 1
+  },
+  {
+    "filename": "java/src/EmployeeAction.java",
+    "complexity": {
+      "esumcc": 1,
+      "emaxcc": 1,
+      "emeancc": 1.0
+    },
+    "churn": 1
+  },
+  {
+    "filename": "java/src/BirthdayApp.java",
+    "complexity": {
+      "esumcc": 2,
+      "emaxcc": 2,
+      "emeancc": 2.0
+    },
+    "churn": 1
+  }
+]
