@@ -152,5 +152,19 @@
       "maxemeancc": 16.33,
       "meanesumcc": 11.71
     }
+  },
+  {
+    "ref": "6bee069",
+    "author": "Kevin Rutherford",
+    "date": "2014-07-18 07:24:06 +0100",
+    "comment": "Extract some helpful message in the Emailer",
+    "num_files_touched": 1,
+    "complexity": {
+      "sumesumcc": 178,
+      "maxesumcc": 63,
+      "maxemaxcc": 21,
+      "maxemeancc": 15.0,
+      "meanesumcc": 12.71
+    }
   }
 ]

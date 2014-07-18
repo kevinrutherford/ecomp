@@ -101,11 +101,11 @@
   {
     "filename": "java/src/Emailer.java",
     "complexity": {
-      "esumcc": 49,
+      "esumcc": 63,
       "emaxcc": 21,
-      "emeancc": 16.333333333333336
+      "emeancc": 12.6
     },
-    "churn": 1
+    "churn": 2
   },
   {
     "filename": "java/src/EmployeeAction.java",
