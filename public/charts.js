@@ -7,7 +7,7 @@ function recent_commits_plot(target, data) {
             pts.push({
                 name: c.ref,
                 x: Date.parse(c.date),
-                y: c.complexity.delta_sumesumcc,
+                y: c.complexity.delta_sum_of_file_weights,
                 z: c.num_files_touched
             });
         });
@@ -140,11 +140,11 @@ function churn_vs_complexity_plot(target, data) {
         max_complexity = 0;
     $.each(data, function(i, item) {
         max_churn = Math.max(max_churn, item.churn);
-        max_complexity = Math.max(max_complexity, item.complexity.emeancc);
+        max_complexity = Math.max(max_complexity, item.weight);
     });
     var points = [];
     $.each(data, function(i, item) {
-        var x = +(item.complexity.emeancc).toFixed(2);
+        var x = +(item.weight).toFixed(2);
         var y = item.churn;
         points.push({
             x: x,
@@ -160,9 +160,13 @@ function draw_churn_vs_complexity_chart(div, data, max_churn) {
     $(div).highcharts({
         credits: { enabled: false },
         chart: { zoomType: 'xy' },
+        colors: ['#99ff32'],
         title: { text: null },
         subtitle: { text: null },
-        xAxis: { title: { text: 'Mean method complexity' } },
+        xAxis: {
+            title: { text: 'Complexity weight' },
+            min: 0
+        },
         yAxis: {
             title: { text: 'Number of times changed' },
             min: 0
@@ -181,7 +185,7 @@ function draw_churn_vs_complexity_chart(div, data, max_churn) {
                 states: { hover: { marker: { enabled: false } } },
                 tooltip: {
                     headerFormat: '<b>{point.key}</b><br>',
-                    pointFormat: 'Mean method complexity: {point.x}<br>Number of commits: {point.y}'
+                    pointFormat: 'Complexity weight: {point.x}<br>Number of commits: {point.y}'
                 }
             }
         },
@@ -198,7 +202,7 @@ function ctrend_plot(target, data) {
     $.each(data, function(i, item) {
         points.push({
             x: Date.parse(item.date),
-            y: item.complexity.meanesumcc,
+            y: item.complexity.mean_of_file_weights,
             name: item.ref + " by " + item.author
         });
     });

@@ -33,11 +33,11 @@ class RubySourceFile
   end
 
   def is_branch_point?(node)
-    branch_nodes.include?(node[0])
+    Array === node && branch_nodes.include?(node[0])
   end
 
   def is_require?(node)
-    node[0] == :call && node[2] == :require
+    Array === node && node[0] == :call && node[2] == :require
   end
 
   def branch_nodes
