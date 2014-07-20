@@ -14,16 +14,9 @@ require_relative '../lib/ruby/ruby_source_file'
 
 def complexity_report(path)
   report = RubySourceFile.new(path).complexity
-  function_complexities = report[:functions].map {|f| f[:complexity] }
-  sumcc = function_complexities.inject(:+)
-  maxcc = function_complexities.max || 0
-  meancc = function_complexities.length > 0 ? sumcc.to_f / function_complexities.length : 0
   efferent_multiplier = report[:num_dependencies] + 1
-  report[:complexity] = {
-    esumcc: sumcc * efferent_multiplier,
-    emaxcc: maxcc * efferent_multiplier,
-    emeancc: (meancc * efferent_multiplier).round(2)
-  }
+  branches = 1 + report[:num_branches]
+  report[:complexity] = branches * efferent_multiplier
   report
 end
 
