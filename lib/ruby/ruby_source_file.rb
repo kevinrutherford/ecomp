@@ -37,7 +37,8 @@ class RubySourceFile
   end
 
   def is_require?(node)
-    Array === node && node[0] == :call && node[2] == :require
+    Array === node && node[0] == :call &&
+      [:require, :require_relative].include?(node[2])
   end
 
   def branch_nodes
@@ -45,8 +46,7 @@ class RubySourceFile
       :if, :when,
       :and, :or,
       :for, :while, :until,
-      :rescue, :ensure,
-      :iter
+      :rescue, :ensure
     ]
   end
 end

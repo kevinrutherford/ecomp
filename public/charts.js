@@ -164,7 +164,7 @@ function draw_churn_vs_complexity_chart(div, data, max_churn) {
         title: { text: null },
         subtitle: { text: null },
         xAxis: {
-            title: { text: 'Complexity weight' },
+            title: { text: 'Complexity' },
             min: 0
         },
         yAxis: {
@@ -185,7 +185,7 @@ function draw_churn_vs_complexity_chart(div, data, max_churn) {
                 states: { hover: { marker: { enabled: false } } },
                 tooltip: {
                     headerFormat: '<b>{point.key}</b><br>',
-                    pointFormat: 'Complexity weight: {point.x}<br>Number of commits: {point.y}'
+                    pointFormat: 'Complexity: {point.x}<br>Number of commits: {point.y}'
                 }
             }
         },
@@ -232,13 +232,13 @@ function draw_complexity_trend_chart(div, data) {
         },
         series: [{
             data: data,
-            name: 'Complexity'
+            name: 'Mean complexity'
         }]
     });
 };
 
 function draw_chart(filename, target_div, charting_function) {
-  $.getJSON("/data/bday/" + filename + ".json", function(data) {
+  $.getJSON("/data/reek/" + filename + ".json", function(data) {
     charting_function(target_div, data);
   });
 };
