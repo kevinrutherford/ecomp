@@ -144,12 +144,12 @@ function churn_vs_complexity_plot(target, data) {
     });
     var points = [];
     $.each(data, function(i, item) {
-        var x = +(item.weight).toFixed(2);
-        var y = item.churn;
+        var w = +(item.weight).toFixed(2);
+        var ch = item.churn;
         points.push({
-            x: x,
-            y: y,
-            color: colour_for(x, y, max_complexity, max_churn),
+            x: ch,
+            y: w,
+            color: colour_for(w, ch, max_complexity, max_churn),
             name: item.filename
         });
     });
@@ -163,11 +163,11 @@ function draw_churn_vs_complexity_chart(div, data, max_churn) {
         colors: ['#99ff32'],
         title: { text: null },
         subtitle: { text: null },
-        xAxis: {
+        yAxis: {
             title: { text: 'Complexity' },
             min: 0
         },
-        yAxis: {
+        xAxis: {
             title: { text: 'Number of times changed' },
             min: 0
         },
@@ -185,7 +185,7 @@ function draw_churn_vs_complexity_chart(div, data, max_churn) {
                 states: { hover: { marker: { enabled: false } } },
                 tooltip: {
                     headerFormat: '<b>{point.key}</b><br>',
-                    pointFormat: 'Complexity: {point.x}<br>Number of commits: {point.y}'
+                    pointFormat: 'Complexity: {point.y}<br>Number of commits: {point.x}'
                 }
             }
         },
