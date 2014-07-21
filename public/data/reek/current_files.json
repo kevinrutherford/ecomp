@@ -1,450 +1,514 @@
 [
   {
-    "filename": "lib/reek/config_file_exception.rb",
-    "num_branches": 0,
-    "num_dependencies": 0,
-    "weight": 1,
-    "churn": 2
-  },
-  {
-    "filename": "lib/reek/cli/report.rb",
-    "num_branches": 14,
-    "num_dependencies": 1,
-    "weight": 30,
-    "churn": 17
-  },
-  {
-    "filename": "lib/reek/cli/reek_command.rb",
-    "num_branches": 2,
-    "num_dependencies": 1,
-    "weight": 6,
-    "churn": 11
-  },
-  {
-    "filename": "lib/reek/cli/command_line.rb",
-    "num_branches": 14,
-    "num_dependencies": 7,
-    "weight": 120,
-    "churn": 21
-  },
-  {
-    "filename": "lib/reek/cli/version_command.rb",
-    "num_branches": 0,
-    "num_dependencies": 1,
-    "weight": 2,
-    "churn": 2
-  },
-  {
-    "filename": "lib/reek/cli/help_command.rb",
-    "num_branches": 0,
-    "num_dependencies": 0,
-    "weight": 1,
-    "churn": 1
-  },
-  {
-    "filename": "lib/reek/cli/application.rb",
-    "num_branches": 1,
-    "num_dependencies": 1,
-    "weight": 4,
-    "churn": 7
-  },
-  {
-    "filename": "lib/reek/source/sexp_node.rb",
-    "num_branches": 12,
-    "num_dependencies": 0,
-    "weight": 13,
-    "churn": 2
-  },
-  {
-    "filename": "lib/reek/source/source_locator.rb",
-    "num_branches": 6,
-    "num_dependencies": 1,
-    "weight": 14,
-    "churn": 6
-  },
-  {
-    "filename": "lib/reek/source/sexp_formatter.rb",
-    "num_branches": 1,
-    "num_dependencies": 1,
-    "weight": 4,
-    "churn": 3
-  },
-  {
-    "filename": "lib/reek/source/sexp_extensions.rb",
-    "num_branches": 13,
-    "num_dependencies": 1,
-    "weight": 28,
-    "churn": 4
-  },
-  {
-    "filename": "lib/reek/source/code_comment.rb",
-    "num_branches": 3,
-    "num_dependencies": 0,
-    "weight": 4,
-    "churn": 6
-  },
-  {
-    "filename": "lib/reek/source/config_file.rb",
-    "num_branches": 8,
-    "num_dependencies": 2,
-    "weight": 27,
-    "churn": 5
-  },
-  {
-    "filename": "lib/reek/source/source_repository.rb",
-    "num_branches": 2,
-    "num_dependencies": 3,
-    "weight": 12,
-    "churn": 4
-  },
-  {
-    "filename": "lib/reek/source/source_file.rb",
-    "num_branches": 3,
-    "num_dependencies": 1,
-    "weight": 8,
-    "churn": 3
-  },
-  {
-    "filename": "lib/reek/source/source_code.rb",
-    "num_branches": 1,
-    "num_dependencies": 3,
-    "weight": 8,
-    "churn": 7
-  },
-  {
-    "filename": "lib/reek/source/reference_collector.rb",
-    "num_branches": 4,
-    "num_dependencies": 0,
-    "weight": 5,
-    "churn": 2
-  },
-  {
-    "filename": "lib/reek/source/core_extras.rb",
-    "num_branches": 0,
-    "num_dependencies": 1,
-    "weight": 2,
-    "churn": 4
-  },
-  {
-    "filename": "lib/reek/source/tree_dresser.rb",
-    "num_branches": 3,
-    "num_dependencies": 2,
-    "weight": 12,
-    "churn": 15
-  },
-  {
-    "filename": "lib/reek/version.rb",
-    "num_branches": 0,
-    "num_dependencies": 0,
-    "weight": 1,
-    "churn": 29
-  },
-  {
-    "filename": "lib/reek/examiner.rb",
-    "num_branches": 1,
-    "num_dependencies": 3,
-    "weight": 8,
-    "churn": 26
-  },
-  {
-    "filename": "lib/reek/source.rb",
-    "num_branches": 0,
-    "num_dependencies": 8,
-    "weight": 9,
-    "churn": 48
-  },
-  {
     "filename": "lib/reek/spec.rb",
-    "num_branches": 4,
+    "num_branches": 2,
     "num_dependencies": 3,
-    "weight": 20,
+    "num_superclasses": 0,
+    "weight": 12,
     "churn": 31
   },
   {
-    "filename": "lib/reek/rake/task.rb",
-    "num_branches": 15,
+    "filename": "lib/reek/smells/uncommunicative_parameter_name.rb",
+    "num_branches": 3,
     "num_dependencies": 2,
-    "weight": 48,
-    "churn": 7
-  },
-  {
-    "filename": "lib/reek/smell_warning.rb",
-    "num_branches": 2,
-    "num_dependencies": 0,
-    "weight": 3,
-    "churn": 34
-  },
-  {
-    "filename": "lib/reek/smells.rb",
-    "num_branches": 0,
-    "num_dependencies": 23,
+    "num_superclasses": 1,
     "weight": 24,
-    "churn": 22
+    "churn": 16
   },
   {
-    "filename": "lib/reek/smells/class_variable.rb",
-    "num_branches": 4,
-    "num_dependencies": 3,
-    "weight": 20,
+    "filename": "lib/reek/smells/uncommunicative_variable_name.rb",
+    "num_branches": 7,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 48,
     "churn": 18
   },
   {
-    "filename": "lib/reek/smells/nested_iterators.rb",
-    "num_branches": 10,
-    "num_dependencies": 2,
-    "weight": 33,
-    "churn": 34
-  },
-  {
-    "filename": "lib/reek/smells/attribute.rb",
-    "num_branches": 4,
-    "num_dependencies": 3,
-    "weight": 20,
-    "churn": 20
-  },
-  {
-    "filename": "lib/reek/smells/long_yield_list.rb",
-    "num_branches": 2,
-    "num_dependencies": 2,
-    "weight": 9,
-    "churn": 35
-  },
-  {
-    "filename": "lib/reek/smells/data_clump.rb",
-    "num_branches": 11,
-    "num_dependencies": 3,
-    "weight": 48,
-    "churn": 31
-  },
-  {
-    "filename": "lib/reek/smells/too_many_statements.rb",
-    "num_branches": 1,
-    "num_dependencies": 2,
-    "weight": 6,
-    "churn": 2
-  },
-  {
     "filename": "lib/reek/smells/uncommunicative_module_name.rb",
-    "num_branches": 4,
+    "num_branches": 3,
     "num_dependencies": 2,
-    "weight": 15,
+    "num_superclasses": 1,
+    "weight": 24,
     "churn": 14
   },
   {
-    "filename": "lib/reek/smells/prima_donna_method.rb",
-    "num_branches": 4,
-    "num_dependencies": 2,
-    "weight": 15,
-    "churn": 1
+    "filename": "lib/reek/smells/data_clump.rb",
+    "num_branches": 0,
+    "num_dependencies": 3,
+    "num_superclasses": 1,
+    "weight": 8,
+    "churn": 31
   },
   {
     "filename": "lib/reek/smells/utility_function.rb",
     "num_branches": 3,
     "num_dependencies": 3,
-    "weight": 16,
+    "num_superclasses": 1,
+    "weight": 32,
     "churn": 35
   },
   {
-    "filename": "lib/reek/smells/too_many_instance_variables.rb",
-    "num_branches": 2,
-    "num_dependencies": 2,
-    "weight": 9,
-    "churn": 2
-  },
-  {
-    "filename": "lib/reek/smells/nil_check.rb",
-    "num_branches": 6,
-    "num_dependencies": 2,
-    "weight": 21,
-    "churn": 8
-  },
-  {
-    "filename": "lib/reek/smells/control_parameter.rb",
-    "num_branches": 17,
-    "num_dependencies": 2,
-    "weight": 54,
-    "churn": 3
-  },
-  {
-    "filename": "lib/reek/smells/duplicate_method_call.rb",
-    "num_branches": 14,
-    "num_dependencies": 2,
-    "weight": 45,
-    "churn": 5
-  },
-  {
     "filename": "lib/reek/smells/unused_parameters.rb",
-    "num_branches": 6,
+    "num_branches": 4,
     "num_dependencies": 2,
-    "weight": 21,
+    "num_superclasses": 1,
+    "weight": 30,
     "churn": 9
   },
   {
-    "filename": "lib/reek/smells/uncommunicative_parameter_name.rb",
+    "filename": "lib/reek/smells/nested_iterators.rb",
+    "num_branches": 7,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 48,
+    "churn": 34
+  },
+  {
+    "filename": "lib/reek/smells/duplicate_method_call.rb",
     "num_branches": 6,
     "num_dependencies": 2,
-    "weight": 21,
-    "churn": 16
+    "num_superclasses": 1,
+    "weight": 42,
+    "churn": 5
   },
   {
-    "filename": "lib/reek/smells/smell_detector.rb",
-    "num_branches": 7,
-    "num_dependencies": 3,
-    "weight": 32,
-    "churn": 80
-  },
-  {
-    "filename": "lib/reek/smells/uncommunicative_method_name.rb",
-    "num_branches": 4,
+    "filename": "lib/reek/smells/nil_check.rb",
+    "num_branches": 2,
     "num_dependencies": 2,
-    "weight": 15,
-    "churn": 14
+    "num_superclasses": 3,
+    "weight": 36,
+    "churn": 8
   },
   {
     "filename": "lib/reek/smells/feature_envy.rb",
-    "num_branches": 1,
+    "num_branches": 0,
     "num_dependencies": 2,
+    "num_superclasses": 1,
     "weight": 6,
     "churn": 36
   },
   {
-    "filename": "lib/reek/smells/boolean_parameter.rb",
+    "filename": "lib/reek/smells/prima_donna_method.rb",
     "num_branches": 2,
     "num_dependencies": 2,
-    "weight": 9,
-    "churn": 15
+    "num_superclasses": 1,
+    "weight": 18,
+    "churn": 1
+  },
+  {
+    "filename": "lib/reek/smells/long_yield_list.rb",
+    "num_branches": 0,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 6,
+    "churn": 35
   },
   {
     "filename": "lib/reek/smells/irresponsible_module.rb",
     "num_branches": 1,
     "num_dependencies": 3,
-    "weight": 8,
+    "num_superclasses": 1,
+    "weight": 16,
     "churn": 10
   },
   {
-    "filename": "lib/reek/smells/uncommunicative_variable_name.rb",
-    "num_branches": 15,
+    "filename": "lib/reek/smells/control_parameter.rb",
+    "num_branches": 7,
     "num_dependencies": 2,
+    "num_superclasses": 1,
     "weight": 48,
+    "churn": 3
+  },
+  {
+    "filename": "lib/reek/smells/class_variable.rb",
+    "num_branches": 0,
+    "num_dependencies": 3,
+    "num_superclasses": 1,
+    "weight": 8,
     "churn": 18
   },
   {
-    "filename": "lib/reek/smells/long_parameter_list.rb",
+    "filename": "lib/reek/smells/boolean_parameter.rb",
+    "num_branches": 0,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 6,
+    "churn": 15
+  },
+  {
+    "filename": "lib/reek/smells/uncommunicative_method_name.rb",
+    "num_branches": 3,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 24,
+    "churn": 14
+  },
+  {
+    "filename": "lib/reek/smells/too_many_statements.rb",
     "num_branches": 1,
-    "num_dependencies": 3,
-    "weight": 8,
-    "churn": 55
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 12,
+    "churn": 2
+  },
+  {
+    "filename": "lib/reek/smells/repeated_conditional.rb",
+    "num_branches": 2,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 18,
+    "churn": 2
   },
   {
     "filename": "lib/reek/smells/too_many_methods.rb",
     "num_branches": 1,
     "num_dependencies": 2,
-    "weight": 6,
+    "num_superclasses": 1,
+    "weight": 12,
     "churn": 2
   },
   {
-    "filename": "lib/reek/smells/repeated_conditional.rb",
-    "num_branches": 7,
-    "num_dependencies": 2,
+    "filename": "lib/reek/smells/smell_detector.rb",
+    "num_branches": 5,
+    "num_dependencies": 3,
+    "num_superclasses": 0,
     "weight": 24,
+    "churn": 80
+  },
+  {
+    "filename": "lib/reek/smells/attribute.rb",
+    "num_branches": 1,
+    "num_dependencies": 3,
+    "num_superclasses": 1,
+    "weight": 16,
+    "churn": 20
+  },
+  {
+    "filename": "lib/reek/smells/too_many_instance_variables.rb",
+    "num_branches": 1,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 12,
     "churn": 2
   },
   {
-    "filename": "lib/reek/core/object_refs.rb",
-    "num_branches": 3,
-    "num_dependencies": 0,
-    "weight": 4,
-    "churn": 5
-  },
-  {
-    "filename": "lib/reek/core/sniffer.rb",
+    "filename": "lib/reek/smells/long_parameter_list.rb",
     "num_branches": 1,
-    "num_dependencies": 4,
-    "weight": 10,
-    "churn": 12
+    "num_dependencies": 3,
+    "num_superclasses": 1,
+    "weight": 16,
+    "churn": 55
   },
   {
-    "filename": "lib/reek/core/smell_repository.rb",
-    "num_branches": 6,
-    "num_dependencies": 1,
-    "weight": 14,
-    "churn": 8
+    "filename": "lib/reek/smells.rb",
+    "num_branches": 0,
+    "num_dependencies": 23,
+    "num_superclasses": 0,
+    "weight": 24,
+    "churn": 22
   },
   {
-    "filename": "lib/reek/core/code_parser.rb",
-    "num_branches": 8,
-    "num_dependencies": 5,
-    "weight": 54,
-    "churn": 8
+    "filename": "lib/reek/version.rb",
+    "num_branches": 0,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 1,
+    "churn": 29
+  },
+  {
+    "filename": "lib/reek/source.rb",
+    "num_branches": 0,
+    "num_dependencies": 8,
+    "num_superclasses": 0,
+    "weight": 9,
+    "churn": 48
+  },
+  {
+    "filename": "lib/reek/config_file_exception.rb",
+    "num_branches": 0,
+    "num_dependencies": 0,
+    "num_superclasses": 1,
+    "weight": 2,
+    "churn": 2
+  },
+  {
+    "filename": "lib/reek/rake/task.rb",
+    "num_branches": 12,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 78,
+    "churn": 7
+  },
+  {
+    "filename": "lib/reek/core/code_context.rb",
+    "num_branches": 5,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 6,
+    "churn": 7
   },
   {
     "filename": "lib/reek/core/warning_collector.rb",
     "num_branches": 0,
     "num_dependencies": 1,
+    "num_superclasses": 0,
     "weight": 2,
     "churn": 2
   },
   {
-    "filename": "lib/reek/core/code_context.rb",
-    "num_branches": 6,
-    "num_dependencies": 0,
-    "weight": 7,
-    "churn": 7
-  },
-  {
-    "filename": "lib/reek/core/module_context.rb",
-    "num_branches": 0,
-    "num_dependencies": 4,
-    "weight": 5,
-    "churn": 9
-  },
-  {
-    "filename": "lib/reek/core/stop_context.rb",
-    "num_branches": 0,
-    "num_dependencies": 0,
-    "weight": 1,
-    "churn": 3
-  },
-  {
-    "filename": "lib/reek/core/method_context.rb",
-    "num_branches": 8,
-    "num_dependencies": 2,
-    "weight": 27,
-    "churn": 12
-  },
-  {
-    "filename": "lib/reek/core/smell_configuration.rb",
-    "num_branches": 4,
-    "num_dependencies": 0,
-    "weight": 5,
-    "churn": 3
+    "filename": "lib/reek/core/smell_repository.rb",
+    "num_branches": 1,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 4,
+    "churn": 8
   },
   {
     "filename": "lib/reek/core/singleton_method_context.rb",
     "num_branches": 0,
     "num_dependencies": 1,
-    "weight": 2,
+    "num_superclasses": 1,
+    "weight": 4,
     "churn": 7
   },
   {
-    "filename": "lib/reek/spec/should_reek_only_of.rb",
-    "num_branches": 1,
-    "num_dependencies": 2,
-    "weight": 6,
-    "churn": 4
+    "filename": "lib/reek/core/sniffer.rb",
+    "num_branches": 0,
+    "num_dependencies": 4,
+    "num_superclasses": 0,
+    "weight": 5,
+    "churn": 12
   },
   {
-    "filename": "lib/reek/spec/should_reek_of.rb",
-    "num_branches": 1,
-    "num_dependencies": 1,
-    "weight": 4,
+    "filename": "lib/reek/core/stop_context.rb",
+    "num_branches": 0,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 1,
     "churn": 3
+  },
+  {
+    "filename": "lib/reek/core/object_refs.rb",
+    "num_branches": 2,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 3,
+    "churn": 5
+  },
+  {
+    "filename": "lib/reek/core/code_parser.rb",
+    "num_branches": 3,
+    "num_dependencies": 5,
+    "num_superclasses": 0,
+    "weight": 24,
+    "churn": 8
+  },
+  {
+    "filename": "lib/reek/core/smell_configuration.rb",
+    "num_branches": 1,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 2,
+    "churn": 3
+  },
+  {
+    "filename": "lib/reek/core/method_context.rb",
+    "num_branches": 7,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 48,
+    "churn": 12
+  },
+  {
+    "filename": "lib/reek/core/module_context.rb",
+    "num_branches": 0,
+    "num_dependencies": 4,
+    "num_superclasses": 1,
+    "weight": 10,
+    "churn": 9
   },
   {
     "filename": "lib/reek/spec/should_reek.rb",
     "num_branches": 0,
     "num_dependencies": 2,
+    "num_superclasses": 0,
     "weight": 3,
     "churn": 6
+  },
+  {
+    "filename": "lib/reek/spec/should_reek_of.rb",
+    "num_branches": 0,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 2,
+    "churn": 3
+  },
+  {
+    "filename": "lib/reek/spec/should_reek_only_of.rb",
+    "num_branches": 1,
+    "num_dependencies": 2,
+    "num_superclasses": 1,
+    "weight": 12,
+    "churn": 4
+  },
+  {
+    "filename": "lib/reek/examiner.rb",
+    "num_branches": 0,
+    "num_dependencies": 3,
+    "num_superclasses": 0,
+    "weight": 4,
+    "churn": 26
+  },
+  {
+    "filename": "lib/reek/cli/command_line.rb",
+    "num_branches": 3,
+    "num_dependencies": 7,
+    "num_superclasses": 0,
+    "weight": 32,
+    "churn": 21
+  },
+  {
+    "filename": "lib/reek/cli/application.rb",
+    "num_branches": 1,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 4,
+    "churn": 7
+  },
+  {
+    "filename": "lib/reek/cli/help_command.rb",
+    "num_branches": 0,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 1,
+    "churn": 1
+  },
+  {
+    "filename": "lib/reek/cli/report.rb",
+    "num_branches": 9,
+    "num_dependencies": 1,
+    "num_superclasses": 2,
+    "weight": 60,
+    "churn": 17
+  },
+  {
+    "filename": "lib/reek/cli/reek_command.rb",
+    "num_branches": 1,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 4,
+    "churn": 11
+  },
+  {
+    "filename": "lib/reek/cli/version_command.rb",
+    "num_branches": 0,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 2,
+    "churn": 2
+  },
+  {
+    "filename": "lib/reek/source/source_file.rb",
+    "num_branches": 2,
+    "num_dependencies": 1,
+    "num_superclasses": 1,
+    "weight": 12,
+    "churn": 3
+  },
+  {
+    "filename": "lib/reek/source/sexp_node.rb",
+    "num_branches": 7,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 8,
+    "churn": 2
+  },
+  {
+    "filename": "lib/reek/source/reference_collector.rb",
+    "num_branches": 1,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 2,
+    "churn": 2
+  },
+  {
+    "filename": "lib/reek/source/config_file.rb",
+    "num_branches": 7,
+    "num_dependencies": 2,
+    "num_superclasses": 0,
+    "weight": 24,
+    "churn": 5
+  },
+  {
+    "filename": "lib/reek/source/tree_dresser.rb",
+    "num_branches": 1,
+    "num_dependencies": 2,
+    "num_superclasses": 0,
+    "weight": 6,
+    "churn": 15
+  },
+  {
+    "filename": "lib/reek/source/core_extras.rb",
+    "num_branches": 0,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 2,
+    "churn": 4
+  },
+  {
+    "filename": "lib/reek/source/source_locator.rb",
+    "num_branches": 2,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 6,
+    "churn": 6
+  },
+  {
+    "filename": "lib/reek/source/source_repository.rb",
+    "num_branches": 2,
+    "num_dependencies": 3,
+    "num_superclasses": 0,
+    "weight": 12,
+    "churn": 4
+  },
+  {
+    "filename": "lib/reek/source/source_code.rb",
+    "num_branches": 1,
+    "num_dependencies": 3,
+    "num_superclasses": 0,
+    "weight": 8,
+    "churn": 7
+  },
+  {
+    "filename": "lib/reek/source/code_comment.rb",
+    "num_branches": 0,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 1,
+    "churn": 6
+  },
+  {
+    "filename": "lib/reek/source/sexp_extensions.rb",
+    "num_branches": 7,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 16,
+    "churn": 4
+  },
+  {
+    "filename": "lib/reek/source/sexp_formatter.rb",
+    "num_branches": 1,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 4,
+    "churn": 3
+  },
+  {
+    "filename": "lib/reek/smell_warning.rb",
+    "num_branches": 1,
+    "num_dependencies": 0,
+    "num_superclasses": 0,
+    "weight": 2,
+    "churn": 34
   }
 ]

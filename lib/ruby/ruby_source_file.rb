@@ -10,11 +10,13 @@ class RubySourceFile
     ast = RubyParser.for_current_ruby.parse(@source_code)
     @num_branches = 0
     @num_dependencies = 0
+    @num_superclasses = 0
     process_ast(ast)
     {
       filename: @path,
       num_branches: @num_branches,
-      num_dependencies: @num_dependencies
+      num_dependencies: @num_dependencies,
+      num_superclasses: @num_superclasses
     }
   end
 
@@ -24,6 +26,7 @@ class RubySourceFile
     return unless node
     @num_dependencies = @num_dependencies + 1 if is_require?(node)
     @num_branches = @num_branches + 1 if is_branch_point?(node)
+    @num_superclasses = @num_superclasses + 1 if is_superclass?(node)
     return unless has_children?(node)
     node[1..-1].select {|n| n }.each {|n| process_ast(n) }
   end
@@ -34,6 +37,10 @@ class RubySourceFile
 
   def is_branch_point?(node)
     Array === node && branch_nodes.include?(node[0])
+  end
+
+  def is_superclass?(node)
+    Array === node && node[0] == :class && Array === node[2]
   end
 
   def is_require?(node)

@@ -40,9 +40,10 @@ end
 
 def ruby_complexity_report(path)
   report = RubySourceFile.new(path).complexity
-  efferent_multiplier = report[:num_dependencies] + 1
-  branches = 1 + report[:num_branches]
-  report['weight'] = branches * efferent_multiplier
+  e = 1 + report[:num_dependencies]
+  b = 1 + report[:num_branches]
+  s = 1 + report[:num_superclasses]
+  report['weight'] = b * e * s
   report
 end
 
