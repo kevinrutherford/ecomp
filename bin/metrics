@@ -38,22 +38,24 @@ def all_commits
   result.reverse
 end
 
-def ruby_complexity_report(path)
-  report = RubySourceFile.new(path).complexity
-  e = 1 + report[:num_dependencies]
-  b = 1 + report[:num_branches]
-  s = 1 + report[:num_superclasses]
-  report['weight'] = b * e * s
-  report
+def java_report(path)
+  json = JSON.parse(`#{BIN}/javancss #{path}`)
+  result = {}
+  json.each {|k,v| result[k.to_sym] = v }
+  result
 end
 
 def complexity_report(path)
   report = case path
            when /.*\.rb$/
-             ruby_complexity_report(path)
+             RubySourceFile.new(path).complexity
            when /.*\.java$/
-             JSON.parse(`#{BIN}/javacc #{path}`)
+             java_report(path)
            end
+  e = 1 + report[:num_dependencies]
+  b = 1 + report[:num_branches]
+  s = 1 + report[:num_superclasses]
+  report['weight'] = b * e * s
   report[:churn] = churn(path)
   report
 end
