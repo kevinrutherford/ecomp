@@ -61,16 +61,20 @@ class BesMetrics
     commits.each do |commit|
       repo.checkout(commit[:ref])
       $stderr.print '.'
-      files = Dir[@glob]
-      file_reports = files.map {|path| complexity_report(path) }
-      weights = file_reports.empty? ? [0] : file_reports.map {|rpt| rpt['weight'] }
-      weight_sum = weights.inject(:+)
-      commit[:complexity] = {
-        sum_of_file_weights: weight_sum,
-        max_of_file_weights: weights.max,
-        mean_of_file_weights: (weight_sum.to_f / weights.length).round(2)
-      }
+      commit[:complexity] = summarise_all_files(@glob)
     end
+  end
+
+  def summarise_all_files(glob)
+    files = Dir[glob]
+    file_reports = files.map {|path| complexity_report(path) }
+    weights = file_reports.empty? ? [0] : file_reports.map {|rpt| rpt['weight'] }
+    weight_sum = weights.inject(:+)
+    {
+      sum_of_file_weights: weight_sum,
+      max_of_file_weights: weights.max,
+      mean_of_file_weights: (weight_sum.to_f / weights.length).round(2)
+    }
   end
 
   def group_by_author(commits)
