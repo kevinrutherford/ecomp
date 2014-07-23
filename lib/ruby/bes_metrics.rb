@@ -18,33 +18,13 @@ class BesMetrics
     @repo.reset
     prepare_output_folder(@outdir)
     write_json_file("#{@outdir}/current_files.json", files_report(@glob))
-    commits = all_commits
+    commits = @repo.all_commits
     update_with_complexity(commits, @glob)
     write_json_file("#{@outdir}/commits.json", commits)
     recent = select_recent_commits(commits)
     write_json_file("#{@outdir}/recent_commits_by_author.json", recent)
     @repo.reset
     $stderr.puts ''
-  end
-
-  def all_commits
-    raw_log = `git log --pretty="%h/%aN/%ci/%s" --shortstat`
-    lines = raw_log.split("\n")
-    result = []
-    (0..(lines.length-1)).each do |i|
-      if lines[i].empty?
-        fields = lines[i-1].split('/')
-        count = lines[i+1].to_i
-        result << {
-          ref: fields[0],
-          author: fields[1],
-          date: fields[2],
-          comment: fields[3..-1].join,
-          num_files_touched: count
-        }
-      end
-    end
-    result.reverse
   end
 
   def java_report(path)
