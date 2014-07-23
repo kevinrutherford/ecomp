@@ -157,6 +157,19 @@
           "mean_of_file_weights": 6.0,
           "delta_sum_of_file_weights": 2
         }
+      },
+      {
+        "ref": "5466850",
+        "author": "Kevin Rutherford",
+        "date": "2014-07-23 17:56:23 +0100",
+        "comment": "Removed an unused parameter",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 72,
+          "max_of_file_weights": 14,
+          "mean_of_file_weights": 6.0,
+          "delta_sum_of_file_weights": 0
+        }
       }
     ]
   }

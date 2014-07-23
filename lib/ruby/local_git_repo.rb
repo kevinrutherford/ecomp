@@ -1,0 +1,2 @@
+class LocalGitRepo
+end

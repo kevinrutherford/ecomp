@@ -1,6 +1,6 @@
 [
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/Employee.java",
+    "filename": "java/src/Employee.java",
     "num_branches": 0,
     "num_dependencies": 0,
     "num_superclasses": 0,
@@ -8,15 +8,15 @@
     "churn": 3
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/BirthdayService.java",
+    "filename": "java/src/BirthdayService.java",
     "num_branches": 1,
     "num_dependencies": 0,
     "num_superclasses": 0,
     "weight": 2,
-    "churn": 9
+    "churn": 10
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/AcceptanceTest.java",
+    "filename": "java/src/AcceptanceTest.java",
     "num_branches": 0,
     "num_dependencies": 6,
     "num_superclasses": 0,
@@ -24,7 +24,7 @@
     "churn": 6
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/EmployeeTest.java",
+    "filename": "java/src/EmployeeTest.java",
     "num_branches": 0,
     "num_dependencies": 2,
     "num_superclasses": 0,
@@ -32,7 +32,15 @@
     "churn": 2
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/EmployeeFile.java",
+    "filename": "java/src/EmployeeFile.java",
+    "num_branches": 2,
+    "num_dependencies": 3,
+    "num_superclasses": 0,
+    "weight": 12,
+    "churn": 5
+  },
+  {
+    "filename": "java/src/OurDate.java",
     "num_branches": 2,
     "num_dependencies": 3,
     "num_superclasses": 0,
@@ -40,15 +48,7 @@
     "churn": 4
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/OurDate.java",
-    "num_branches": 2,
-    "num_dependencies": 3,
-    "num_superclasses": 0,
-    "weight": 12,
-    "churn": 4
-  },
-  {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/PersonnelException.java",
+    "filename": "java/src/PersonnelException.java",
     "num_branches": 0,
     "num_dependencies": 0,
     "num_superclasses": 1,
@@ -56,7 +56,7 @@
     "churn": 1
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/TestDataFile.java",
+    "filename": "java/src/TestDataFile.java",
     "num_branches": 1,
     "num_dependencies": 4,
     "num_superclasses": 0,
@@ -64,7 +64,7 @@
     "churn": 1
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/OurDateTest.java",
+    "filename": "java/src/OurDateTest.java",
     "num_branches": 0,
     "num_dependencies": 2,
     "num_superclasses": 0,
@@ -72,7 +72,7 @@
     "churn": 2
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/MessageSenderException.java",
+    "filename": "java/src/MessageSenderException.java",
     "num_branches": 0,
     "num_dependencies": 1,
     "num_superclasses": 1,
@@ -80,7 +80,7 @@
     "churn": 1
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/Emailer.java",
+    "filename": "java/src/Emailer.java",
     "num_branches": 1,
     "num_dependencies": 6,
     "num_superclasses": 0,
@@ -88,7 +88,7 @@
     "churn": 2
   },
   {
-    "filename": "/home/kevin/Working/git/bday-soln/java/src/BirthdayApp.java",
+    "filename": "java/src/BirthdayApp.java",
     "num_branches": 1,
     "num_dependencies": 0,
     "num_superclasses": 0,

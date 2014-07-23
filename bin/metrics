@@ -8,6 +8,7 @@
 require 'date'
 require 'json'
 require_relative '../lib/ruby/ruby_source_file'
+require_relative '../lib/ruby/local_git_repo'
 
 BIN = File.dirname($0)
 DELTA_CUTOFF_DAYS = 365
@@ -62,7 +63,8 @@ end
 
 def update_with_complexity(commits, files_glob)
   commits.each do |commit|
-    `git checkout #{commit[:ref]} >/dev/null 2>&1`
+    gitout = `git checkout #{commit[:ref]} 2>&1`
+    abort(gitout) if $? != 0
     $stderr.print '.'
     files = Dir[files_glob]
     file_reports = files.map {|path| complexity_report(path) }
@@ -130,6 +132,8 @@ files_glob = ARGV[1]
 COMMITS_FILE_PATH = "#{outdir}/commits.json"
 CURRENT_FILES_PATH = "#{outdir}/current_files.json"
 RECENT_COMMITS_PATH = "#{outdir}/recent_commits_by_author.json"
+
+repo = LocalGitRepo.new
 
 reset_current_repo
 prepare_output_folder(outdir)
