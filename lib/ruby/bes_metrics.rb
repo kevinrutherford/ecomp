@@ -14,17 +14,25 @@ class BesMetrics
   end
 
   def collect
-    @repo = LocalGitRepo.new
-    @repo.reset
     prepare_output_folder(@outdir)
     write_json_file("#{@outdir}/current_files.json", files_report(@glob))
-    commits = @repo.all_commits
-    update_with_complexity(commits, @glob)
+    commits = repo.all_commits
+    update_with_complexity(commits)
     write_json_file("#{@outdir}/commits.json", commits)
     recent = select_recent_commits(commits)
     write_json_file("#{@outdir}/recent_commits_by_author.json", recent)
-    @repo.reset
+    repo.reset
     $stderr.puts ''
+  end
+
+  private
+
+  def repo
+    if @repo.nil?
+      @repo = LocalGitRepo.new
+      @repo.reset
+    end
+    @repo
   end
 
   def java_report(path)
@@ -45,31 +53,23 @@ class BesMetrics
     b = 1 + report[:num_branches]
     s = 1 + report[:num_superclasses]
     report['weight'] = b * e * s
-    report[:churn] = @repo.num_commits_involving(path)
+    report[:churn] = repo.num_commits_involving(path)
     report
   end
 
-  def update_with_complexity(commits, files_glob)
+  def update_with_complexity(commits)
     commits.each do |commit|
-      @repo.checkout(commit[:ref])
+      repo.checkout(commit[:ref])
       $stderr.print '.'
-      files = Dir[files_glob]
+      files = Dir[@glob]
       file_reports = files.map {|path| complexity_report(path) }
-      if file_reports.empty?
-        commit[:complexity] = {
-          sum_of_file_weights: 0,
-          max_of_file_weights: 0,
-          mean_of_file_weights: 0.0
-        }
-      else
-        weights = file_reports.map {|rpt| rpt['weight'] }
-        weight_sum = weights.inject(:+)
-        commit[:complexity] = {
-          sum_of_file_weights: weight_sum,
-          max_of_file_weights: weights.max,
-          mean_of_file_weights: (weight_sum.to_f / weights.length).round(2)
-        }
-      end
+      weights = file_reports.empty? ? [0] : file_reports.map {|rpt| rpt['weight'] }
+      weight_sum = weights.inject(:+)
+      commit[:complexity] = {
+        sum_of_file_weights: weight_sum,
+        max_of_file_weights: weights.max,
+        mean_of_file_weights: (weight_sum.to_f / weights.length).round(2)
+      }
     end
   end
 
@@ -86,7 +86,6 @@ class BesMetrics
       delta = commit[:complexity][:sum_of_file_weights] - (i > 0 ? recent[i-1][:complexity][:sum_of_file_weights] : 0)
       commit[:complexity][:delta_sum_of_file_weights] = delta
     end
-
     group_by_author(recent[1..-1])
   end
 
