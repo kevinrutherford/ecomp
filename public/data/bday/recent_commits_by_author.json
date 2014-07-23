@@ -3,168 +3,159 @@
     "author": "Kevin Rutherford",
     "commits": [
       {
-        "ref": "22b2cfd",
+        "ref": "2dcde57",
         "author": "Kevin Rutherford",
-        "date": "2014-07-17 11:47:32 +0100",
-        "comment": "Removed a few unused methods",
-        "num_files_touched": 4,
-        "complexity": {
-          "sumesumcc": 212,
-          "maxesumcc": 84,
-          "maxemaxcc": 36,
-          "maxemeancc": 21.0,
-          "meanesumcc": 35.33,
-          "delta_sumesumcc": -95
-        }
-      },
-      {
-        "ref": "d461e59",
-        "author": "Kevin Rutherford",
-        "date": "2014-07-17 11:56:22 +0100",
-        "comment": "Don't throw a ParseException from the OurDate constructor",
-        "num_files_touched": 4,
-        "complexity": {
-          "sumesumcc": 203,
-          "maxesumcc": 84,
-          "maxemaxcc": 36,
-          "maxemeancc": 19.25,
-          "meanesumcc": 33.83,
-          "delta_sumesumcc": -9
-        }
-      },
-      {
-        "ref": "38efb56",
-        "author": "Kevin Rutherford",
-        "date": "2014-07-17 12:03:48 +0100",
-        "comment": "Throw domain exception instead of emailer-specific types",
-        "num_files_touched": 3,
-        "complexity": {
-          "sumesumcc": 237,
-          "maxesumcc": 110,
-          "maxemaxcc": 36,
-          "maxemeancc": 27.5,
-          "meanesumcc": 33.86,
-          "delta_sumesumcc": 34
-        }
-      },
-      {
-        "ref": "1e980cc",
-        "author": "Kevin Rutherford",
-        "date": "2014-07-17 12:10:26 +0100",
-        "comment": "Throw domain exception instead of IOExceptions",
-        "num_files_touched": 3,
-        "complexity": {
-          "sumesumcc": 271,
-          "maxesumcc": 143,
-          "maxemaxcc": 55,
-          "maxemeancc": 35.75,
-          "meanesumcc": 33.88,
-          "delta_sumesumcc": 34
-        }
-      },
-      {
-        "ref": "95ec047",
-        "author": "Kevin Rutherford",
-        "date": "2014-07-17 12:18:59 +0100",
-        "comment": "Extract an Emailer class from the BirthdayService",
-        "num_files_touched": 3,
-        "complexity": {
-          "sumesumcc": 198,
-          "maxesumcc": 77,
-          "maxemaxcc": 33,
-          "maxemeancc": 16.33,
-          "meanesumcc": 22.0,
-          "delta_sumesumcc": -73
-        }
-      },
-      {
-        "ref": "977ac26",
-        "author": "Kevin Rutherford",
-        "date": "2014-07-17 12:23:17 +0100",
-        "comment": "Extract a TestDataFile class from the AcceptanceTest",
+        "date": "2014-07-21 15:23:59 +0100",
+        "comment": "Extracted a BirthdayApp class frmo BirthdayService.main()",
         "num_files_touched": 2,
         "complexity": {
-          "sumesumcc": 164,
-          "maxesumcc": 49,
-          "maxemaxcc": 21,
-          "maxemeancc": 16.33,
-          "meanesumcc": 16.4,
-          "delta_sumesumcc": -34
+          "sum_of_file_weights": 123,
+          "max_of_file_weights": 40,
+          "mean_of_file_weights": 17.57,
+          "delta_sum_of_file_weights": -10
         }
       },
       {
-        "ref": "c78b240",
+        "ref": "fbe94f6",
         "author": "Kevin Rutherford",
-        "date": "2014-07-17 12:34:04 +0100",
-        "comment": "Extract an EmployeeFile class from the BirthdayService",
-        "num_files_touched": 4,
-        "complexity": {
-          "sumesumcc": 173,
-          "maxesumcc": 49,
-          "maxemaxcc": 21,
-          "maxemeancc": 16.33,
-          "meanesumcc": 15.73,
-          "delta_sumesumcc": 9
-        }
-      },
-      {
-        "ref": "91b5766",
-        "author": "Kevin Rutherford",
-        "date": "2014-07-17 13:17:22 +0100",
-        "comment": "Extract a BirthdayApp class from the BirthdayService",
+        "date": "2014-07-21 15:27:49 +0100",
+        "comment": "Deleted unused code from Employee",
         "num_files_touched": 2,
         "complexity": {
-          "sumesumcc": 167,
-          "maxesumcc": 49,
-          "maxemaxcc": 21,
-          "maxemeancc": 16.33,
-          "meanesumcc": 13.92,
-          "delta_sumesumcc": -6
+          "sum_of_file_weights": 85,
+          "max_of_file_weights": 36,
+          "mean_of_file_weights": 12.14,
+          "delta_sum_of_file_weights": -38
         }
       },
       {
-        "ref": "6167f66",
+        "ref": "0659b68",
         "author": "Kevin Rutherford",
-        "date": "2014-07-17 13:23:53 +0100",
+        "date": "2014-07-21 15:37:46 +0100",
+        "comment": "Extract an Emailer class from BirthdayService",
+        "num_files_touched": 4,
+        "complexity": {
+          "sum_of_file_weights": 78,
+          "max_of_file_weights": 24,
+          "mean_of_file_weights": 9.75,
+          "delta_sum_of_file_weights": -7
+        }
+      },
+      {
+        "ref": "b17a948",
+        "author": "Kevin Rutherford",
+        "date": "2014-07-21 15:42:55 +0100",
+        "comment": "Extracted a TestDataFile class from AcceptanceTest",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 72,
+          "max_of_file_weights": 21,
+          "mean_of_file_weights": 8.0,
+          "delta_sum_of_file_weights": -6
+        }
+      },
+      {
+        "ref": "0bf5be2",
+        "author": "Kevin Rutherford",
+        "date": "2014-07-21 15:56:48 +0100",
         "comment": "Extract a Greeter class from the BirthdayService",
+        "num_files_touched": 5,
+        "complexity": {
+          "sum_of_file_weights": 72,
+          "max_of_file_weights": 15,
+          "mean_of_file_weights": 6.55,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "243f46a",
+        "author": "Kevin Rutherford",
+        "date": "2014-07-21 16:02:17 +0100",
+        "comment": "Hide the checked email exceptions inside an unchecked excpetion of our own",
+        "num_files_touched": 5,
+        "complexity": {
+          "sum_of_file_weights": 73,
+          "max_of_file_weights": 15,
+          "mean_of_file_weights": 6.08,
+          "delta_sum_of_file_weights": 1
+        }
+      },
+      {
+        "ref": "08c9d1f",
+        "author": "Kevin Rutherford",
+        "date": "2014-07-21 16:17:28 +0100",
+        "comment": "Deleted some unused code",
         "num_files_touched": 2,
         "complexity": {
-          "sumesumcc": 162,
-          "maxesumcc": 49,
-          "maxemaxcc": 21,
-          "maxemeancc": 16.33,
-          "meanesumcc": 12.46,
-          "delta_sumesumcc": -5
+          "sum_of_file_weights": 68,
+          "max_of_file_weights": 14,
+          "mean_of_file_weights": 5.67,
+          "delta_sum_of_file_weights": -5
         }
       },
       {
-        "ref": "84acb01",
+        "ref": "0dee919",
         "author": "Kevin Rutherford",
-        "date": "2014-07-17 13:29:26 +0100",
-        "comment": "Move all file io into the EmployeeFile",
+        "date": "2014-07-21 16:28:25 +0100",
+        "comment": "Move Greeter to an inner class of BirthdayService",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 71,
+          "max_of_file_weights": 15,
+          "mean_of_file_weights": 6.45,
+          "delta_sum_of_file_weights": 3
+        }
+      },
+      {
+        "ref": "485212b",
+        "author": "Kevin Rutherford",
+        "date": "2014-07-21 16:37:04 +0100",
+        "comment": "Move IO reading into the EmployeeFile class",
         "num_files_touched": 4,
         "complexity": {
-          "sumesumcc": 164,
-          "maxesumcc": 49,
-          "maxemaxcc": 21,
-          "maxemeancc": 16.33,
-          "meanesumcc": 11.71,
-          "delta_sumesumcc": 2
+          "sum_of_file_weights": 73,
+          "max_of_file_weights": 14,
+          "mean_of_file_weights": 6.64,
+          "delta_sum_of_file_weights": 2
         }
       },
       {
-        "ref": "6bee069",
+        "ref": "c4519bf",
         "author": "Kevin Rutherford",
-        "date": "2014-07-18 07:24:06 +0100",
-        "comment": "Extract some helpful message in the Emailer",
+        "date": "2014-07-21 16:41:19 +0100",
+        "comment": "Replace a checked exception with an unchecked exception of our own",
+        "num_files_touched": 4,
+        "complexity": {
+          "sum_of_file_weights": 73,
+          "max_of_file_weights": 15,
+          "mean_of_file_weights": 6.64,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "0f7c933",
+        "author": "Kevin Rutherford",
+        "date": "2014-07-21 16:43:58 +0100",
+        "comment": "Simplify exception handling in OurDate",
         "num_files_touched": 1,
         "complexity": {
-          "sumesumcc": 178,
-          "maxesumcc": 63,
-          "maxemaxcc": 21,
-          "maxemeancc": 15.0,
-          "meanesumcc": 12.71,
-          "delta_sumesumcc": 14
+          "sum_of_file_weights": 70,
+          "max_of_file_weights": 14,
+          "mean_of_file_weights": 6.36,
+          "delta_sum_of_file_weights": -3
+        }
+      },
+      {
+        "ref": "8b0f91d",
+        "author": "Kevin Rutherford",
+        "date": "2014-07-21 16:52:54 +0100",
+        "comment": "Hide IO exceptions inside one of our own",
+        "num_files_touched": 3,
+        "complexity": {
+          "sum_of_file_weights": 72,
+          "max_of_file_weights": 14,
+          "mean_of_file_weights": 6.0,
+          "delta_sum_of_file_weights": 2
         }
       }
     ]
