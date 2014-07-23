@@ -5,29 +5,25 @@ require_relative 'local_git_repo'
 
 class BesMetrics
 
-  BIN = File.dirname($0)
+  BIN = File.dirname(File.expand_path(__FILE__)) + '/../../bin'
   DELTA_CUTOFF_DAYS = 365
 
-  def initialize(outdir, files_glob)
+  def initialize(outdir: '.', glob: '*/**/*.*')
     @outdir = outdir
-    @glob = files_glob
+    @glob = glob
   end
 
   def collect
     @repo = LocalGitRepo.new
     @repo.reset
-
     prepare_output_folder(@outdir)
-
     write_json_file("#{@outdir}/current_files.json", files_report(@glob))
-
     commits = all_commits
     update_with_complexity(commits, @glob)
     write_json_file("#{@outdir}/commits.json", commits)
-
     recent = select_recent_commits(commits)
     write_json_file("#{@outdir}/recent_commits_by_author.json", recent)
-
+    @repo.reset
     $stderr.puts ''
   end
 

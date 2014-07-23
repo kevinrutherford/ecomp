@@ -7,17 +7,11 @@
 
 require_relative '../lib/ruby/bes_metrics'
 
-BIN = File.dirname($0)
-DELTA_CUTOFF_DAYS = 365
-
 if ARGV.length != 2
   $stderr.puts "Usage: #{File.basename($0)} output_folder files_glob"
   exit 1
 end
 
-outdir = ARGV[0]
-files_glob = ARGV[1]
-
-bes = BesMetrics.new(outdir, files_glob)
+bes = BesMetrics.new(outdir: ARGV[0], glob: ARGV[1])
 bes.collect
 exit 0
