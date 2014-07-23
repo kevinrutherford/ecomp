@@ -27,10 +27,6 @@ class BesMetrics
     $stderr.puts ''
   end
 
-  def churn(path)
-    `git log --pretty=%h #{path} | wc -l`.to_i
-  end
-
   def all_commits
     raw_log = `git log --pretty="%h/%aN/%ci/%s" --shortstat`
     lines = raw_log.split("\n")
@@ -69,7 +65,7 @@ class BesMetrics
     b = 1 + report[:num_branches]
     s = 1 + report[:num_superclasses]
     report['weight'] = b * e * s
-    report[:churn] = churn(path)
+    report[:churn] = @repo.num_commits_involving(path)
     report
   end
 
