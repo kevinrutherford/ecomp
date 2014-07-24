@@ -15,12 +15,12 @@ class BesMetrics
 
   def collect
     prepare_output_folder(@outdir)
-    write_json_file("#{@outdir}/current_files.json", files_report(@glob))
+    write_json_file("current_files.json", files_report(@glob))
     commits = repo.all_commits
     update_with_complexity(commits)
-    write_json_file("#{@outdir}/commits.json", commits)
+    write_json_file("commits.json", commits)
     recent = select_recent_commits(commits)
-    write_json_file("#{@outdir}/recent_commits_by_author.json", recent)
+    write_json_file("recent_commits_by_author.json", recent)
     repo.reset
     $stderr.puts ''
   end
@@ -102,7 +102,7 @@ class BesMetrics
   end
 
   def write_json_file(path, data)
-    File.open(path, 'w') {|f| f.puts JSON.pretty_generate(data) }
+    File.open("#{@outdir}/path", 'w') {|f| f.puts JSON.pretty_generate(data) }
   end
 
 end
