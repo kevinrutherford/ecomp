@@ -102,7 +102,7 @@ class BesMetrics
   end
 
   def write_json_file(path, data)
-    File.open("#{@outdir}/path", 'w') {|f| f.puts JSON.pretty_generate(data) }
+    File.open("#{@outdir}/#{path}", 'w') {|f| f.puts JSON.pretty_generate(data) }
   end
 
 end
