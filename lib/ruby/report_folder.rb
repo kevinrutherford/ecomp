@@ -4,9 +4,9 @@ class ReportFolder
     @folder = folder
   end
 
-  def update(key, data)
+  def update(key, report_doc)
     prepare_output_folder
-    File.open("#{@folder}/#{key}.json", 'w') {|f| f.puts JSON.pretty_generate(data) }
+    File.open("#{@folder}/#{key}.json", 'w') {|f| f.puts JSON.pretty_generate(report_doc.raw_data) }
   end
 
   private

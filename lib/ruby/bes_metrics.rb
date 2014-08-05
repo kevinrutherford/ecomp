@@ -16,9 +16,9 @@ class BesMetrics
     commits = @repo.all_revisions_oldest_first
     summaries = update_with_complexity(commits)
     summaries = record_complexity_deltas(summaries)
-    @report.update('current_files', CurrentHotspotsReport.new(@repo, @glob).raw_data)
-    @report.update('commits', ComplexityTrendReport.new(summaries).raw_data)
-    @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(summaries).raw_data)
+    @report.update('current_files', CurrentHotspotsReport.new(@repo, @glob))
+    @report.update('commits', ComplexityTrendReport.new(summaries))
+    @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(summaries))
     @repo.reset
     $stderr.puts ''
   end
