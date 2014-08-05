@@ -1,6 +1,7 @@
 require 'ruby_parser'
 
 class RubySourceFile
+  
   def initialize(path)
     @path = path
     @source_code = IO.readlines(path).join

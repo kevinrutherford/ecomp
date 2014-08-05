@@ -1,11 +1,11 @@
 require 'date'
 require 'json'
 require_relative 'ruby_source_file'
+require_relative 'java_source_file'
 require_relative 'local_git_repo'
 
 class BesMetrics
 
-  BIN = File.dirname(File.expand_path(__FILE__)) + '/../../bin'
   DELTA_CUTOFF_DAYS = 365
 
   def initialize(report, glob='*/**/*.*')
@@ -34,19 +34,12 @@ class BesMetrics
     @repo
   end
 
-  def java_report(path)
-    json = JSON.parse(`#{BIN}/javancss #{path}`)
-    result = {}
-    json.each {|k,v| result[k.to_sym] = v }
-    result
-  end
-
   def complexity_report(path)
     report = case path
              when /.*\.rb$/
                RubySourceFile.new(path).complexity
              when /.*\.java$/
-               java_report(path)
+               JavaSourceFile.new(path).complexity
              end
     e = 1 + report[:num_dependencies]
     b = 1 + report[:num_branches]
