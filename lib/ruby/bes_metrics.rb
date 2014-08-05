@@ -1,4 +1,5 @@
 require_relative 'file_revision'
+require_relative 'revision_summary'
 require_relative 'complexity_trend_report'
 require_relative 'developer_behaviour_report'
 require_relative 'current_hotspots_report'
@@ -13,8 +14,8 @@ class BesMetrics
 
   def collect
     @repo.reset
-    commits = @repo.all_revisions_oldest_first
-    summaries = update_with_complexity(commits)
+    revisions = @repo.all_revisions_oldest_first
+    summaries = revisions.map {|rev| update_with_complexity(rev) }
     summaries = record_complexity_deltas(summaries)
     @report.update('current_files', CurrentHotspotsReport.new(@repo, @glob))
     @report.update('commits', ComplexityTrendReport.new(summaries))
@@ -25,21 +26,19 @@ class BesMetrics
 
   private
 
-  def record_complexity_deltas(commits)
-    commits.each_with_index do |commit, i|
-      delta = commit[:complexity][:sum_of_file_weights] - (i > 0 ? commits[i-1][:complexity][:sum_of_file_weights] : 0)
-      commit[:complexity][:delta_sum_of_file_weights] = delta
+  def record_complexity_deltas(summaries)
+    summaries.each_with_index do |summary, i|
+      delta = summary.sum_of_file_weights - (i > 0 ? summaries[i-1].sum_of_file_weights : 0)
+      summary.set_delta(delta)
     end
-    commits
+    summaries
   end
 
-  def update_with_complexity(commits)
-    commits.each do |commit|
-      files = @repo.files_in_revision(commit, @glob)
-      commit[:complexity] = summarise_all_files(files)
-      $stderr.print '.'
-    end
-    commits
+  def update_with_complexity(rev)
+    files = @repo.files_in_revision(rev, @glob)
+    rev[:complexity] = summarise_all_files(files)
+    $stderr.print '.'
+    RevisionSummary.new(rev)
   end
 
   def summarise_all_files(files)

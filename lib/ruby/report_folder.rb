@@ -5,13 +5,13 @@ class ReportFolder
   end
 
   def update(key, report_doc)
-    prepare_output_folder
+    ensure_output_folder_exists
     File.open("#{@folder}/#{key}.json", 'w') {|f| f.puts JSON.pretty_generate(report_doc.raw_data) }
   end
 
   private
 
-  def prepare_output_folder
+  def ensure_output_folder_exists
     `mkdir -p #{@folder}`
   end
 
