@@ -1,4 +1,5 @@
 require 'ruby_parser'
+require 'json'
 
 class JavaSourceFile
 
