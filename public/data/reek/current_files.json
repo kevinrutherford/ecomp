@@ -1,5 +1,13 @@
 [
   {
+    "filename": "lib/reek.rb",
+    "num_branches": 0,
+    "num_dependencies": 3,
+    "num_superclasses": 0,
+    "weight": 4,
+    "churn": 67
+  },
+  {
     "filename": "lib/reek/spec.rb",
     "num_branches": 2,
     "num_dependencies": 3,

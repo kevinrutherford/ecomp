@@ -9,9 +9,9 @@
         "comment": "Fix dup in code example",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 937,
+          "sum_of_file_weights": 941,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.11,
+          "mean_of_file_weights": 14.94,
           "delta_sum_of_file_weights": -12
         }
       }
@@ -27,9 +27,9 @@
         "comment": "Fix wiki links in README",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 937,
+          "sum_of_file_weights": 941,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.11,
+          "mean_of_file_weights": 14.94,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -40,9 +40,9 @@
         "comment": "Ignore Rubinius cache directory",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -53,9 +53,9 @@
         "comment": "Support Ruby 2.0 syntax",
         "num_files_touched": 3,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -66,9 +66,9 @@
         "comment": "Improve SexpNode#deep_copy",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -79,9 +79,9 @@
         "comment": "Handle only specific exceptions",
         "num_files_touched": 18,
         "complexity": {
-          "sum_of_file_weights": 963,
+          "sum_of_file_weights": 967,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.29,
+          "mean_of_file_weights": 15.11,
           "delta_sum_of_file_weights": 10
         }
       },
@@ -92,9 +92,9 @@
         "comment": "Improve SmellOfMatcher",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 963,
+          "sum_of_file_weights": 967,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.29,
+          "mean_of_file_weights": 15.11,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -105,9 +105,9 @@
         "comment": "Simplify ShouldReek matcher",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 963,
+          "sum_of_file_weights": 967,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.29,
+          "mean_of_file_weights": 15.11,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -118,9 +118,9 @@
         "comment": "Clean up tree_dresser.rb",
         "num_files_touched": 6,
         "complexity": {
-          "sum_of_file_weights": 977,
+          "sum_of_file_weights": 981,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.03,
+          "mean_of_file_weights": 14.86,
           "delta_sum_of_file_weights": 14
         }
       },
@@ -131,9 +131,9 @@
         "comment": "Simplify implementation of DataClump",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 931,
+          "sum_of_file_weights": 935,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 14.78,
+          "mean_of_file_weights": 14.61,
           "delta_sum_of_file_weights": -46
         }
       },
@@ -144,9 +144,9 @@
         "comment": "Refactor DuplicateMethodCall smell detector",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 945,
+          "sum_of_file_weights": 949,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 14.54,
+          "mean_of_file_weights": 14.38,
           "delta_sum_of_file_weights": 14
         }
       },
@@ -157,9 +157,9 @@
         "comment": "Improve line numbers CLI options",
         "num_files_touched": 3,
         "complexity": {
-          "sum_of_file_weights": 990,
+          "sum_of_file_weights": 994,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.23,
+          "mean_of_file_weights": 15.06,
           "delta_sum_of_file_weights": 3
         }
       },
@@ -170,9 +170,9 @@
         "comment": "Make -q the default",
         "num_files_touched": 7,
         "complexity": {
-          "sum_of_file_weights": 982,
+          "sum_of_file_weights": 986,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.11,
+          "mean_of_file_weights": 14.94,
           "delta_sum_of_file_weights": -8
         }
       },
@@ -183,9 +183,9 @@
         "comment": "Only mark parameters uncommunicative if used",
         "num_files_touched": 7,
         "complexity": {
-          "sum_of_file_weights": 1000,
+          "sum_of_file_weights": 1004,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.38,
+          "mean_of_file_weights": 15.21,
           "delta_sum_of_file_weights": 6
         }
       },
@@ -196,9 +196,9 @@
         "comment": "Remove HashExtensions",
         "num_files_touched": 24,
         "complexity": {
-          "sum_of_file_weights": 987,
+          "sum_of_file_weights": 991,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.42,
+          "mean_of_file_weights": 15.25,
           "delta_sum_of_file_weights": -13
         }
       },
@@ -209,9 +209,9 @@
         "comment": "Ignore unused parameters if method calls super in nested context",
         "num_files_touched": 4,
         "complexity": {
-          "sum_of_file_weights": 992,
+          "sum_of_file_weights": 996,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.5,
+          "mean_of_file_weights": 15.32,
           "delta_sum_of_file_weights": -1
         }
       },
@@ -222,9 +222,9 @@
         "comment": "Improve statement counting",
         "num_files_touched": 5,
         "complexity": {
-          "sum_of_file_weights": 974,
+          "sum_of_file_weights": 978,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.22,
+          "mean_of_file_weights": 15.05,
           "delta_sum_of_file_weights": -18
         }
       },
@@ -235,9 +235,9 @@
         "comment": "Loosen ruby2ruby dependency",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -253,9 +253,9 @@
         "comment": "Bump version to 1.3.2",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 949,
+          "sum_of_file_weights": 953,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.31,
+          "mean_of_file_weights": 15.13,
           "delta_sum_of_file_weights": 12
         }
       },
@@ -266,9 +266,9 @@
         "comment": "Bump version to 1.3.3.",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -279,9 +279,9 @@
         "comment": "Bump version to 1.3.4.",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -292,9 +292,9 @@
         "comment": "Update our rvms settings.",
         "num_files_touched": 3,
         "complexity": {
-          "sum_of_file_weights": 981,
+          "sum_of_file_weights": 985,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.09,
+          "mean_of_file_weights": 14.92,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -305,9 +305,9 @@
         "comment": "Add `debugger` gem.",
         "num_files_touched": 3,
         "complexity": {
-          "sum_of_file_weights": 981,
+          "sum_of_file_weights": 985,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.09,
+          "mean_of_file_weights": 14.92,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -318,9 +318,9 @@
         "comment": "Force ruby2ruby update.",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 981,
+          "sum_of_file_weights": 985,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.09,
+          "mean_of_file_weights": 14.92,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -331,9 +331,9 @@
         "comment": "Refactor reporting handling as a precondition for sorting output.",
         "num_files_touched": 7,
         "complexity": {
-          "sum_of_file_weights": 987,
+          "sum_of_file_weights": 991,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.18,
+          "mean_of_file_weights": 15.02,
           "delta_sum_of_file_weights": 6
         }
       },
@@ -344,9 +344,9 @@
         "comment": "Allow sorting by issue count.",
         "num_files_touched": 7,
         "complexity": {
-          "sum_of_file_weights": 990,
+          "sum_of_file_weights": 994,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.23,
+          "mean_of_file_weights": 15.06,
           "delta_sum_of_file_weights": 3
         }
       },
@@ -357,9 +357,9 @@
         "comment": "Add `tags` to gitignore.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 987,
+          "sum_of_file_weights": 991,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.18,
+          "mean_of_file_weights": 15.02,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -370,9 +370,9 @@
         "comment": "Fix spec for uncommunicative-method-name smell.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 987,
+          "sum_of_file_weights": 991,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.18,
+          "mean_of_file_weights": 15.02,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -383,9 +383,9 @@
         "comment": "Add `pry` gem as development dependency.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 987,
+          "sum_of_file_weights": 991,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.18,
+          "mean_of_file_weights": 15.02,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -396,9 +396,9 @@
         "comment": "Update README - Make it clearer how to call reek.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 987,
+          "sum_of_file_weights": 991,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.18,
+          "mean_of_file_weights": 15.02,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -409,9 +409,9 @@
         "comment": "Bump version to 1.3.5.",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 982,
+          "sum_of_file_weights": 986,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.11,
+          "mean_of_file_weights": 14.94,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -422,9 +422,9 @@
         "comment": "Prima Donna method smell.",
         "num_files_touched": 9,
         "complexity": {
-          "sum_of_file_weights": 1001,
+          "sum_of_file_weights": 1005,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.17,
+          "mean_of_file_weights": 15.0,
           "delta_sum_of_file_weights": 19
         }
       },
@@ -435,9 +435,9 @@
         "comment": "Add `pry_debug` to our `local_development` gems.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 1001,
+          "sum_of_file_weights": 1005,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.17,
+          "mean_of_file_weights": 15.0,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -448,9 +448,9 @@
         "comment": "Bump version to 1.3.6.",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 1001,
+          "sum_of_file_weights": 1005,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.17,
+          "mean_of_file_weights": 15.0,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -461,9 +461,9 @@
         "comment": "Refactor CLI commands.",
         "num_files_touched": 4,
         "complexity": {
-          "sum_of_file_weights": 994,
+          "sum_of_file_weights": 998,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.29,
+          "mean_of_file_weights": 15.12,
           "delta_sum_of_file_weights": -7
         }
       },
@@ -474,9 +474,9 @@
         "comment": "Add gemnasium badge.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 994,
+          "sum_of_file_weights": 998,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.29,
+          "mean_of_file_weights": 15.12,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -487,9 +487,9 @@
         "comment": "Fix heading format in README.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 994,
+          "sum_of_file_weights": 998,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.29,
+          "mean_of_file_weights": 15.12,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -500,9 +500,9 @@
         "comment": "Let's use the latest ruby version locally (which is 2.1.0).",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 992,
+          "sum_of_file_weights": 996,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.5,
+          "mean_of_file_weights": 15.32,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -513,9 +513,9 @@
         "comment": "Force ruby2ruby 2.0.8.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -526,9 +526,9 @@
         "comment": "Bump version to 1.3.7.",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -539,9 +539,9 @@
         "comment": "Bump version to 1.3.8.",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -557,9 +557,9 @@
         "comment": "replaced deprecated mock with double to remove warnings",
         "num_files_touched": 10,
         "complexity": {
-          "sum_of_file_weights": 949,
+          "sum_of_file_weights": 953,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.31,
+          "mean_of_file_weights": 15.13,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -570,9 +570,9 @@
         "comment": "replaced deprecated any_number_of_times with stub method syntax to remove warnings",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 949,
+          "sum_of_file_weights": 953,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.31,
+          "mean_of_file_weights": 15.13,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -583,9 +583,9 @@
         "comment": "Added total warning count",
         "num_files_touched": 7,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 4
         }
       },
@@ -596,9 +596,9 @@
         "comment": "Added feature to remove extra slash from source path to prevent doubling of slash character in report output.",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -609,9 +609,9 @@
         "comment": "Added line numbers by default when you run the reek command",
         "num_files_touched": 9,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -622,9 +622,9 @@
         "comment": "Allow config files to override default config values",
         "num_files_touched": 6,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -635,9 +635,9 @@
         "comment": "Added more robust ControlParameter detection.",
         "num_files_touched": 4,
         "complexity": {
-          "sum_of_file_weights": 981,
+          "sum_of_file_weights": 985,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.09,
+          "mean_of_file_weights": 14.92,
           "delta_sum_of_file_weights": 36
         }
       },
@@ -648,9 +648,9 @@
         "comment": "Minor refactorings to remove some reek smells on.",
         "num_files_touched": 6,
         "complexity": {
-          "sum_of_file_weights": 992,
+          "sum_of_file_weights": 996,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.5,
+          "mean_of_file_weights": 15.32,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -661,9 +661,9 @@
         "comment": "Refactoring of the ControlParameter smell detector",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 980,
+          "sum_of_file_weights": 984,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.31,
+          "mean_of_file_weights": 15.14,
           "delta_sum_of_file_weights": -12
         }
       },
@@ -674,9 +674,9 @@
         "comment": "Small refactorings to remove some code smells.",
         "num_files_touched": 8,
         "complexity": {
-          "sum_of_file_weights": 992,
+          "sum_of_file_weights": 996,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.5,
+          "mean_of_file_weights": 15.32,
           "delta_sum_of_file_weights": 12
         }
       },
@@ -687,9 +687,9 @@
         "comment": "Add color to reek's output",
         "num_files_touched": 7,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 22
         }
       },
@@ -700,9 +700,9 @@
         "comment": "Added the rainbow dependency to the readme",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -718,9 +718,9 @@
         "comment": "Loosen ruby_parser version dependency",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -731,9 +731,9 @@
         "comment": "Remove from gemspec development deps not required to run tests",
         "num_files_touched": 4,
         "complexity": {
-          "sum_of_file_weights": 987,
+          "sum_of_file_weights": 991,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.18,
+          "mean_of_file_weights": 15.02,
           "delta_sum_of_file_weights": -3
         }
       },
@@ -744,9 +744,9 @@
         "comment": "Specify required Rainbow version as >= 1.99",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -762,9 +762,9 @@
         "comment": "Add --single-line option for reporting (github Issue #206)",
         "num_files_touched": 4,
         "complexity": {
-          "sum_of_file_weights": 953,
+          "sum_of_file_weights": 957,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.37,
+          "mean_of_file_weights": 15.19,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -780,9 +780,9 @@
         "comment": "Updating documentaion: Adding information for reek textmate bundle",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 963,
+          "sum_of_file_weights": 967,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.29,
+          "mean_of_file_weights": 15.11,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -798,9 +798,9 @@
         "comment": "Add Ruby 2.1.0 support",
         "num_files_touched": 3,
         "complexity": {
-          "sum_of_file_weights": 1001,
+          "sum_of_file_weights": 1005,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.17,
+          "mean_of_file_weights": 15.0,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -816,9 +816,9 @@
         "comment": "Bump ruby_parser and adjust kwarg-related spec case.",
         "num_files_touched": 3,
         "complexity": {
-          "sum_of_file_weights": 994,
+          "sum_of_file_weights": 998,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.29,
+          "mean_of_file_weights": 15.12,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -834,9 +834,9 @@
         "comment": "Added link to preek (as requested)",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 993,
+          "sum_of_file_weights": 997,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.52,
+          "mean_of_file_weights": 15.34,
           "delta_sum_of_file_weights": 6
         }
       }
@@ -852,9 +852,9 @@
         "comment": "Add docs badge to README",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 992,
+          "sum_of_file_weights": 996,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.5,
+          "mean_of_file_weights": 15.32,
           "delta_sum_of_file_weights": 0
         }
       },
@@ -865,9 +865,9 @@
         "comment": "Update docs badge in README",
         "num_files_touched": 1,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 0
         }
       }
@@ -883,9 +883,9 @@
         "comment": "Avoid duplicate method calls",
         "num_files_touched": 2,
         "complexity": {
-          "sum_of_file_weights": 996,
+          "sum_of_file_weights": 1000,
           "max_of_file_weights": 78,
-          "mean_of_file_weights": 15.56,
+          "mean_of_file_weights": 15.38,
           "delta_sum_of_file_weights": 0
         }
       }
