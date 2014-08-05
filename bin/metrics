@@ -5,6 +5,7 @@
 # Usage: $0 output_folder files
 #
 
+require_relative '../lib/ruby/report_folder'
 require_relative '../lib/ruby/bes_metrics'
 
 if ARGV.length != 2
@@ -12,6 +13,7 @@ if ARGV.length != 2
   exit 1
 end
 
-bes = BesMetrics.new(outdir: ARGV[0], glob: ARGV[1])
+folder = ReportFolder.new(ARGV[0])
+bes = BesMetrics.new(folder, ARGV[1])
 bes.collect
 exit 0

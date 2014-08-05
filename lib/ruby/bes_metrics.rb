@@ -8,19 +8,18 @@ class BesMetrics
   BIN = File.dirname(File.expand_path(__FILE__)) + '/../../bin'
   DELTA_CUTOFF_DAYS = 365
 
-  def initialize(outdir: '.', glob: '*/**/*.*')
-    @outdir = outdir
+  def initialize(report, glob='*/**/*.*')
+    @report = report
     @glob = glob
   end
 
   def collect
-    prepare_output_folder(@outdir)
-    write_json_file("current_files.json", files_report(@glob))
+    @report.update('current_files', files_report(@glob))
     commits = repo.all_commits
     update_with_complexity(commits)
-    write_json_file("commits.json", commits)
+    @report.update('commits', commits)
     recent = select_recent_commits(commits)
-    write_json_file("recent_commits_by_author.json", recent)
+    @report.update('recent_commits_by_author', recent)
     repo.reset
     $stderr.puts ''
   end
@@ -95,14 +94,6 @@ class BesMetrics
 
   def files_report(files_glob)
     Dir[files_glob].map {|path| complexity_report(path) }
-  end
-
-  def prepare_output_folder(folder)
-    `mkdir -p #{folder}`
-  end
-
-  def write_json_file(path, data)
-    File.open("#{@outdir}/#{path}", 'w') {|f| f.puts JSON.pretty_generate(data) }
   end
 
 end
