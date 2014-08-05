@@ -1,5 +1,6 @@
 require_relative 'file_revision'
 require_relative 'developer_behaviour_report'
+require_relative 'current_hotspots_report'
 
 class BesMetrics
 
@@ -14,7 +15,7 @@ class BesMetrics
     commits = @repo.all_revisions_oldest_first
     update_with_complexity(commits)
     commits = record_complexity_deltas(commits)
-    @report.update('current_files', files_report(@glob))
+    @report.update('current_files', CurrentHotspotsReport.new(@repo, @glob).raw_data)
     @report.update('commits', commits)
     @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(commits).raw_data)
     @repo.reset
@@ -48,10 +49,6 @@ class BesMetrics
       max_of_file_weights: weights.max,
       mean_of_file_weights: (weight_sum.to_f / weights.length).round(2)
     }
-  end
-
-  def files_report(files_glob)
-    @repo.current_files(files_glob).map(&:complexity_report)
   end
 
 end
