@@ -1,8 +1,5 @@
-require 'date'
-require_relative 'ruby_source_file'
-require_relative 'java_source_file'
+require_relative 'file_revision'
 require_relative 'developer_behaviour_report'
-require_relative 'local_git_repo'
 
 class BesMetrics
 
@@ -34,21 +31,6 @@ class BesMetrics
     commits
   end
 
-  def complexity_report(path)
-    report = case path
-             when /.*\.rb$/
-               RubySourceFile.new(path).complexity
-             when /.*\.java$/
-               JavaSourceFile.new(path).complexity
-             end
-    e = 1 + report[:num_dependencies]
-    b = 1 + report[:num_branches]
-    s = 1 + report[:num_superclasses]
-    report['weight'] = b * e * s
-    report[:churn] = @repo.num_commits_involving(path)
-    report
-  end
-
   def update_with_complexity(commits)
     commits.each do |commit|
       @repo.checkout(commit[:ref])
@@ -59,7 +41,7 @@ class BesMetrics
 
   def summarise_all_files(glob)
     files = Dir[glob]
-    file_reports = files.map {|path| complexity_report(path) }
+    file_reports = files.map {|path| FileRevision.new(path, @repo) }.map(&:complexity_report)
     weights = file_reports.empty? ? [0] : file_reports.map {|rpt| rpt['weight'] }
     weight_sum = weights.inject(:+)
     {
@@ -70,7 +52,7 @@ class BesMetrics
   end
 
   def files_report(files_glob)
-    Dir[files_glob].map {|path| complexity_report(path) }
+    Dir[files_glob].map {|path| FileRevision.new(path, @repo) }.map(&:complexity_report)
   end
 
 end
