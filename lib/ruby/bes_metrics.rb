@@ -15,6 +15,7 @@ class BesMetrics
     @report.update('current_files', files_report(@glob))
     commits = repo.all_commits
     update_with_complexity(commits)
+    commits = record_complexity_deltas(commits)
     @report.update('commits', commits)
     @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(commits).raw_data)
     repo.reset
@@ -29,6 +30,14 @@ class BesMetrics
       @repo.reset
     end
     @repo
+  end
+
+  def record_complexity_deltas(commits)
+    commits.each_with_index do |commit, i|
+      delta = commit[:complexity][:sum_of_file_weights] - (i > 0 ? commits[i-1][:complexity][:sum_of_file_weights] : 0)
+      commit[:complexity][:delta_sum_of_file_weights] = delta
+    end
+    commits
   end
 
   def complexity_report(path)

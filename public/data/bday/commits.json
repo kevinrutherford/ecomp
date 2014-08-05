@@ -8,7 +8,8 @@
     "complexity": {
       "sum_of_file_weights": 266,
       "max_of_file_weights": 96,
-      "mean_of_file_weights": 44.33
+      "mean_of_file_weights": 44.33,
+      "delta_sum_of_file_weights": 266
     }
   },
   {
@@ -20,7 +21,8 @@
     "complexity": {
       "sum_of_file_weights": 180,
       "max_of_file_weights": 96,
-      "mean_of_file_weights": 30.0
+      "mean_of_file_weights": 30.0,
+      "delta_sum_of_file_weights": -86
     }
   },
   {
@@ -32,7 +34,8 @@
     "complexity": {
       "sum_of_file_weights": 174,
       "max_of_file_weights": 88,
-      "mean_of_file_weights": 29.0
+      "mean_of_file_weights": 29.0,
+      "delta_sum_of_file_weights": -6
     }
   },
   {
@@ -44,7 +47,8 @@
     "complexity": {
       "sum_of_file_weights": 209,
       "max_of_file_weights": 120,
-      "mean_of_file_weights": 29.86
+      "mean_of_file_weights": 29.86,
+      "delta_sum_of_file_weights": 35
     }
   },
   {
@@ -56,7 +60,8 @@
     "complexity": {
       "sum_of_file_weights": 246,
       "max_of_file_weights": 154,
-      "mean_of_file_weights": 30.75
+      "mean_of_file_weights": 30.75,
+      "delta_sum_of_file_weights": 37
     }
   },
   {
@@ -68,7 +73,8 @@
     "complexity": {
       "sum_of_file_weights": 170,
       "max_of_file_weights": 44,
-      "mean_of_file_weights": 18.89
+      "mean_of_file_weights": 18.89,
+      "delta_sum_of_file_weights": -76
     }
   },
   {
@@ -80,7 +86,8 @@
     "complexity": {
       "sum_of_file_weights": 160,
       "max_of_file_weights": 42,
-      "mean_of_file_weights": 16.0
+      "mean_of_file_weights": 16.0,
+      "delta_sum_of_file_weights": -10
     }
   },
   {
@@ -92,7 +99,8 @@
     "complexity": {
       "sum_of_file_weights": 162,
       "max_of_file_weights": 42,
-      "mean_of_file_weights": 14.73
+      "mean_of_file_weights": 14.73,
+      "delta_sum_of_file_weights": 2
     }
   },
   {
@@ -104,7 +112,8 @@
     "complexity": {
       "sum_of_file_weights": 158,
       "max_of_file_weights": 42,
-      "mean_of_file_weights": 13.17
+      "mean_of_file_weights": 13.17,
+      "delta_sum_of_file_weights": -4
     }
   },
   {
@@ -116,7 +125,8 @@
     "complexity": {
       "sum_of_file_weights": 154,
       "max_of_file_weights": 42,
-      "mean_of_file_weights": 11.85
+      "mean_of_file_weights": 11.85,
+      "delta_sum_of_file_weights": -4
     }
   },
   {
@@ -128,7 +138,8 @@
     "complexity": {
       "sum_of_file_weights": 155,
       "max_of_file_weights": 42,
-      "mean_of_file_weights": 11.07
+      "mean_of_file_weights": 11.07,
+      "delta_sum_of_file_weights": 1
     }
   },
   {
@@ -140,7 +151,8 @@
     "complexity": {
       "sum_of_file_weights": 155,
       "max_of_file_weights": 42,
-      "mean_of_file_weights": 11.07
+      "mean_of_file_weights": 11.07,
+      "delta_sum_of_file_weights": 0
     }
   }
 ]
