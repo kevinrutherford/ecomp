@@ -1,4 +1,5 @@
 require_relative 'file_revision'
+require_relative 'complexity_trend_report'
 require_relative 'developer_behaviour_report'
 require_relative 'current_hotspots_report'
 
@@ -13,11 +14,11 @@ class BesMetrics
   def collect
     @repo.reset
     commits = @repo.all_revisions_oldest_first
-    update_with_complexity(commits)
-    commits = record_complexity_deltas(commits)
+    summaries = update_with_complexity(commits)
+    summaries = record_complexity_deltas(summaries)
     @report.update('current_files', CurrentHotspotsReport.new(@repo, @glob).raw_data)
-    @report.update('commits', commits)
-    @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(commits).raw_data)
+    @report.update('commits', ComplexityTrendReport.new(summaries).raw_data)
+    @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(summaries).raw_data)
     @repo.reset
     $stderr.puts ''
   end
@@ -38,6 +39,7 @@ class BesMetrics
       commit[:complexity] = summarise_all_files(files)
       $stderr.print '.'
     end
+    commits
   end
 
   def summarise_all_files(files)
