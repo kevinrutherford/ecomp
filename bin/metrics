@@ -5,6 +5,7 @@
 # Usage: $0 output_folder files
 #
 
+require_relative '../lib/ruby/local_git_repo'
 require_relative '../lib/ruby/report_folder'
 require_relative '../lib/ruby/bes_metrics'
 
@@ -13,7 +14,8 @@ if ARGV.length != 2
   exit 1
 end
 
-folder = ReportFolder.new(ARGV[0])
-bes = BesMetrics.new(folder, ARGV[1])
+repo = LocalGitRepo.new
+reports_folder = ReportFolder.new(ARGV[0])
+bes = BesMetrics.new(repo, reports_folder, ARGV[1])
 bes.collect
 exit 0

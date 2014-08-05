@@ -1,3 +1,5 @@
+require 'date'
+
 class DeveloperBehaviourReport
 
   DELTA_CUTOFF_DAYS = 365
@@ -7,7 +9,7 @@ class DeveloperBehaviourReport
   end
 
   def raw_data
-    recent = @commits.select {|c| DateTime.parse(c[:date]) > cutoff_date }
+    recent = @commits.select {|commit| is_recent?(commit) }
     group_by_author(recent[1..-1])
   end
 
@@ -15,6 +17,10 @@ class DeveloperBehaviourReport
 
   def cutoff_date
     @cutoff_date ||= DateTime.parse(@commits[-1][:date]) - DELTA_CUTOFF_DAYS
+  end
+
+  def is_recent?(commit)
+    DateTime.parse(commit[:date]) > cutoff_date
   end
 
   def group_by_author(commits)

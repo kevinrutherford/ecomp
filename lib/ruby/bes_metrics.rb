@@ -6,31 +6,25 @@ require_relative 'local_git_repo'
 
 class BesMetrics
 
-  def initialize(report, glob='*/**/*.*')
+  def initialize(repo, report, glob='*/**/*.*')
+    @repo = repo
     @report = report
     @glob = glob
   end
 
   def collect
-    @report.update('current_files', files_report(@glob))
-    commits = repo.all_commits
+    @repo.reset
+    commits = @repo.all_commits
     update_with_complexity(commits)
     commits = record_complexity_deltas(commits)
+    @report.update('current_files', files_report(@glob))
     @report.update('commits', commits)
     @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(commits).raw_data)
-    repo.reset
+    @repo.reset
     $stderr.puts ''
   end
 
   private
-
-  def repo
-    if @repo.nil?
-      @repo = LocalGitRepo.new
-      @repo.reset
-    end
-    @repo
-  end
 
   def record_complexity_deltas(commits)
     commits.each_with_index do |commit, i|
@@ -51,13 +45,13 @@ class BesMetrics
     b = 1 + report[:num_branches]
     s = 1 + report[:num_superclasses]
     report['weight'] = b * e * s
-    report[:churn] = repo.num_commits_involving(path)
+    report[:churn] = @repo.num_commits_involving(path)
     report
   end
 
   def update_with_complexity(commits)
     commits.each do |commit|
-      repo.checkout(commit[:ref])
+      @repo.checkout(commit[:ref])
       $stderr.print '.'
       commit[:complexity] = summarise_all_files(@glob)
     end
