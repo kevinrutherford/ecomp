@@ -11,7 +11,7 @@ class BesMetrics
 
   def collect
     @repo.reset
-    commits = @repo.all_commits
+    commits = @repo.all_revisions_oldest_first
     update_with_complexity(commits)
     commits = record_complexity_deltas(commits)
     @report.update('current_files', files_report(@glob))
@@ -33,15 +33,14 @@ class BesMetrics
 
   def update_with_complexity(commits)
     commits.each do |commit|
-      @repo.checkout(commit[:ref])
+      files = @repo.files_in_revision(commit, @glob)
+      commit[:complexity] = summarise_all_files(files)
       $stderr.print '.'
-      commit[:complexity] = summarise_all_files(@glob)
     end
   end
 
-  def summarise_all_files(glob)
-    files = Dir[glob]
-    file_reports = files.map {|path| FileRevision.new(path, @repo) }.map(&:complexity_report)
+  def summarise_all_files(files)
+    file_reports = files.map(&:complexity_report)
     weights = file_reports.empty? ? [0] : file_reports.map {|rpt| rpt['weight'] }
     weight_sum = weights.inject(:+)
     {
@@ -52,7 +51,7 @@ class BesMetrics
   end
 
   def files_report(files_glob)
-    Dir[files_glob].map {|path| FileRevision.new(path, @repo) }.map(&:complexity_report)
+    @repo.current_files(files_glob).map(&:complexity_report)
   end
 
 end
