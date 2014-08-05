@@ -84,7 +84,7 @@ class BesMetrics
   end
 
   def select_recent_commits(commits)
-    cutoff = DateTime.now - DELTA_CUTOFF_DAYS
+    cutoff = DateTime.parse(commits[-1][:date]) - DELTA_CUTOFF_DAYS
     recent = commits.select {|c| DateTime.parse(c[:date]) > cutoff }
     recent.each_with_index do |commit, i|
       delta = commit[:complexity][:sum_of_file_weights] - (i > 0 ? recent[i-1][:complexity][:sum_of_file_weights] : 0)

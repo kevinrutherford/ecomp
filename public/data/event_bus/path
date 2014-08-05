@@ -1,0 +1,51 @@
+[
+  {
+    "author": "Kevin Rutherford",
+    "commits": [
+      {
+        "ref": "cbf8b68",
+        "author": "Kevin Rutherford",
+        "date": "2014-04-07 08:39:46 +0100",
+        "comment": "Corrected the supported Rubies and added a note about Sidekiq support.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 41,
+          "max_of_file_weights": 22,
+          "mean_of_file_weights": 10.25,
+          "delta_sum_of_file_weights": 0
+        }
+      }
+    ]
+  },
+  {
+    "author": "Jon Moses",
+    "commits": [
+      {
+        "ref": "16c4d9c",
+        "author": "Jon Moses",
+        "date": "2014-05-30 11:37:51 -0400",
+        "comment": "Add methods that facilitate testing",
+        "num_files_touched": 3,
+        "complexity": {
+          "sum_of_file_weights": 44,
+          "max_of_file_weights": 22,
+          "mean_of_file_weights": 8.8,
+          "delta_sum_of_file_weights": 3
+        }
+      },
+      {
+        "ref": "fe74745",
+        "author": "Jon Moses",
+        "date": "2014-06-02 08:45:28 -0400",
+        "comment": "Cleanup per PR comments.",
+        "num_files_touched": 5,
+        "complexity": {
+          "sum_of_file_weights": 43,
+          "max_of_file_weights": 24,
+          "mean_of_file_weights": 10.75,
+          "delta_sum_of_file_weights": -1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,758 @@
+[
+  {
+    "ref": "10e0ea9",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-16 08:49:17 -0800",
+    "comment": "Initial commit",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 0,
+      "max_of_file_weights": 0,
+      "mean_of_file_weights": 0.0
+    }
+  },
+  {
+    "ref": "a0e0a8c",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-16 16:57:50 +0000",
+    "comment": "First basic gem files",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 2,
+      "max_of_file_weights": 2,
+      "mean_of_file_weights": 2.0
+    }
+  },
+  {
+    "ref": "ad47fd5",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-16 19:04:39 +0000",
+    "comment": "Ensure the EventBus starts up cleanly",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 4,
+      "max_of_file_weights": 4,
+      "mean_of_file_weights": 4.0
+    }
+  },
+  {
+    "ref": "c3a5d20",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-16 19:30:33 +0000",
+    "comment": "Add the Travis badge to the readme",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 4,
+      "max_of_file_weights": 4,
+      "mean_of_file_weights": 4.0
+    }
+  },
+  {
+    "ref": "ab1f8c6",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-16 19:39:18 +0000",
+    "comment": "Added an empty rspec test",
+    "num_files_touched": 6,
+    "complexity": {
+      "sum_of_file_weights": 10,
+      "max_of_file_weights": 4,
+      "mean_of_file_weights": 3.33
+    }
+  },
+  {
+    "ref": "1a7261b",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-16 19:44:46 +0000",
+    "comment": "Added a travis config file",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 10,
+      "max_of_file_weights": 4,
+      "mean_of_file_weights": 3.33
+    }
+  },
+  {
+    "ref": "a937a38",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-16 20:33:53 +0000",
+    "comment": "Added a simple rakefile to run the specs",
+    "num_files_touched": 4,
+    "complexity": {
+      "sum_of_file_weights": 10,
+      "max_of_file_weights": 4,
+      "mean_of_file_weights": 3.33
+    }
+  },
+  {
+    "ref": "8c6457e",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-16 20:43:44 +0000",
+    "comment": "Added the first simple test",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 10,
+      "max_of_file_weights": 4,
+      "mean_of_file_weights": 3.33
+    }
+  },
+  {
+    "ref": "ec66fed",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-18 07:57:26 +0000",
+    "comment": "Fixed the rubygems homepage link",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 10,
+      "max_of_file_weights": 4,
+      "mean_of_file_weights": 3.33
+    }
+  },
+  {
+    "ref": "ebf3f08",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-18 08:21:43 +0000",
+    "comment": "Added Simpecov for test coverage",
+    "num_files_touched": 4,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "37d600d",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-18 08:41:09 +0000",
+    "comment": "Improve test coverage",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "dc17b0f",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-18 08:59:44 +0000",
+    "comment": "Moved the internal workings out of the public API",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "a060aa0",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-21 16:52:33 +0000",
+    "comment": "Added some initial Yardoc for rubydoc.info",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "de0e2f9",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-21 16:53:22 +0000",
+    "comment": "Bump version to 0.0.2",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "b9d2f7a",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 09:10:43 +0000",
+    "comment": "Added tests for more cases",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "b37acc1",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 09:11:10 +0000",
+    "comment": "Added some basics to the README",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "3ac9e01",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 09:18:47 +0000",
+    "comment": "Added more to the README",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "b8aedc2",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 09:22:55 +0000",
+    "comment": "Added build check for ruby 1.8.7",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "dfc85a9",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 10:25:22 +0000",
+    "comment": "Added some usage documentation",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "691769f",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 10:33:15 +0000",
+    "comment": "Fixed the gemspec",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "bcc0a6e",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 10:36:32 +0000",
+    "comment": "Removed ruby 1.9.1 from the travis build",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "c73cc09",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 10:49:44 +0000",
+    "comment": "Bumped version to 0.0.3",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "0244ed2",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-24 11:10:16 +0000",
+    "comment": "Show gem dependency status in the README",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "fdf99af",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-25 14:33:21 +0000",
+    "comment": "Simple fix to the code sample in the README",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "bbdb4d6",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-25 14:51:45 +0000",
+    "comment": "Add yardopts to the gem",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "2ad8649",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-25 15:14:59 +0000",
+    "comment": "Pass the event name to listeners in the details hash. Closes #1",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "defc503",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-25 15:42:14 +0000",
+    "comment": "Added some aliases for the main EventBus methods",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "12d7dec",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-25 15:53:59 +0000",
+    "comment": "Use the latest version of rake",
+    "num_files_touched": 4,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "baa5d14",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-25 16:08:55 +0000",
+    "comment": "Allow the event details to be omitted",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "ac165b0",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-25 16:29:32 +0000",
+    "comment": "Clarified the spec descriptions",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "f01f756",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-26 16:57:35 +0000",
+    "comment": "Added a note about using the specs to find out how to use this gem.",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 11,
+      "max_of_file_weights": 5,
+      "mean_of_file_weights": 3.67
+    }
+  },
+  {
+    "ref": "8125b44",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-27 20:23:43 +0000",
+    "comment": "Allow subscribing a block. Closes 2",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 23,
+      "max_of_file_weights": 16,
+      "mean_of_file_weights": 7.67
+    }
+  },
+  {
+    "ref": "9769e2d",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-27 20:34:55 +0000",
+    "comment": "Bump to version 0.0.4",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 23,
+      "max_of_file_weights": 16,
+      "mean_of_file_weights": 7.67
+    }
+  },
+  {
+    "ref": "1606bb6",
+    "author": "Kevin Rutherford",
+    "date": "2013-01-30 13:24:56 +0000",
+    "comment": "Added some doc, and refactored the tests a bit",
+    "num_files_touched": 4,
+    "complexity": {
+      "sum_of_file_weights": 23,
+      "max_of_file_weights": 16,
+      "mean_of_file_weights": 7.67
+    }
+  },
+  {
+    "ref": "f62df85",
+    "author": "Kevin Rutherford",
+    "date": "2013-03-15 15:09:49 +0000",
+    "comment": "Added CodeClimate status to the readme",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 23,
+      "max_of_file_weights": 16,
+      "mean_of_file_weights": 7.67
+    }
+  },
+  {
+    "ref": "74325f0",
+    "author": "Stuart King",
+    "date": "2013-04-16 13:49:40 -0700",
+    "comment": "Allow an object to subscribe to events",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 27,
+      "max_of_file_weights": 20,
+      "mean_of_file_weights": 9.0
+    }
+  },
+  {
+    "ref": "091b85a",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-17 07:02:08 +0100",
+    "comment": "Fix the gems source for 1.8",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 27,
+      "max_of_file_weights": 20,
+      "mean_of_file_weights": 9.0
+    }
+  },
+  {
+    "ref": "d10d889",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-17 07:33:22 +0100",
+    "comment": "Use consistent naming for the payload",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 27,
+      "max_of_file_weights": 20,
+      "mean_of_file_weights": 9.0
+    }
+  },
+  {
+    "ref": "5e311f0",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-17 19:37:03 +0100",
+    "comment": "Allow a symbol as the event name",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 29,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 9.67
+    }
+  },
+  {
+    "ref": "f340d5d",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-17 19:44:02 +0100",
+    "comment": "Drop support for Ruby 1.8",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 29,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 9.67
+    }
+  },
+  {
+    "ref": "78fbd81",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-18 07:49:41 +0100",
+    "comment": "Split the private class into a separate sourcefile",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 31,
+      "max_of_file_weights": 16,
+      "mean_of_file_weights": 7.75
+    }
+  },
+  {
+    "ref": "9f06e51",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-18 18:06:16 +0100",
+    "comment": "Describe listener objects in the docs",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 31,
+      "max_of_file_weights": 16,
+      "mean_of_file_weights": 7.75
+    }
+  },
+  {
+    "ref": "643381c",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-18 18:14:22 +0100",
+    "comment": "Prevent further arguments when the pattern is a listener object",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 37,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 9.25
+    }
+  },
+  {
+    "ref": "8eea72d",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-18 18:18:59 +0100",
+    "comment": "Fix some of the spec names for clarity",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 37,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 9.25
+    }
+  },
+  {
+    "ref": "780fff7",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-18 20:14:47 +0100",
+    "comment": "Bump to version 0.1.0",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 37,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 9.25
+    }
+  },
+  {
+    "ref": "3fe7865",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-19 07:31:35 +0100",
+    "comment": "Allow listeners to subscribe with a symbol for the pattern",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 37,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 9.25
+    }
+  },
+  {
+    "ref": "9193107",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-19 07:32:14 +0100",
+    "comment": "Bump to version 0.1.1",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 37,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 9.25
+    }
+  },
+  {
+    "ref": "e6b3ff3",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-19 07:57:35 +0100",
+    "comment": "Remove old experimental code",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 35,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 8.75
+    }
+  },
+  {
+    "ref": "8a0fddf",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-19 07:58:23 +0100",
+    "comment": "Bump to version 1.0.0",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 35,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 8.75
+    }
+  },
+  {
+    "ref": "3c9734a",
+    "author": "Kevin Rutherford",
+    "date": "2013-04-23 08:01:09 +0100",
+    "comment": "Fixed the one problem found by mutant",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 35,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 8.75
+    }
+  },
+  {
+    "ref": "dd72396",
+    "author": "Kevin Rutherford",
+    "date": "2013-05-06 13:44:58 +0100",
+    "comment": "Updated to latest gem dependency versions",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 35,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 8.75
+    }
+  },
+  {
+    "ref": "73259a6",
+    "author": "Kevin Rutherford",
+    "date": "2013-05-16 07:21:06 +0100",
+    "comment": "Convert the specs to use spies instead of mocks",
+    "num_files_touched": 4,
+    "complexity": {
+      "sum_of_file_weights": 36,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 9.0
+    }
+  },
+  {
+    "ref": "4ca7e98",
+    "author": "Jon Moses",
+    "date": "2013-05-16 11:39:18 -0400",
+    "comment": "Ensure all listeners receive event when one errors",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 44,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 11.0
+    }
+  },
+  {
+    "ref": "1372e92",
+    "author": "Kevin Rutherford",
+    "date": "2013-05-17 07:16:29 +0100",
+    "comment": "Removed a case statement via a little polymorphism",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 40,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 10.0
+    }
+  },
+  {
+    "ref": "24f2562",
+    "author": "Kevin Rutherford",
+    "date": "2013-05-22 19:09:56 +0100",
+    "comment": "Made the receiving method name explicit in the tests, for clarity",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 40,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 10.0
+    }
+  },
+  {
+    "ref": "8769afc",
+    "author": "Kevin Rutherford",
+    "date": "2013-05-22 19:18:06 +0100",
+    "comment": "Use explicit event names in the specs, for clarity",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 40,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 10.0
+    }
+  },
+  {
+    "ref": "c17612c",
+    "author": "Kevin Rutherford",
+    "date": "2013-05-23 17:52:40 +0100",
+    "comment": "First pass at converting the specs to use rspec-given",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 41,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 10.25
+    }
+  },
+  {
+    "ref": "e50dfba",
+    "author": "Kevin Rutherford",
+    "date": "2013-05-23 19:55:34 +0100",
+    "comment": "Collect the error cases together in the specs",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 41,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 10.25
+    }
+  },
+  {
+    "ref": "2edfbd7",
+    "author": "Jon Moses",
+    "date": "2013-07-09 11:49:49 -0400",
+    "comment": "Pass the error to the handler.",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 41,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 10.25
+    }
+  },
+  {
+    "ref": "0889a03",
+    "author": "John Dell",
+    "date": "2014-01-13 19:50:35 -0800",
+    "comment": "Update travis build configuration  * Add ruby 2.0.0 and 2.1.0 to travis builds  * remove obsolete rbx-19mode  * add rbx-2.1 and rbx-2.2 as allowed failures (rbx setup fails on travis)  * ensure travis doesn't append '-- deployment' to bundle install",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 41,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 10.25
+    }
+  },
+  {
+    "ref": "cbf8b68",
+    "author": "Kevin Rutherford",
+    "date": "2014-04-07 08:39:46 +0100",
+    "comment": "Corrected the supported Rubies and added a note about Sidekiq support.",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 41,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 10.25
+    }
+  },
+  {
+    "ref": "16c4d9c",
+    "author": "Jon Moses",
+    "date": "2014-05-30 11:37:51 -0400",
+    "comment": "Add methods that facilitate testing",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 44,
+      "max_of_file_weights": 22,
+      "mean_of_file_weights": 8.8
+    }
+  },
+  {
+    "ref": "fe74745",
+    "author": "Jon Moses",
+    "date": "2014-06-02 08:45:28 -0400",
+    "comment": "Cleanup per PR comments.",
+    "num_files_touched": 5,
+    "complexity": {
+      "sum_of_file_weights": 43,
+      "max_of_file_weights": 24,
+      "mean_of_file_weights": 10.75
+    }
+  }
+]

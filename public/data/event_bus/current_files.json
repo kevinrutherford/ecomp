@@ -1,0 +1,34 @@
+[
+  {
+    "filename": "lib/event_bus/registrations.rb",
+    "num_branches": 4,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 10,
+    "churn": 8
+  },
+  {
+    "filename": "lib/event_bus.rb",
+    "num_branches": 11,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 24,
+    "churn": 22
+  },
+  {
+    "filename": "spec/spec_helper.rb",
+    "num_branches": 0,
+    "num_dependencies": 6,
+    "num_superclasses": 0,
+    "weight": 7,
+    "churn": 4
+  },
+  {
+    "filename": "spec/lib/event_bus_spec.rb",
+    "num_branches": 0,
+    "num_dependencies": 1,
+    "num_superclasses": 0,
+    "weight": 2,
+    "churn": 29
+  }
+]

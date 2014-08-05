@@ -5,23 +5,31 @@
     "num_dependencies": 0,
     "num_superclasses": 0,
     "weight": 1,
-    "churn": 3
+    "churn": 4
+  },
+  {
+    "filename": "java/src/EmailerException.java",
+    "num_branches": 0,
+    "num_dependencies": 1,
+    "num_superclasses": 2,
+    "weight": 6,
+    "churn": 1
   },
   {
     "filename": "java/src/BirthdayService.java",
-    "num_branches": 1,
-    "num_dependencies": 0,
-    "num_superclasses": 0,
-    "weight": 2,
-    "churn": 10
+    "num_branches": 2,
+    "num_dependencies": 3,
+    "num_superclasses": 1,
+    "weight": 24,
+    "churn": 5
   },
   {
     "filename": "java/src/AcceptanceTest.java",
-    "num_branches": 0,
-    "num_dependencies": 6,
+    "num_branches": 1,
+    "num_dependencies": 11,
     "num_superclasses": 0,
-    "weight": 7,
-    "churn": 6
+    "weight": 24,
+    "churn": 3
   },
   {
     "filename": "java/src/EmployeeTest.java",
@@ -29,15 +37,7 @@
     "num_dependencies": 2,
     "num_superclasses": 0,
     "weight": 3,
-    "churn": 2
-  },
-  {
-    "filename": "java/src/EmployeeFile.java",
-    "num_branches": 2,
-    "num_dependencies": 3,
-    "num_superclasses": 0,
-    "weight": 12,
-    "churn": 5
+    "churn": 4
   },
   {
     "filename": "java/src/OurDate.java",
@@ -48,44 +48,20 @@
     "churn": 4
   },
   {
-    "filename": "java/src/PersonnelException.java",
-    "num_branches": 0,
-    "num_dependencies": 0,
-    "num_superclasses": 1,
-    "weight": 2,
-    "churn": 1
-  },
-  {
-    "filename": "java/src/TestDataFile.java",
-    "num_branches": 1,
-    "num_dependencies": 4,
-    "num_superclasses": 0,
-    "weight": 10,
-    "churn": 1
-  },
-  {
     "filename": "java/src/OurDateTest.java",
     "num_branches": 0,
     "num_dependencies": 2,
     "num_superclasses": 0,
     "weight": 3,
-    "churn": 2
-  },
-  {
-    "filename": "java/src/MessageSenderException.java",
-    "num_branches": 0,
-    "num_dependencies": 1,
-    "num_superclasses": 1,
-    "weight": 4,
-    "churn": 1
+    "churn": 4
   },
   {
     "filename": "java/src/Emailer.java",
     "num_branches": 1,
-    "num_dependencies": 6,
-    "num_superclasses": 0,
-    "weight": 14,
-    "churn": 2
+    "num_dependencies": 7,
+    "num_superclasses": 1,
+    "weight": 32,
+    "churn": 1
   },
   {
     "filename": "java/src/BirthdayApp.java",
@@ -93,6 +69,6 @@
     "num_dependencies": 0,
     "num_superclasses": 0,
     "weight": 2,
-    "churn": 4
+    "churn": 1
   }
 ]
