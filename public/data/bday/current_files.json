@@ -8,20 +8,12 @@
     "churn": 3
   },
   {
-    "filename": "java/src/Greeter.java",
+    "filename": "java/src/BirthdayService.java",
     "num_branches": 1,
     "num_dependencies": 0,
-    "num_superclasses": 1,
-    "weight": 4,
-    "churn": 2
-  },
-  {
-    "filename": "java/src/BirthdayService.java",
-    "num_branches": 0,
-    "num_dependencies": 0,
-    "num_superclasses": 1,
+    "num_superclasses": 0,
     "weight": 2,
-    "churn": 9
+    "churn": 11
   },
   {
     "filename": "java/src/AcceptanceTest.java",
@@ -29,7 +21,7 @@
     "num_dependencies": 6,
     "num_superclasses": 1,
     "weight": 14,
-    "churn": 7
+    "churn": 6
   },
   {
     "filename": "java/src/EmployeeTest.java",
@@ -45,7 +37,7 @@
     "num_dependencies": 3,
     "num_superclasses": 1,
     "weight": 24,
-    "churn": 2
+    "churn": 5
   },
   {
     "filename": "java/src/OurDate.java",
@@ -53,7 +45,7 @@
     "num_dependencies": 3,
     "num_superclasses": 1,
     "weight": 24,
-    "churn": 3
+    "churn": 4
   },
   {
     "filename": "java/src/PersonnelException.java",
@@ -69,7 +61,7 @@
     "num_dependencies": 4,
     "num_superclasses": 1,
     "weight": 20,
-    "churn": 2
+    "churn": 1
   },
   {
     "filename": "java/src/OurDateTest.java",
@@ -82,26 +74,18 @@
   {
     "filename": "java/src/MessageSenderException.java",
     "num_branches": 0,
-    "num_dependencies": 0,
+    "num_dependencies": 1,
     "num_superclasses": 2,
-    "weight": 3,
+    "weight": 6,
     "churn": 1
   },
   {
     "filename": "java/src/Emailer.java",
-    "num_branches": 2,
+    "num_branches": 1,
     "num_dependencies": 6,
-    "num_superclasses": 1,
-    "weight": 42,
-    "churn": 2
-  },
-  {
-    "filename": "java/src/EmployeeAction.java",
-    "num_branches": 0,
-    "num_dependencies": 0,
     "num_superclasses": 0,
-    "weight": 1,
-    "churn": 1
+    "weight": 14,
+    "churn": 3
   },
   {
     "filename": "java/src/BirthdayApp.java",
@@ -109,6 +93,6 @@
     "num_dependencies": 0,
     "num_superclasses": 1,
     "weight": 4,
-    "churn": 1
+    "churn": 4
   }
 ]

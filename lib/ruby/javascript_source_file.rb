@@ -1,6 +1,6 @@
 require 'json'
 
-class JavaSourceFile
+class JavascriptSourceFile
 
   BIN = File.dirname(File.expand_path(__FILE__)) + '/../../bin'
 
@@ -9,7 +9,7 @@ class JavaSourceFile
   end
 
   def complexity
-    json = JSON.parse(`#{BIN}/javancss #{@path}`)
+    json = JSON.parse(`node #{BIN}/../lib/js/js_parser.js #{@path}`)
     result = {}
     json.each {|k,v| result[k.to_sym] = v }
     result
