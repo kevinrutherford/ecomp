@@ -153,10 +153,10 @@ function churn_vs_complexity_plot(target, data) {
             name: item.filename
         });
     });
-    draw_churn_vs_complexity_chart(target, points, Math.max(max_churn, max_complexity));
+    draw_churn_vs_complexity_chart(target, points, max_complexity, max_churn);
 };
 
-function draw_churn_vs_complexity_chart(div, data, max) {
+function draw_churn_vs_complexity_chart(div, data, max, max_churn) {
     $(div).highcharts({
         credits: { enabled: false },
         chart: { zoomType: 'xy' },
@@ -171,7 +171,7 @@ function draw_churn_vs_complexity_chart(div, data, max) {
         xAxis: {
             title: { text: 'Number of times changed' },
             min: 0,
-            max: max
+            max: max_churn
         },
         plotOptions: {
             scatter: {
