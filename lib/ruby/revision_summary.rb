@@ -34,6 +34,7 @@ class RevisionSummary
 
   def summarise
     return if @summarised
+    puts('Summarising revision: ' + @rev[:date])
     files = @repo.files_in_revision(@rev, @glob)
     @rev[:complexity] = summarise_all_files(files)
     @summarised = true
