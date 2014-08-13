@@ -6,23 +6,27 @@ This is a placeholder readme file aiming to provide a quick starting point to an
 The readme tries to assume no knowledge of using a Ruby project (gems & bundler etc.) and is likely to be incorrect!
 
 Requirements
-============
+------------
 To run the ecomp tools, Ruby 2.1.2 must be available along with RubyGems and Bundler. 
 Java analysis requires a JVM.
 JavaScript analysis requires nodejs.
 Ruby analysis requires no other tools. 
 
 Quickstart
-==========
+----------
 Ensure you have Ruby 2.1.2 installed and RubyGems and Bundler, then in the directory you checked ecomp out to, run:
 
-  * bundle
+```
+bundle
+```
 
 This will download and install the required gems that the tool requires to run.
 
 In the directory you checked out ecomp to, run:
 
-  * export PATH=$PATH:`pwd`/bin
+```
+export PATH=$PATH:`pwd`/bin
+```
 
 You should now be able to execute the 'metrics' tool. 
 
@@ -39,12 +43,13 @@ The tools require projects to have a git repository, how to convert subversion p
 When converting your git repository, it is important that the format of the author of commits be correct! If you have issues getting the tools to work, this may be the source of your problems.
 
 Example 1: Java
-===============
+---------------
 
 In the root of a Java project, with the metrics tool accessible via your $PATH, the following commands will generate a complexity dataset:
-
-  * mkdir report_output
-  * metrics report_output **/*.java
+```
+mkdir report_output
+metrics report_output **/*.java
+```
   
 NOTE: The process is time consuming and involves going through all the previous commits to calculate a play-by-play dataset of complexity changes to each of the source files.
 
