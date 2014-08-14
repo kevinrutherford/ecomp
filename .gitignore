@@ -1,3 +1,6 @@
 .ecomp.sublime-workspace
 .tags*
 public/data/*
+lib/objc/ObjC*.class
+lib/objc/ObjC*.java
+

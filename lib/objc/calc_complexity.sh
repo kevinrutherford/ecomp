@@ -1,8 +1,14 @@
 #!/bin/bash
 
-if [ ! -e "ObjC.tokens" ]; then
+SCRIPTDIR=`dirname $0`
+
+PROJECT_ROOT=`pwd`
+
+if [ ! -e "$SCRIPTDIR/ObjC.tokens" ]; then
+	cd $SCRIPTDIR
 	java -jar /usr/local/lib/antlr-4.4-complete.jar ObjC.g4
 	javac ObjC*.java
+	cd -
 fi
 
 if [ -z "$1" ]; then
@@ -11,19 +17,18 @@ if [ -z "$1" ]; then
 fi
 
 TMPDIR=`mktemp -d -t ecomp`
-
-alias antlr4='java -jar /usr/local/lib/antlr-4.4-complete.jar'
-grun='java org.antlr.v4.runtime.misc.TestRig'
-
 SOURCEFILE=`basename "$1"`
 SRCDIR=`dirname "$1"`
+ABSSOURCEFILE="$PROJECT_ROOT/$SRCDIR/$SOURCEFILE"
+
 CLASSNAME=`echo $SOURCEFILE | awk '{ print substr($1, 1, length($1)-2) }'`
 HEADERFILE=$CLASSNAME.h
 ABSHEADERFILE="$SRCDIR/$HEADERFILE"
 
 LEXOUT=$TMPDIR/$CLASSNAME.lex
 
-java org.antlr.v4.runtime.misc.TestRig ObjC lex -tokens "$1" | grep -v "#import \"$HEADERFILE\"" > $LEXOUT
+cd $SCRIPTDIR
+java org.antlr.v4.runtime.misc.TestRig ObjC lex -tokens $ABSSOURCEFILE | grep -v "#import \"$HEADERFILE\"" > $LEXOUT
 IMPORTS=$(grep "<132>" "$LEXOUT" | wc -l | tr -d [:blank:])
 CONDITIONALS=$(grep "<43>" "$LEXOUT" | wc -l | tr -d [:blank:])
 ANDS=$(grep "<91>" "$LEXOUT" | wc -l | tr -d [:blank:])
