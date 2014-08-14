@@ -6,6 +6,7 @@ function recent_commits_plot(target, data) {
         $.each(item.commits, function(i, c) {
             pts.push({
                 name: c.ref,
+                message: c.comment,
                 x: Date.parse(c.date),
                 y: c.complexity.delta_sum_of_file_weights,
                 z: c.num_files_touched
@@ -41,7 +42,8 @@ function draw_recent_commits_chart(div, data) {
             formatter: function() {
                 var header = '<b>'+ this.point.name + ' by ' + this.series.name + '</b><br>';
                 var detail = 'Files touched: ' + this.point.z + '<br>' + 'Complexity delta: ' + this.point.y;
-                return header + detail;
+                var commitMessage = '<br><i>' + this.point.message + '</i>';
+                return header + detail + commitMessage;
             }
         },
         series: data
