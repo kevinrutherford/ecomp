@@ -42,7 +42,18 @@ class RevisionSummary
 
   def summarise_all_files(files)
     file_reports = files.map(&:complexity_report)
-    weights = file_reports.empty? ? [0] : file_reports.map {|rpt| rpt['weight'] }
+      weights = []
+    if (file_reports.empty?)
+      weights.push(0)
+    else
+      file_reports.each do |rpt|
+        if rpt.nil?
+          puts "There is nothing to report"
+        else
+          weights.push(rpt['weight'])
+        end
+      end
+    end
     weight_sum = weights.inject(:+)
     {
       sum_of_file_weights: weight_sum,

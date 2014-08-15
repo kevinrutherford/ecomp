@@ -9,6 +9,6 @@ JAVA_HOME=`dirname "$JAVA_HOME"`/..
 JAVANCSS_HOME=`dirname "$0"`/..
 lib="${JAVANCSS_HOME}/lib/java"
 
-classpath=${lib}/javancss.jar:${lib}/ccl.jar:${CLASSPATH}
+classpath=${lib}/javancss-1.1.jar:${lib}/ccl.jar:${CLASSPATH}
 
 $JAVA_HOME/bin/java -classpath $classpath javancss.Main $@
