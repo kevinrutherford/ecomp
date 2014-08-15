@@ -1,5 +1,6 @@
 require_relative 'file_revision'
 require_relative 'revision_summary'
+require_relative 'revision_summary_from_metrics'
 require_relative 'complexity_trend_report'
 require_relative 'developer_behaviour_report'
 require_relative 'current_hotspots_report'
@@ -38,6 +39,8 @@ class BesMetrics
     latest_revision_metrics = @metrics_dao.get_latest_revision_metrics
     revision = find_oldest_unanalysed_revision(latest_revision_metrics)
 
+    i = 0
+
     while revision
       if revision.nil?
         puts 'No revision to analyse'
@@ -49,7 +52,18 @@ class BesMetrics
       @repo.reset
       latest_revision_metrics = @metrics_dao.get_latest_revision_metrics
       revision = find_oldest_unanalysed_revision(latest_revision_metrics)
+
+      i = i + 1
+      if (i == 5)
+        break
+      end
     end
+
+    summaries = Array.new
+    @metrics_dao.get_all_revision_metrics.each do |metrics|
+      summaries << RevisionSummaryFromMetrics.new(metrics)
+    end
+    @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(summaries))
 
   end
 

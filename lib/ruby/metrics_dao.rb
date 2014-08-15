@@ -33,6 +33,10 @@ class MetricsDAO
 
   # TODO ....to here
 
+  def get_all_revision_metrics
+    @commits.get_content
+  end
+
   def get_latest_revision_metrics
     @commits.get_content.last
   end
