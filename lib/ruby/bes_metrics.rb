@@ -64,7 +64,7 @@ class BesMetrics
       summaries << RevisionSummaryFromMetrics.new(metrics)
     end
     @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(summaries))
-
+    @report.update('current_files', CurrentHotspotsReport.new(@repo, @glob))
   end
 
   private

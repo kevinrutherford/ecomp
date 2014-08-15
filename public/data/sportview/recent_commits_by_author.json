@@ -1778,2214 +1778,6 @@
           "mean_of_file_weights": 37.61,
           "delta_sum_of_file_weights": 0
         }
-      }
-    ]
-  },
-  {
-    "author": "Will Crossland",
-    "commits": [
-      {
-        "ref": "11533d3",
-        "author": "Will Crossland",
-        "date": "2014-02-20 16:33:20 +0000",
-        "comment": "TVPSPORTV5-836 Move Region and Regions classes into data.statistics and add unit tests for them",
-        "num_files_touched": 11,
-        "complexity": {
-          "sum_of_file_weights": 1805,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.02,
-          "delta_sum_of_file_weights": -136
-        }
-      },
-      {
-        "ref": "1f2da84",
-        "author": "Will Crossland",
-        "date": "2014-02-28 15:11:09 +0000",
-        "comment": "TVPSPORTV5-863 Update sandboxdeploy.sh to stopstart tomcat and copy testdata to deployed sprtview webapp",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 2251,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.9,
-          "delta_sum_of_file_weights": 310
-        }
-      },
-      {
-        "ref": "8d28353",
-        "author": "Will Crossland",
-        "date": "2014-03-03 12:05:08 +0000",
-        "comment": "TVPSPORTV5-863 Start implementation of Footbal statistics state",
-        "num_files_touched": 14,
-        "complexity": {
-          "sum_of_file_weights": 2225,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.63,
-          "delta_sum_of_file_weights": -26
-        }
-      },
-      {
-        "ref": "8b624e0",
-        "author": "Will Crossland",
-        "date": "2014-03-03 12:10:19 +0000",
-        "comment": "TVPSPORTV5-863 Add message check to exception test",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 2225,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.63,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "f7b0773",
-        "author": "Will Crossland",
-        "date": "2014-03-03 12:12:57 +0000",
-        "comment": "TVPSPORTV5-863 Move DAOSServices under statistics package",
-        "num_files_touched": 10,
-        "complexity": {
-          "sum_of_file_weights": 2217,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.47,
-          "delta_sum_of_file_weights": -8
-        }
-      },
-      {
-        "ref": "e5c37c9",
-        "author": "Will Crossland",
-        "date": "2014-03-03 12:13:47 +0000",
-        "comment": "TVPSPORTV5-863 Move RestTemplate configuration test into spring package",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 2217,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.47,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "59cf415",
-        "author": "Will Crossland",
-        "date": "2014-03-03 12:41:18 +0000",
-        "comment": "TVPSPORTV5-863 Implement StatisticsStateService. Define in Spring config",
-        "num_files_touched": 8,
-        "complexity": {
-          "sum_of_file_weights": 2349,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.5,
-          "delta_sum_of_file_weights": 132
-        }
-      },
-      {
-        "ref": "c343959",
-        "author": "Will Crossland",
-        "date": "2014-03-03 13:04:04 +0000",
-        "comment": "TVPSPORTV5-863 Add canning for statistics model endpoint. Change exception handling in DAO to embed RestClientException (so cause bubbles to controller to be logged)",
-        "num_files_touched": 11,
-        "complexity": {
-          "sum_of_file_weights": 2389,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.24,
-          "delta_sum_of_file_weights": 40
-        }
-      },
-      {
-        "ref": "b1f3647",
-        "author": "Will Crossland",
-        "date": "2014-03-03 14:49:26 +0000",
-        "comment": "TVPSPORTV5-863 Move ComponentItem interface to under data.component package. Refactoring in tests of pojo classes",
-        "num_files_touched": 12,
-        "complexity": {
-          "sum_of_file_weights": 2385,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.17,
-          "delta_sum_of_file_weights": -4
-        }
-      },
-      {
-        "ref": "2e2a08c",
-        "author": "Will Crossland",
-        "date": "2014-03-03 16:53:22 +0000",
-        "comment": "TVPSPORTV5-927 Update JSON structure for homeerror state output. Add support for serializing enums via interface.",
-        "num_files_touched": 25,
-        "complexity": {
-          "sum_of_file_weights": 2205,
-          "max_of_file_weights": 352,
-          "mean_of_file_weights": 35.0,
-          "delta_sum_of_file_weights": -180
-        }
-      },
-      {
-        "ref": "3982147",
-        "author": "Will Crossland",
-        "date": "2014-03-03 16:59:32 +0000",
-        "comment": "TVPSPORTV5-927 Update unit tests for POJOs",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 2211,
-          "max_of_file_weights": 352,
-          "mean_of_file_weights": 34.55,
-          "delta_sum_of_file_weights": 6
-        }
-      },
-      {
-        "ref": "3c6b6cd",
-        "author": "Will Crossland",
-        "date": "2014-03-04 09:11:44 +0000",
-        "comment": "TVPSPORTV5-927 Implement StatisticsStateBuilder. Refactor BuilderException to be created via BuilderExceptionType (in line with ServiceException)",
-        "num_files_touched": 8,
-        "complexity": {
-          "sum_of_file_weights": 2350,
-          "max_of_file_weights": 374,
-          "mean_of_file_weights": 35.07,
-          "delta_sum_of_file_weights": 139
-        }
-      },
-      {
-        "ref": "fa26806",
-        "author": "Will Crossland",
-        "date": "2014-03-04 09:34:52 +0000",
-        "comment": "TVPSPORTV5-927 Refactor Regions to StatisticsModel. Add interface for StatisticsModelDao",
-        "num_files_touched": 26,
-        "complexity": {
-          "sum_of_file_weights": 2353,
-          "max_of_file_weights": 374,
-          "mean_of_file_weights": 34.6,
-          "delta_sum_of_file_weights": 3
-        }
-      },
-      {
-        "ref": "73cc644",
-        "author": "Will Crossland",
-        "date": "2014-03-04 09:37:50 +0000",
-        "comment": "TVPSPORTV5-927 Move statistics builders into .statistics package",
-        "num_files_touched": 9,
-        "complexity": {
-          "sum_of_file_weights": 2353,
-          "max_of_file_weights": 374,
-          "mean_of_file_weights": 34.6,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "c73244d",
-        "author": "Will Crossland",
-        "date": "2014-03-04 10:15:25 +0000",
-        "comment": "TVPSPORTV5-927 Start implementing tests for StatisticsChooserComponentBuilder. Rename TopNavigationDataItem to BiscuitMenuDataItem",
-        "num_files_touched": 14,
-        "complexity": {
-          "sum_of_file_weights": 2445,
-          "max_of_file_weights": 374,
-          "mean_of_file_weights": 34.44,
-          "delta_sum_of_file_weights": 92
-        }
-      },
-      {
-        "ref": "1f0f349",
-        "author": "Will Crossland",
-        "date": "2014-03-04 10:50:44 +0000",
-        "comment": "TVPSPORTV5-927 Implement StatisticsChooserComponentBuilder. Enable StatisticsFootballStateTest (now passing)",
-        "num_files_touched": 5,
-        "complexity": {
-          "sum_of_file_weights": 2628,
-          "max_of_file_weights": 374,
-          "mean_of_file_weights": 37.01,
-          "delta_sum_of_file_weights": 183
-        }
-      },
-      {
-        "ref": "d3cbfc2",
-        "author": "Will Crossland",
-        "date": "2014-03-04 11:19:04 +0000",
-        "comment": "TVPSPORTV5-927 Start re-enabling tests for TopNavigationComponentBuilder",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 2682,
-          "max_of_file_weights": 374,
-          "mean_of_file_weights": 37.77,
-          "delta_sum_of_file_weights": 54
-        }
-      },
-      {
-        "ref": "084647a",
-        "author": "Will Crossland",
-        "date": "2014-03-04 12:17:59 +0000",
-        "comment": "TVPSPORTV5-927 Finish re-enabling tests for TopNavigationComponentBuilder, using all mocks for data objects",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 2900,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.85,
-          "delta_sum_of_file_weights": 218
-        }
-      },
-      {
-        "ref": "4851658",
-        "author": "Will Crossland",
-        "date": "2014-03-04 12:33:17 +0000",
-        "comment": "TVPSPORTV5-927 Refactor for consistency between TopNavigationComponentBuilder and StatisticsChooserComponentBuilder",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 2900,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.85,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "b9dfb18",
-        "author": "Will Crossland",
-        "date": "2014-03-04 12:44:50 +0000",
-        "comment": "TVPSPORTV5-927 Create BiscuitComponentBuilder",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 2954,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.47,
-          "delta_sum_of_file_weights": 54
-        }
-      },
-      {
-        "ref": "42e93d2",
-        "author": "Will Crossland",
-        "date": "2014-03-04 12:51:44 +0000",
-        "comment": "TVPSPORTV5-927 Remove BiscuitComponentBuilder",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 2900,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.85,
-          "delta_sum_of_file_weights": -54
-        }
-      },
-      {
-        "ref": "23e0a37",
-        "author": "Will Crossland",
-        "date": "2014-03-04 14:38:38 +0000",
-        "comment": "TVPSPORTV5-927 Update cucumber test to align with changes to data format",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 2900,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.85,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "4064e02",
-        "author": "Will Crossland",
-        "date": "2014-03-04 16:12:42 +0000",
-        "comment": "TVPSPORTV5-927 Create StatisticsStateController and seperate calls to StateService and StatisticsStateService into appropriate controller.",
-        "num_files_touched": 16,
-        "complexity": {
-          "sum_of_file_weights": 2954,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.47,
-          "delta_sum_of_file_weights": 54
-        }
-      },
-      {
-        "ref": "1f90078",
-        "author": "Will Crossland",
-        "date": "2014-03-04 16:41:58 +0000",
-        "comment": "TVPSPORTV5-927 Add monitoring configuration (JUnit) test and add to monitoring feature to test statisticsModelDao monitoring occurs.",
-        "num_files_touched": 10,
-        "complexity": {
-          "sum_of_file_weights": 3052,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.69,
-          "delta_sum_of_file_weights": 98
-        }
-      },
-      {
-        "ref": "72c680b",
-        "author": "Will Crossland",
-        "date": "2014-03-04 16:56:01 +0000",
-        "comment": "TVPSPORTV5-927 Configure test data domains and navigation model feed so statistics feed comes from real sportacus normally (int when running on sandbox).",
-        "num_files_touched": 4,
-        "complexity": {
-          "sum_of_file_weights": 3052,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.69,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "0b397bb",
-        "author": "Will Crossland",
-        "date": "2014-03-04 17:12:29 +0000",
-        "comment": "TVPSPORTV5-927 Add monitoring to controllers. Support change with JUnit integration tests and additions to cucumber monitoring.feature",
-        "num_files_touched": 7,
-        "complexity": {
-          "sum_of_file_weights": 3196,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 41.51,
-          "delta_sum_of_file_weights": 144
-        }
-      },
-      {
-        "ref": "35fdf55",
-        "author": "Will Crossland",
-        "date": "2014-03-04 17:36:37 +0000",
-        "comment": "TVPSPORTV5-927 Seperate building of biscuit data out of StatisticsChooserComponentBuilder and into StatisticsChooserComponentDataBuilder",
-        "num_files_touched": 5,
-        "complexity": {
-          "sum_of_file_weights": 3162,
-          "max_of_file_weights": 408,
-          "mean_of_file_weights": 40.03,
-          "delta_sum_of_file_weights": -34
-        }
-      },
-      {
-        "ref": "6eab7f8",
-        "author": "Will Crossland",
-        "date": "2014-03-04 19:57:33 +0000",
-        "comment": "TVPSPORTV5-927 Ridiculous refactor to rationalise and introduce interfaces to Component and descendent interfacesclasses",
-        "num_files_touched": 46,
-        "complexity": {
-          "sum_of_file_weights": 3092,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 35.95,
-          "delta_sum_of_file_weights": -70
-        }
-      }
-    ]
-  },
-  {
-    "author": "christopher darlaston",
-    "commits": [
-      {
-        "ref": "f4f3e53",
-        "author": "christopher darlaston",
-        "date": "2014-02-21 15:37:53 +0000",
-        "comment": "Removing then re-adding to add in the correct execute permissions",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1941,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 49.77,
-          "delta_sum_of_file_weights": 136
-        }
-      },
-      {
-        "ref": "9f24c90",
-        "author": "christopher darlaston",
-        "date": "2014-02-21 15:38:30 +0000",
-        "comment": "Adding the file back in with the execute permissions to run",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1941,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 49.77,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "98d8f3e",
-        "author": "christopher darlaston",
-        "date": "2014-02-21 15:39:24 +0000",
-        "comment": "Removing this file so that it can be re-added with the correct execue permissions",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1941,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 49.77,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "db024f1",
-        "author": "christopher darlaston",
-        "date": "2014-02-21 15:40:27 +0000",
-        "comment": "Re-adding the file with the execute permissions added.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1941,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 49.77,
-          "delta_sum_of_file_weights": 0
-        }
-      }
-    ]
-  },
-  {
-    "author": "gareth jones1",
-    "commits": [
-      {
-        "ref": "b40bcd3",
-        "author": "gareth jones1",
-        "date": "2014-01-23 09:43:05 +0000",
-        "comment": "Committing file structure for the cucumber tests.",
-        "num_files_touched": 4,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      }
-    ]
-  },
-  {
-    "author": "dominic charlesworth",
-    "commits": [
-      {
-        "ref": "7011681",
-        "author": "dominic charlesworth",
-        "date": "2014-01-23 10:34:45 +0000",
-        "comment": "Changing parent version to 1.3.6 because this is what sprtiptvdas uses",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "fd1c8bb",
-        "author": "dominic charlesworth",
-        "date": "2014-01-23 10:37:13 +0000",
-        "comment": "Changed parent version back to 2.0.4",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "f81cd3b",
-        "author": "dominic charlesworth",
-        "date": "2014-01-23 16:03:16 +0000",
-        "comment": "Added initial cucumber test, updated pom to get the project building on sandbox",
-        "num_files_touched": 6,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "2270e27",
-        "author": "dominic charlesworth",
-        "date": "2014-01-23 16:07:02 +0000",
-        "comment": "Add username to pom",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "24d80b2",
-        "author": "dominic charlesworth",
-        "date": "2014-01-23 16:18:08 +0000",
-        "comment": "updated the pom",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "3df5742",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 10:00:32 +0000",
-        "comment": "Updating poms to get naming correct",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "bc7461f",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 10:34:17 +0000",
-        "comment": "Adding an appName to the project pom to call it sprtiptvview",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "29cc943",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 11:24:37 +0000",
-        "comment": "White space to trigger build",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "4c38677",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 11:40:11 +0000",
-        "comment": "Added runas.username and runas.group as sprtiptvview",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "c6b6466",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 13:21:17 +0000",
-        "comment": "Added pom and project structure for api module",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "0e369c2",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 13:37:25 +0000",
-        "comment": "Adding tomcat packagename explicitly to the poms for the modules",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "3e35307",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 13:41:58 +0000",
-        "comment": "Whitespace to trigger build",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "f73b265",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 15:21:55 +0000",
-        "comment": "Changing appName back to sprtiptvview",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "9ea4691",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 16:16:44 +0000",
-        "comment": "Adding pom and sprtview rpms to obsoletes",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "e35f5a4",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 16:18:09 +0000",
-        "comment": "Moving obsoletes to properties",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "cc9d7e4",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 16:20:43 +0000",
-        "comment": "Moving obsoletes to properties",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "53019db",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 16:21:41 +0000",
-        "comment": "Moving obsoletes to properties",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "c75f50d",
-        "author": "dominic charlesworth",
-        "date": "2014-01-24 16:33:42 +0000",
-        "comment": "Moving obsoletes to after requires",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "ba0b248",
-        "author": "dominic charlesworth",
-        "date": "2014-01-27 12:34:15 +0000",
-        "comment": "Changing appName back to sprtview",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "b34fdcb",
-        "author": "dominic charlesworth",
-        "date": "2014-01-27 12:51:27 +0000",
-        "comment": "Made some changes",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "a7e38f4",
-        "author": "dominic charlesworth",
-        "date": "2014-01-27 12:58:53 +0000",
-        "comment": "Reverting to old revision that had a successful build!!",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "10b5f21",
-        "author": "dominic charlesworth",
-        "date": "2014-01-27 15:35:33 +0000",
-        "comment": "Updating the poms for the modules to be services...:",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "1f12d71",
-        "author": "dominic charlesworth",
-        "date": "2014-01-27 15:51:54 +0000",
-        "comment": "Making root project a war",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "8af72fc",
-        "author": "dominic charlesworth",
-        "date": "2014-01-28 09:54:34 +0000",
-        "comment": "Changing everything to sprtview",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "3a292c7",
-        "author": "dominic charlesworth",
-        "date": "2014-02-05 11:16:44 +0000",
-        "comment": "Revert to revision 1385621",
-        "num_files_touched": 19,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "83c106e",
-        "author": "dominic charlesworth",
-        "date": "2014-02-05 11:38:49 +0000",
-        "comment": "Moved sprtiptvview-imp to sprtiptvview",
-        "num_files_touched": 17,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "29c8f6c",
-        "author": "dominic charlesworth",
-        "date": "2014-02-06 17:18:50 +0000",
-        "comment": "Merge from TVPSPORTV5-710",
-        "num_files_touched": 19,
-        "complexity": {
-          "sum_of_file_weights": 37,
-          "max_of_file_weights": 12,
-          "mean_of_file_weights": 7.4,
-          "delta_sum_of_file_weights": 37
-        }
-      },
-      {
-        "ref": "c09c980",
-        "author": "dominic charlesworth",
-        "date": "2014-02-11 16:28:55 +0000",
-        "comment": "TVPSPORTV5-710 Added support for JUnit integration testing using comparison data. Created testdata project to support cucumber BDD testing. Paired with Emma Carruthers",
-        "num_files_touched": 44,
-        "complexity": {
-          "sum_of_file_weights": 1066,
-          "max_of_file_weights": 120,
-          "mean_of_file_weights": 39.48,
-          "delta_sum_of_file_weights": 609
-        }
-      },
-      {
-        "ref": "1787718",
-        "author": "dominic charlesworth",
-        "date": "2014-02-13 16:22:59 +0000",
-        "comment": "TVPSPORTV5-710",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 134
-        }
-      },
-      {
-        "ref": "8c92f91",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 11:53:51 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": -132
-        }
-      },
-      {
-        "ref": "b90d539",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 14:13:58 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "54abe59",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 14:27:45 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "2ee88b2",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 15:06:46 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "f3be4ff",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 15:14:10 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "75378b2",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 15:16:54 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "e289acf",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 15:17:10 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "a0f8f5d",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 15:27:06 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "565abe0",
-        "author": "dominic charlesworth",
-        "date": "2014-02-17 15:45:06 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      }
-    ]
-  },
-  {
-    "author": "katie roberts",
-    "commits": [
-      {
-        "ref": "e0cc89e",
-        "author": "katie roberts",
-        "date": "2014-01-24 14:36:39 +0000",
-        "comment": "TVPSPORTV5-704",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "78e8b8e",
-        "author": "katie roberts",
-        "date": "2014-01-24 15:08:57 +0000",
-        "comment": "TVPSPORTV5-704",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "39868bd",
-        "author": "katie roberts",
-        "date": "2014-01-27 09:48:14 +0000",
-        "comment": "TVPSPORTV5-707",
-        "num_files_touched": 4,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "f539d0d",
-        "author": "katie roberts",
-        "date": "2014-01-27 11:11:38 +0000",
-        "comment": "TVPSPORTV5-707",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "333d135",
-        "author": "katie roberts",
-        "date": "2014-02-17 16:07:37 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      }
-    ]
-  },
-  {
-    "author": "Matthew Mould",
-    "commits": [
-      {
-        "ref": "6cf43e7",
-        "author": "Matthew Mould",
-        "date": "2014-01-28 10:34:27 +0000",
-        "comment": "TVPSPORTV5-704 Changed modules names back. Paired with charld13",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "13cb01c",
-        "author": "Matthew Mould",
-        "date": "2014-01-28 10:46:30 +0000",
-        "comment": "TVPSPORTV5-704 Added usernames to child poms. Formatted xmls. Paired with charld13",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "fab9fd6",
-        "author": "Matthew Mould",
-        "date": "2014-02-04 14:34:08 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "b27190f",
-        "author": "Matthew Mould",
-        "date": "2014-02-05 10:58:16 +0000",
-        "comment": "Refactor of sprtiptvview-imp to sprtiptvview. -Paired with Dominic Charlesworth",
-        "num_files_touched": 19,
-        "complexity": {
-          "sum_of_file_weights": 0,
-          "max_of_file_weights": 0,
-          "mean_of_file_weights": 0.0,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "7b188a9",
-        "author": "Matthew Mould",
-        "date": "2014-02-06 18:53:01 +0000",
-        "comment": "TVPSPORTV5-708 Added new dao to consume Sportacus end point. Paired with Andy Longshaw. Reviewed by Emma Carruthers.",
-        "num_files_touched": 4,
-        "complexity": {
-          "sum_of_file_weights": 122,
-          "max_of_file_weights": 48,
-          "mean_of_file_weights": 13.56,
-          "delta_sum_of_file_weights": 85
-        }
-      },
-      {
-        "ref": "d85fa96",
-        "author": "Matthew Mould",
-        "date": "2014-02-07 15:01:11 +0000",
-        "comment": "TVPSPORTV5-708 Added new spring configuration for new DAO. Paired with Andy Longshaw.",
-        "num_files_touched": 5,
-        "complexity": {
-          "sum_of_file_weights": 148,
-          "max_of_file_weights": 56,
-          "mean_of_file_weights": 14.8,
-          "delta_sum_of_file_weights": 26
-        }
-      },
-      {
-        "ref": "f860c39",
-        "author": "Matthew Mould",
-        "date": "2014-02-07 17:00:20 +0000",
-        "comment": "TVPSPORTV5-708",
-        "num_files_touched": 6,
-        "complexity": {
-          "sum_of_file_weights": 372,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 24.8,
-          "delta_sum_of_file_weights": 224
-        }
-      },
-      {
-        "ref": "932f637",
-        "author": "Matthew Mould",
-        "date": "2014-02-08 17:02:08 +0000",
-        "comment": "TVPSPORTV5-709_710",
-        "num_files_touched": 8,
-        "complexity": {
-          "sum_of_file_weights": 590,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 29.5,
-          "delta_sum_of_file_weights": 133
-        }
-      },
-      {
-        "ref": "040c8a7",
-        "author": "Matthew Mould",
-        "date": "2014-02-09 10:26:31 +0000",
-        "comment": "TVPSPORTV5-709_710",
-        "num_files_touched": 27,
-        "complexity": {
-          "sum_of_file_weights": 1050,
-          "max_of_file_weights": 140,
-          "mean_of_file_weights": 42.0,
-          "delta_sum_of_file_weights": 460
-        }
-      },
-      {
-        "ref": "6d0cbd8",
-        "author": "Matthew Mould",
-        "date": "2014-02-09 13:19:51 +0000",
-        "comment": "TVPSPORTV5-709_710",
-        "num_files_touched": 17,
-        "complexity": {
-          "sum_of_file_weights": 1036,
-          "max_of_file_weights": 120,
-          "mean_of_file_weights": 41.44,
-          "delta_sum_of_file_weights": -14
-        }
-      },
-      {
-        "ref": "a8ccd68",
-        "author": "Matthew Mould",
-        "date": "2014-02-11 16:47:47 +0000",
-        "comment": "TVPSPORTV5-711 Added default constructor for AOP. Paired with Andy Longshaw",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 457,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 28.56,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "11a3373",
-        "author": "Matthew Mould",
-        "date": "2014-02-13 16:09:43 +0000",
-        "comment": "TVPSPORTV5-711 Merge from trunk Paired with Andy Longshaw",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1318,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 47.07,
-          "delta_sum_of_file_weights": -177
-        }
-      },
-      {
-        "ref": "7783567",
-        "author": "Matthew Mould",
-        "date": "2014-02-13 16:09:56 +0000",
-        "comment": "TVPSPORTV5-711 Merge from trunk Paired with Andy Longshaw",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1321,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 45.55,
-          "delta_sum_of_file_weights": 3
-        }
-      },
-      {
-        "ref": "6bef52a",
-        "author": "Matthew Mould",
-        "date": "2014-02-13 16:11:28 +0000",
-        "comment": "TVPSPORTV5-711 Merge from trunk Paired with Andy Longshaw",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 1361,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 42.53,
-          "delta_sum_of_file_weights": 40
-        }
-      },
-      {
-        "ref": "938b371",
-        "author": "Matthew Mould",
-        "date": "2014-02-26 16:04:34 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 15,
-        "complexity": {
-          "sum_of_file_weights": 1941,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 49.77,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "30cae1b",
-        "author": "Matthew Mould",
-        "date": "2014-02-27 15:20:00 +0000",
-        "comment": "TVPSPORTV5-705",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1941,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 49.77,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "9166bd1",
-        "author": "Matthew Mould",
-        "date": "2014-03-07 13:57:42 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 204
-        }
-      },
-      {
-        "ref": "c4285b8",
-        "author": "Matthew Mould",
-        "date": "2014-03-07 14:02:19 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "be28917",
-        "author": "Matthew Mould",
-        "date": "2014-03-07 16:57:59 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "3d4dafa",
-        "author": "Matthew Mould",
-        "date": "2014-03-10 10:53:43 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "9d515cc",
-        "author": "Matthew Mould",
-        "date": "2014-03-10 11:53:29 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "1d1f36e",
-        "author": "Matthew Mould",
-        "date": "2014-03-10 12:02:42 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "de13c10",
-        "author": "Matthew Mould",
-        "date": "2014-03-10 12:08:21 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "d3adf26",
-        "author": "Matthew Mould",
-        "date": "2014-03-10 14:14:25 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "c8fc938",
-        "author": "Matthew Mould",
-        "date": "2014-03-11 10:51:51 +0000",
-        "comment": "TVPSPORTV5-958",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      }
-    ]
-  },
-  {
-    "author": "emma carruthers",
-    "commits": [
-      {
-        "ref": "bae9133",
-        "author": "emma carruthers",
-        "date": "2014-02-08 13:05:56 +0000",
-        "comment": "Merge all from TVPSPORTV5-710 at 1389336 (reintegration) Paired with Matt Mould.",
-        "num_files_touched": 13,
-        "complexity": {
-          "sum_of_file_weights": 457,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 28.56,
-          "delta_sum_of_file_weights": 85
-        }
-      },
-      {
-        "ref": "ba48f96",
-        "author": "emma carruthers",
-        "date": "2014-02-12 11:00:14 +0000",
-        "comment": "TVPSPORTV5-710 Replaced require_relatives Slight modifications to sprtview pom.xml Reviewed by Dominic Charlesworth",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 1066,
-          "max_of_file_weights": 120,
-          "mean_of_file_weights": 39.48,
-          "delta_sum_of_file_weights": 609
-        }
-      },
-      {
-        "ref": "937a8f2",
-        "author": "emma carruthers",
-        "date": "2014-02-12 12:06:54 +0000",
-        "comment": "TVPSPORTV5-710 givenHomeStateIsRequestedAndNavigationDataIsEmptyThenErrorStateIsReturned Paired with Dominic Charlesworth",
-        "num_files_touched": 8,
-        "complexity": {
-          "sum_of_file_weights": 1108,
-          "max_of_file_weights": 128,
-          "mean_of_file_weights": 41.04,
-          "delta_sum_of_file_weights": 42
-        }
-      },
-      {
-        "ref": "4e2c8b7",
-        "author": "emma carruthers",
-        "date": "2014-02-12 14:12:48 +0000",
-        "comment": "TVPSPORTV5-710 \"Scenario: Error case when upstream navigation endpoint returns a 404\" Paired with Dominic Charlesworth",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 1100,
-          "max_of_file_weights": 128,
-          "mean_of_file_weights": 40.74,
-          "delta_sum_of_file_weights": -8
-        }
-      },
-      {
-        "ref": "424ca96",
-        "author": "emma carruthers",
-        "date": "2014-02-12 21:48:18 +0000",
-        "comment": "TVPSPORTV5-710 Adding support for case insensitive StateType path variables Unreviewed.",
-        "num_files_touched": 5,
-        "complexity": {
-          "sum_of_file_weights": 1084,
-          "max_of_file_weights": 128,
-          "mean_of_file_weights": 40.15,
-          "delta_sum_of_file_weights": -16
-        }
-      },
-      {
-        "ref": "d679e09",
-        "author": "emma carruthers",
-        "date": "2014-02-13 11:07:35 +0000",
-        "comment": "TVPSPORTV5-710 Refactored architecture to create ComponentBuilders that encapsulate their role in building 'biscuits'. There is now one StateBuilder that uses these. Reviewed by Dominic Charlesworth.",
-        "num_files_touched": 16,
-        "complexity": {
-          "sum_of_file_weights": 1339,
-          "max_of_file_weights": 176,
-          "mean_of_file_weights": 43.19,
-          "delta_sum_of_file_weights": 882
-        }
-      },
-      {
-        "ref": "78505b5",
-        "author": "emma carruthers",
-        "date": "2014-02-13 12:57:15 +0000",
-        "comment": "TVPSPORTV5-710 Refactored Component to store ComponentItem interface to make the implementation more reusable. Paired with Dominic Charlesworth",
-        "num_files_touched": 18,
-        "complexity": {
-          "sum_of_file_weights": 1371,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 42.84,
-          "delta_sum_of_file_weights": 32
-        }
-      },
-      {
-        "ref": "49997fa",
-        "author": "emma carruthers",
-        "date": "2014-02-13 15:54:06 +0000",
-        "comment": "TVPSPORTV5-710 Refactored TopNavigationComponentBuilder to return sportmain, \"Choose Sport\" and any featured items; in that order. Paired with Dominic Charlesworth",
-        "num_files_touched": 18,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 952
-        }
-      },
-      {
-        "ref": "3bd7717",
-        "author": "emma carruthers",
-        "date": "2014-02-18 15:24:05 +0000",
-        "comment": "TVPSPORTV5-711 Created integration test that enables RestOperations mocking; this ensures that we can use the entire stack but with a mocked http retrieval. Note: this required a change to tvp-commons-web. Removed redundant test files. Paired with Andy Longshaw.",
-        "num_files_touched": 16,
-        "complexity": {
-          "sum_of_file_weights": 1684,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 46.78,
-          "delta_sum_of_file_weights": -65
-        }
-      },
-      {
-        "ref": "fa7c293",
-        "author": "emma carruthers",
-        "date": "2014-02-18 17:11:29 +0000",
-        "comment": "TVPSPORTV5-711 Added integration test for 'service unavailable' response to listener. Note: this required a change to tvp-commons-web. Reviewed by Andy Longshaw.",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 1693,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 47.03,
-          "delta_sum_of_file_weights": 6
-        }
-      }
-    ]
-  },
-  {
-    "author": "Andy Longshaw ext",
-    "commits": [
-      {
-        "ref": "434f96e",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-10 17:08:08 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 7,
-        "complexity": {
-          "sum_of_file_weights": 457,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 28.56,
-          "delta_sum_of_file_weights": -579
-        }
-      },
-      {
-        "ref": "9a426bf",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-11 12:02:57 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 457,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 28.56,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "1fb3189",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-11 16:28:21 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 457,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 28.56,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "870e485",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-11 16:29:56 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 457,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 28.56,
-          "delta_sum_of_file_weights": -609
-        }
-      },
-      {
-        "ref": "55476db",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-12 10:51:40 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 457,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 28.56,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "376d887",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-13 10:13:48 +0000",
-        "comment": "added executable property to ci-build.sh",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 457,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 28.56,
-          "delta_sum_of_file_weights": -627
-        }
-      },
-      {
-        "ref": "c83155a",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-13 15:18:26 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 543,
-          "max_of_file_weights": 75,
-          "mean_of_file_weights": 30.17,
-          "delta_sum_of_file_weights": -828
-        }
-      },
-      {
-        "ref": "a4e9dd9",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-13 16:51:51 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 3,
-        "complexity": {
-          "sum_of_file_weights": 1361,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 42.53,
-          "delta_sum_of_file_weights": -134
-        }
-      },
-      {
-        "ref": "1651ec7",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-14 17:08:07 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 18,
-        "complexity": {
-          "sum_of_file_weights": 1627,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 40.67,
-          "delta_sum_of_file_weights": 132
-        }
-      },
-      {
-        "ref": "0fba5f0",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-17 17:09:57 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 14,
-        "complexity": {
-          "sum_of_file_weights": 1749,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 42.66,
-          "delta_sum_of_file_weights": 254
-        }
-      },
-      {
-        "ref": "0b10620",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-18 16:28:57 +0000",
-        "comment": "TVPSPORTV5-711",
-        "num_files_touched": 4,
-        "complexity": {
-          "sum_of_file_weights": 1687,
-          "max_of_file_weights": 192,
-          "mean_of_file_weights": 46.86,
-          "delta_sum_of_file_weights": 3
-        }
-      },
-      {
-        "ref": "a225788",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-20 14:32:17 +0000",
-        "comment": "TVPSPORTV5-711 Adding integration test for navigationDaoMonitor. Paired with Andy Longshaw.",
-        "num_files_touched": 5,
-        "complexity": {
-          "sum_of_file_weights": 1941,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 49.77,
-          "delta_sum_of_file_weights": 152
-        }
-      },
-      {
-        "ref": "a5a4404",
-        "author": "Andy Longshaw ext",
-        "date": "2014-02-20 16:01:56 +0000",
-        "comment": "TVPSPORTV5-707 - Reviewed endpoints under test in flagpoles.feature to ensure they are relevant to sprtiptvview - Reordered the flagpoles listed in web.xml to show master, component and dependencies. - Removed 'cucumberTest=' parameter from flagpole request URLs as they are misleading. A note has been added to the scenario. Paired with Emma Carruthers.",
-        "num_files_touched": 4,
-        "complexity": {
-          "sum_of_file_weights": 1941,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 49.77,
-          "delta_sum_of_file_weights": 0
-        }
-      }
-    ]
-  },
-  {
-    "author": "Kristian Epps",
-    "commits": [
-      {
-        "ref": "7786414",
-        "author": "Kristian Epps",
-        "date": "2014-02-14 16:40:56 +0000",
-        "comment": "TVPSPORTV5-707",
-        "num_files_touched": 5,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 134
-        }
-      },
-      {
-        "ref": "11ff24e",
-        "author": "Kristian Epps",
-        "date": "2014-02-19 12:04:27 +0000",
-        "comment": "TVPSPORTV5-885",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": -198
-        }
-      },
-      {
-        "ref": "2186445",
-        "author": "Kristian Epps",
-        "date": "2014-02-19 12:15:22 +0000",
-        "comment": "TVPSPORTV5-885",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1495,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.72,
-          "delta_sum_of_file_weights": 0
-        }
-      }
-    ]
-  },
-  {
-    "author": "Jamie Kelly",
-    "commits": [
-      {
-        "ref": "c7c4773",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:16:03 +0000",
-        "comment": "Added region and regions classes.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1501,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.15,
-          "delta_sum_of_file_weights": 6
-        }
-      },
-      {
-        "ref": "68d6023",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:16:15 +0000",
-        "comment": "Regions test data.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1501,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.15,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "06176e9",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:16:27 +0000",
-        "comment": "Regions unmarshelling test minus config.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1503,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.94,
-          "delta_sum_of_file_weights": 2
-        }
-      },
-      {
-        "ref": "6434fba",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:16:41 +0000",
-        "comment": "Regions unmarshelling test minus config.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1527,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.63,
-          "delta_sum_of_file_weights": 24
-        }
-      },
-      {
-        "ref": "5666309",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:16:52 +0000",
-        "comment": "Adding empty constructors so that json unmarshelling will work.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1527,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.63,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "12f95b2",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:17:01 +0000",
-        "comment": "Test configuration.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1527,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.63,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "364ddc7",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:17:12 +0000",
-        "comment": "Updated name of rest template test for regions.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1527,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.63,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "34c3b8f",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:17:22 +0000",
-        "comment": "Added argument test and integration with rest operations test.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1551,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.08,
-          "delta_sum_of_file_weights": 24
-        }
-      },
-      {
-        "ref": "39185b8",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:17:32 +0000",
-        "comment": "Initial implementation of class.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1567,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.35,
-          "delta_sum_of_file_weights": 16
-        }
-      },
-      {
-        "ref": "922179e",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:17:41 +0000",
-        "comment": "Added test for null checking uri.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1567,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.35,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "26be752",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:17:50 +0000",
-        "comment": "Fixed happy path test..",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1567,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.35,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "1a09f36",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:18:01 +0000",
-        "comment": "Refactor extracting a setup step.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1569,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.41,
-          "delta_sum_of_file_weights": 2
-        }
-      },
-      {
-        "ref": "ecf0475",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:18:10 +0000",
-        "comment": "Added test to expect DaoException.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1573,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.51,
-          "delta_sum_of_file_weights": 4
-        }
-      },
-      {
-        "ref": "13f5fb2",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:18:20 +0000",
-        "comment": "Refactored regionDao set up into setup method. Added exception message expectation.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1573,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.51,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "f98878c",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:18:30 +0000",
-        "comment": "Caught RestClientException and implemented null check and setting of feed uri.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1605,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.38,
-          "delta_sum_of_file_weights": 32
-        }
-      },
-      {
-        "ref": "76fff22",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:18:44 +0000",
-        "comment": "Name change refactor.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1605,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.38,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "781ad8b",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:18:58 +0000",
-        "comment": "Changed dao to return list of Region.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1631,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.08,
-          "delta_sum_of_file_weights": 26
-        }
-      },
-      {
-        "ref": "3c2fc08",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 10:19:08 +0000",
-        "comment": "Added Json annotations and removed default constructor.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1639,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.3,
-          "delta_sum_of_file_weights": 8
-        }
-      },
-      {
-        "ref": "0f3db80",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:45:22 +0000",
-        "comment": "Added test class and test to catch dao set as null.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1651,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.45,
-          "delta_sum_of_file_weights": 12
-        }
-      },
-      {
-        "ref": "bd6cbbc",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:45:32 +0000",
-        "comment": "Checking for correct error message.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1651,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.45,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "800eccc",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:45:41 +0000",
-        "comment": "Implemented null check for RegionsDao in constructor.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1659,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.54,
-          "delta_sum_of_file_weights": 8
-        }
-      },
-      {
-        "ref": "96b168a",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:45:51 +0000",
-        "comment": "Corrected expected exception and corrected ExpectedException rule.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1659,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 42.54,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "c70d505",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:46:04 +0000",
-        "comment": "Test and null method for returning region list from dao.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 1681,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.1,
-          "delta_sum_of_file_weights": 22
-        }
-      },
-      {
-        "ref": "3638e78",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:46:17 +0000",
-        "comment": "Implemented returning regions in service from dao.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1681,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.1,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "39003f6",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:46:27 +0000",
-        "comment": "Added test to test for servicee exceptions being thrown when Dao returns a null object.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1683,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.15,
-          "delta_sum_of_file_weights": 2
-        }
-      },
-      {
-        "ref": "48067c8",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:46:36 +0000",
-        "comment": "Added DAO_ERROR type to service exception enums",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1683,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.15,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "a2fa9d6",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:46:46 +0000",
-        "comment": "Service throws Service exception if dao returns null object.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1697,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 43.51,
-          "delta_sum_of_file_weights": 14
-        }
-      },
-      {
-        "ref": "c9fb59d",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:46:55 +0000",
-        "comment": "Altered test to also check that the correct type of sesrvice exception was thrown.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1729,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.33,
-          "delta_sum_of_file_weights": 32
-        }
-      },
-      {
-        "ref": "2cefd8c",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:47:05 +0000",
-        "comment": "Refactored construction of service into setup method.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1733,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 44.44,
-          "delta_sum_of_file_weights": 4
-        }
-      },
-      {
-        "ref": "8bb159a",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:47:14 +0000",
-        "comment": "Test for service exception of dao_error type thrown if a dao exception occurs.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1777,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 45.56,
-          "delta_sum_of_file_weights": 44
-        }
-      },
-      {
-        "ref": "7a79f4b",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:47:25 +0000",
-        "comment": "Argument position refactor.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1777,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 45.56,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "ce774b3",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:47:34 +0000",
-        "comment": "Test for service exception of dao_error type thrown if a dao exception occurs.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1777,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 45.56,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "7d9ff25",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:47:45 +0000",
-        "comment": "Implement throwing of Service exception if a dao exception is thrown.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1795,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 46.03,
-          "delta_sum_of_file_weights": 18
-        }
-      },
-      {
-        "ref": "daf1266",
-        "author": "Jamie Kelly",
-        "date": "2014-02-20 13:47:54 +0000",
-        "comment": "Import cleanup.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 1789,
-          "max_of_file_weights": 264,
-          "mean_of_file_weights": 45.87,
-          "delta_sum_of_file_weights": -6
-        }
-      },
-      {
-        "ref": "7b330e0",
-        "author": "Jamie Kelly",
-        "date": "2014-03-12 12:04:45 +0000",
-        "comment": "Updated to use 3.4.0 of tvp-commons-web.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "fc515f0",
-        "author": "Jamie Kelly",
-        "date": "2014-03-12 12:05:41 +0000",
-        "comment": "Updated test to check that name is correctly unmarshelled.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 3296,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 38.33,
-          "delta_sum_of_file_weights": 0
-        }
-      },
-      {
-        "ref": "633da6a",
-        "author": "Jamie Kelly",
-        "date": "2014-03-12 12:06:10 +0000",
-        "comment": "Unmarshelling Name object.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 3308,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 37.59,
-          "delta_sum_of_file_weights": 12
-        }
-      },
-      {
-        "ref": "de4cdfd",
-        "author": "Jamie Kelly",
-        "date": "2014-03-12 12:06:29 +0000",
-        "comment": "Changing Node to use Name class instead of string.",
-        "num_files_touched": 2,
-        "complexity": {
-          "sum_of_file_weights": 3310,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 37.61,
-          "delta_sum_of_file_weights": 2
-        }
-      },
-      {
-        "ref": "9834a1d",
-        "author": "Jamie Kelly",
-        "date": "2014-03-12 12:06:46 +0000",
-        "comment": "Updating canned data feed to be representative.",
-        "num_files_touched": 1,
-        "complexity": {
-          "sum_of_file_weights": 3310,
-          "max_of_file_weights": 360,
-          "mean_of_file_weights": 37.61,
-          "delta_sum_of_file_weights": 0
-        }
       },
       {
         "ref": "a78c161",
@@ -3999,6 +1791,253 @@
           "mean_of_file_weights": 37.89,
           "delta_sum_of_file_weights": 24
         }
+      },
+      {
+        "ref": "facf5d2",
+        "author": "Jamie Kelly",
+        "date": "2014-03-12 12:07:17 +0000",
+        "comment": "Updated project to use sandbox das when run on sandbox environment and to use new das endpoint of modelstatistics.",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 3334,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 37.89,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "0e639cf",
+        "author": "Jamie Kelly",
+        "date": "2014-03-12 12:07:27 +0000",
+        "comment": "Test for empty first name.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3334,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 37.89,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "abf748f",
+        "author": "Jamie Kelly",
+        "date": "2014-03-12 13:35:55 +0000",
+        "comment": "Now expecting name string instead of object.",
+        "num_files_touched": 9,
+        "complexity": {
+          "sum_of_file_weights": 3298,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.35,
+          "delta_sum_of_file_weights": -36
+        }
+      },
+      {
+        "ref": "1eebb56",
+        "author": "Jamie Kelly",
+        "date": "2014-03-12 14:17:31 +0000",
+        "comment": "efsfes",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3276,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.54,
+          "delta_sum_of_file_weights": -22
+        }
+      },
+      {
+        "ref": "0dbfb6b",
+        "author": "Jamie Kelly",
+        "date": "2014-03-12 14:17:51 +0000",
+        "comment": "Na",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3298,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.35,
+          "delta_sum_of_file_weights": 22
+        }
+      },
+      {
+        "ref": "8946b6f",
+        "author": "Jamie Kelly",
+        "date": "2014-03-12 15:32:22 +0000",
+        "comment": "Changed stats to use templated uri instead of a hardcoded uri.",
+        "num_files_touched": 9,
+        "complexity": {
+          "sum_of_file_weights": 3330,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.72,
+          "delta_sum_of_file_weights": 32
+        }
+      },
+      {
+        "ref": "54ffd88",
+        "author": "Jamie Kelly",
+        "date": "2014-03-13 10:08:28 +0000",
+        "comment": "Removed unused import.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3330,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.72,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "7a79120",
+        "author": "Jamie Kelly",
+        "date": "2014-03-13 10:24:59 +0000",
+        "comment": "Removed unused import.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3330,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.72,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "7ba1b5b",
+        "author": "Jamie Kelly",
+        "date": "2014-03-13 10:28:17 +0000",
+        "comment": "Removed unused import.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3328,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.7,
+          "delta_sum_of_file_weights": -2
+        }
+      },
+      {
+        "ref": "1270a18",
+        "author": "Jamie Kelly",
+        "date": "2014-03-17 11:32:31 +0000",
+        "comment": "NodeByPath: Variable rename.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3396,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.59,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "d4fe239",
+        "author": "Jamie Kelly",
+        "date": "2014-03-17 11:32:42 +0000",
+        "comment": "NodeRetrievalByPath: Changed from using Deque to Queue.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3396,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.59,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "1084ace",
+        "author": "Jamie Kelly",
+        "date": "2014-03-17 11:32:54 +0000",
+        "comment": "NodeRetrievalByPath: Variable rename.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3396,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.59,
+          "delta_sum_of_file_weights": 0
+        }
+      },
+      {
+        "ref": "1fe85df",
+        "author": "Jamie Kelly",
+        "date": "2014-03-17 11:33:09 +0000",
+        "comment": "NodeRetrievalByPath: Rewritten to use StatsModel as inteface rather than node.",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 3460,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 39.32,
+          "delta_sum_of_file_weights": 64
+        }
+      },
+      {
+        "ref": "472e45b",
+        "author": "Jamie Kelly",
+        "date": "2014-03-17 14:26:48 +0000",
+        "comment": "NodeRetrievalExtra tests.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3462,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 39.34,
+          "delta_sum_of_file_weights": 2
+        }
+      },
+      {
+        "ref": "f5677be",
+        "author": "Jamie Kelly",
+        "date": "2014-03-17 15:47:22 +0000",
+        "comment": "Re-implementation of NodeRetrievalByPath.",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 3452,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 39.23,
+          "delta_sum_of_file_weights": -10
+        }
+      },
+      {
+        "ref": "ede86e8",
+        "author": "Jamie Kelly",
+        "date": "2014-03-17 15:59:33 +0000",
+        "comment": "Re-implementation of NodeRetrievalByPath.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3422,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.89,
+          "delta_sum_of_file_weights": -30
+        }
+      },
+      {
+        "ref": "02608ce",
+        "author": "Jamie Kelly",
+        "date": "2014-03-19 09:43:56 +0000",
+        "comment": "Hacked outputting a viewmodel for a node.",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 3553,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 39.48,
+          "delta_sum_of_file_weights": 57
+        }
+      },
+      {
+        "ref": "ffe5134",
+        "author": "Jamie Kelly",
+        "date": "2014-03-19 11:09:32 +0000",
+        "comment": "Previous tag failed, undoing snapshot change.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3362,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.2,
+          "delta_sum_of_file_weights": -191
+        }
+      },
+      {
+        "ref": "1411446",
+        "author": "Jamie Kelly",
+        "date": "2014-03-19 11:44:19 +0000",
+        "comment": "Updated to snapshot for post release.",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3362,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.2,
+          "delta_sum_of_file_weights": 0
+        }
       }
     ]
   },
@@ -4368,6 +2407,32 @@
           "mean_of_file_weights": 35.95,
           "delta_sum_of_file_weights": -70
         }
+      },
+      {
+        "ref": "6677623",
+        "author": "Will Crossland",
+        "date": "2014-03-13 12:38:10 +0000",
+        "comment": "Update version from 1.5.0 to 1.6.0. Add jsonp callback filter. Update dependency on tvp-commons-web from (unstable) 3.3.1 to 3.4.0",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 3296,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.33,
+          "delta_sum_of_file_weights": -32
+        }
+      },
+      {
+        "ref": "7326de8",
+        "author": "Will Crossland",
+        "date": "2014-03-14 12:37:19 +0000",
+        "comment": "TVPSPORTV5-906 Refactor BiscuitMenuDataItem to VerticalMenuBiscuitDataItem. Add hasContent to VerticalMenuBiscuitDataItem. Derive this for statistics_chooser by looking for presence of nested nodes.",
+        "num_files_touched": 11,
+        "complexity": {
+          "sum_of_file_weights": 3362,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.2,
+          "delta_sum_of_file_weights": 60
+        }
       }
     ]
   },
@@ -4424,6 +2489,102 @@
           "max_of_file_weights": 264,
           "mean_of_file_weights": 49.77,
           "delta_sum_of_file_weights": 0
+        }
+      }
+    ]
+  },
+  {
+    "author": "Maxwell Farrell",
+    "commits": [
+      {
+        "ref": "e3f262b",
+        "author": "Maxwell Farrell",
+        "date": "2014-03-14 11:45:19 +0000",
+        "comment": "TVPSPORTV5-928",
+        "num_files_touched": 5,
+        "complexity": {
+          "sum_of_file_weights": 3302,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.4,
+          "delta_sum_of_file_weights": 6
+        }
+      },
+      {
+        "ref": "7861a96",
+        "author": "Maxwell Farrell",
+        "date": "2014-03-16 01:24:39 +0000",
+        "comment": "TVPSPORTV5-928",
+        "num_files_touched": 2,
+        "complexity": {
+          "sum_of_file_weights": 3396,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.59,
+          "delta_sum_of_file_weights": 34
+        }
+      },
+      {
+        "ref": "081a2e5",
+        "author": "Maxwell Farrell",
+        "date": "2014-03-18 10:06:53 +0000",
+        "comment": "TVPSPORTV5-928",
+        "num_files_touched": 1,
+        "complexity": {
+          "sum_of_file_weights": 3420,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.86,
+          "delta_sum_of_file_weights": -2
+        }
+      },
+      {
+        "ref": "fabce61",
+        "author": "Maxwell Farrell",
+        "date": "2014-03-18 17:37:26 +0000",
+        "comment": "TVPSPORTV5-928",
+        "num_files_touched": 5,
+        "complexity": {
+          "sum_of_file_weights": 3486,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.73,
+          "delta_sum_of_file_weights": 66
+        }
+      },
+      {
+        "ref": "22bbe20",
+        "author": "Maxwell Farrell",
+        "date": "2014-03-18 17:37:48 +0000",
+        "comment": "TVPSPORTV5-928",
+        "num_files_touched": 4,
+        "complexity": {
+          "sum_of_file_weights": 3496,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 38.84,
+          "delta_sum_of_file_weights": 10
+        }
+      },
+      {
+        "ref": "2410c5b",
+        "author": "Maxwell Farrell",
+        "date": "2014-03-19 17:32:10 +0000",
+        "comment": "TVPSPORTV5-928-COMPETITIONS_MENU",
+        "num_files_touched": 6,
+        "complexity": {
+          "sum_of_file_weights": 3703,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 40.25,
+          "delta_sum_of_file_weights": 341
+        }
+      },
+      {
+        "ref": "ac7d6bf",
+        "author": "Maxwell Farrell",
+        "date": "2014-03-19 17:32:30 +0000",
+        "comment": "TVPSPORTV5-928-COMPETITIONS_MENU",
+        "num_files_touched": 4,
+        "complexity": {
+          "sum_of_file_weights": 4018,
+          "max_of_file_weights": 360,
+          "mean_of_file_weights": 42.29,
+          "delta_sum_of_file_weights": 315
         }
       }
     ]

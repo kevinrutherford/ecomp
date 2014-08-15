@@ -6,15 +6,7 @@ class ReportFolder
 
   def update(key, report_doc)
     ensure_output_folder_exists
-
-    filename = "#{@folder}/#{key}.json"
-
-    existingJson = JSON.parse(File.open(filename).read)
-    report_doc.raw_data.each do |data|
-      existingJson << data
-    end
-
-    File.open(filename, 'w') {|f| f.puts JSON.pretty_generate(existingJson) }
+    File.open("#{@folder}/#{key}.json", 'w') {|f| f.puts JSON.pretty_generate(report_doc.raw_data) }
   end
 
   private
