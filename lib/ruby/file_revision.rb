@@ -18,12 +18,17 @@ class FileRevision
              when /.*\.js$/
                JavascriptSourceFile.new(@path).complexity
              end
-    e = 1 + report[:num_dependencies]
-    b = 1 + report[:num_branches]
-    s = 1 + report[:num_superclasses]
-    report['weight'] = b * e * s
-    report[:churn] = @repo.num_commits_involving(@path)
-    report[:filename] = @path
+
+    if report.nil?
+      puts "nil report"
+    else
+      e = 1 + report[:num_dependencies]
+      b = 1 + report[:num_branches]
+      s = 1 + report[:num_superclasses]
+      report['weight'] = b * e * s
+      report[:churn] = @repo.num_commits_involving(@path)
+      report[:filename] = @path
+    end
     report
   end
 
