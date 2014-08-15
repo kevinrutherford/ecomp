@@ -19,5 +19,5 @@ repo = LocalGitRepo.new
 reports_folder = ReportFolder.new(ARGV[0])
 metrics_dao = MetricsDAO.new(ARGV[0])
 bes = BesMetrics.new(repo, reports_folder, metrics_dao, ARGV[1])
-bes.new_collect
+bes.collect
 exit 0

@@ -2546,5 +2546,18 @@
       "mean_of_file_weights": 42.29,
       "delta_sum_of_file_weights": 315
     }
+  },
+  {
+    "ref": "fa268ee",
+    "author": "Matthew Mould",
+    "date": "2014-03-20 17:37:20 +0000",
+    "comment": "TVPSPORTV5-919",
+    "num_files_touched": 6,
+    "complexity": {
+      "sum_of_file_weights": 3442,
+      "max_of_file_weights": 360,
+      "mean_of_file_weights": 37.01,
+      "delta_sum_of_file_weights": -576
+    }
   }
 ]
