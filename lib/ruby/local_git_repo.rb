@@ -51,7 +51,7 @@ class LocalGitRepo
   end
 
   def all_files_matching(files_glob)
-    Dir[files_glob].select {|p| p =~ /\.java$|\.rb$|\.js$/}.map {|path| FileRevision.new(path, self) }
+    Dir[files_glob].select {|p| p =~ /\.java$|\.rb$|\.js$|\.m$/}.map {|path| FileRevision.new(path, self) }
   end
 
 end

@@ -1,6 +1,7 @@
 require_relative 'ruby_source_file'
 require_relative 'java_source_file'
 require_relative 'javascript_source_file'
+require_relative 'objc_source_file'
 
 class FileRevision
 
@@ -15,6 +16,8 @@ class FileRevision
                RubySourceFile.new(@path).complexity
              when /.*\.java$/
                JavaSourceFile.new(@path).complexity
+             when /.*\.m$/
+               ObjCSourceFile.new(@path).complexity
              when /.*\.js$/
                JavascriptSourceFile.new(@path).complexity
              end

@@ -54,10 +54,17 @@ class BesMetrics
   end
 
   def record_complexity_deltas(summaries)
+    startTime = Time.now
+    totalSummaries = summaries.length
     summaries.each_with_index do |summary, i|
+      start = Time.now
+      puts ("Summary (" + (i+1).to_s + " / " + totalSummaries.to_s + ")")
       delta = summary.sum_of_file_weights - (i > 0 ? summaries[i-1].sum_of_file_weights : 0)
       summary.set_delta(delta)
+      timeTaken = Time.now - start
+      puts ("Summary completed in " + ('%.2f' % timeTaken.to_s) + "s Estimated completion time: " + ('%.2f' % (timeTaken * (totalSummaries - i))).to_s + "s" )
     end
+    puts("Total time taken recording complexity deltas: " + ('%.2f' % (Time.now - startTime)) + "s")
     summaries
   end
 
