@@ -1,10 +1,15 @@
+require_relative 'json_storage_file'
 require 'json'
+
 
 class MetricsDAO
 
   def initialize(folder)
     @folder = folder
+    @commits = JSONStorageFile.new(full_path('commits'))
   end
+
+  # TODO delete from here....
 
   def get_all_commits
     if not file_exists('commits')
@@ -19,15 +24,22 @@ class MetricsDAO
     revision_numbers
   end
 
-  def add_commit(revision_summary)
-
-  end
-
   def last_commit
     all_commits = get_all_commits
     if not all_commits.nil?
       get_all_commits.last
     end
+  end
+
+  # TODO ....to here
+
+  def get_latest_revision_metrics
+    @commits.get_content.last
+  end
+
+  def add_revision_summary(revision_summary)
+    @commits.get_content << revision_summary.raw_data
+    @commits.write_file
   end
 
   # TODO add_file

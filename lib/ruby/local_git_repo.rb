@@ -19,7 +19,7 @@ class LocalGitRepo
   end
 
   def all_revisions_oldest_first
-    raw_log = git_command('log --pretty="%h/%aN/%ci/%s" -n 20 --shortstat')
+    raw_log = git_command('log --pretty="%h/%aN/%ci/%s" --shortstat')
     lines = raw_log.split("\n")
     result = []
     (0..(lines.length-1)).each do |i|
