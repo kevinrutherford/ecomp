@@ -1,0 +1,171 @@
+[
+  {
+    "ref": "b9c63e4",
+    "author": "Matthew Mould",
+    "date": "2014-07-31 10:03:32 +0000",
+    "comment": "TVPSPORTV5-1270",
+    "num_files_touched": 9,
+    "complexity": {
+      "sum_of_file_weights": 14935,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.45,
+      "delta_sum_of_file_weights": 14935
+    }
+  },
+  {
+    "ref": "8f545c9",
+    "author": "Will Crossland",
+    "date": "2014-07-31 10:42:43 +0000",
+    "comment": "TVPSPORTV5-869 - Edit ruby env.rb so that BACKEND_IF_IP property is used to dynaically set URLs",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 14918,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.93,
+      "delta_sum_of_file_weights": -17
+    }
+  },
+  {
+    "ref": "c5a3d91",
+    "author": "Matthew Mould",
+    "date": "2014-07-31 13:54:34 +0000",
+    "comment": "TVPSPORTV5-1270",
+    "num_files_touched": 4,
+    "complexity": {
+      "sum_of_file_weights": 14935,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.45,
+      "delta_sum_of_file_weights": 17
+    }
+  },
+  {
+    "ref": "8819cbb",
+    "author": "emma carruthers",
+    "date": "2014-07-31 14:05:33 +0000",
+    "comment": "TVPSPORTV5-1270 Modified state builder to ensure that the onwardJourneyStateUrl is circular for any given feed. Reviewed by Matt Mould",
+    "num_files_touched": 4,
+    "complexity": {
+      "sum_of_file_weights": 14945,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.48,
+      "delta_sum_of_file_weights": 10
+    }
+  },
+  {
+    "ref": "139a707",
+    "author": "Will Crossland",
+    "date": "2014-08-01 09:10:31 +0000",
+    "comment": "TVPSPORTV5-869 - Update version from 4.0.0 to 4.1.0-SNAPSHOT",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 14918,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.93,
+      "delta_sum_of_file_weights": -27
+    }
+  },
+  {
+    "ref": "4f1dbb2",
+    "author": "Matthew Mould",
+    "date": "2014-08-04 08:36:10 +0000",
+    "comment": "TVPSPORTV5-1283",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 14954,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.77,
+      "delta_sum_of_file_weights": 36
+    }
+  },
+  {
+    "ref": "0a47778",
+    "author": "Will Crossland",
+    "date": "2014-08-04 09:46:49 +0000",
+    "comment": "TVPSPORTV5-869 - Remove 'dim' from formula one race results poisiton column",
+    "num_files_touched": 3,
+    "complexity": {
+      "sum_of_file_weights": 14918,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.93,
+      "delta_sum_of_file_weights": -36
+    }
+  },
+  {
+    "ref": "5a1bf96",
+    "author": "emma carruthers",
+    "date": "2014-08-04 11:05:19 +0000",
+    "comment": "TVPSPORTV5-1270 Configured monitoring of new FeedAssetModelDao Paired with Louise Heatley",
+    "num_files_touched": 4,
+    "complexity": {
+      "sum_of_file_weights": 16121,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.66,
+      "delta_sum_of_file_weights": 1203
+    }
+  },
+  {
+    "ref": "8e96cfd",
+    "author": "emma carruthers",
+    "date": "2014-08-04 11:16:37 +0000",
+    "comment": "TVPSPORTV5-1270 Configured shared execution of new FeedAssetModelDao Paired with Louise Heatley",
+    "num_files_touched": 2,
+    "complexity": {
+      "sum_of_file_weights": 16183,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.7,
+      "delta_sum_of_file_weights": 62
+    }
+  },
+  {
+    "ref": "b96d254",
+    "author": "Matthew Mould",
+    "date": "2014-08-05 11:00:52 +0000",
+    "comment": "TVPSPORTV5-1270 Removed -SNAPSHOT",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 16183,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.7,
+      "delta_sum_of_file_weights": 0
+    }
+  },
+  {
+    "ref": "1005354",
+    "author": "Will Crossland",
+    "date": "2014-08-05 13:01:49 +0000",
+    "comment": "TVPSPORTV5-869 - Update version from 4.2.0-SNAPSHOT to 4.2.0",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 16197,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.87,
+      "delta_sum_of_file_weights": 14
+    }
+  },
+  {
+    "ref": "e5a0a8c",
+    "author": "Matthew Mould",
+    "date": "2014-08-12 13:45:13 +0000",
+    "comment": "TVPSPORTV5-1290",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 16197,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.87,
+      "delta_sum_of_file_weights": 0
+    }
+  },
+  {
+    "ref": "c85c565",
+    "author": "Ryan Lewis Waudby",
+    "date": "2014-08-14 10:59:19 +0100",
+    "comment": "Added git ignore file",
+    "num_files_touched": 1,
+    "complexity": {
+      "sum_of_file_weights": 16197,
+      "max_of_file_weights": 966,
+      "mean_of_file_weights": 44.87,
+      "delta_sum_of_file_weights": 0
+    }
+  }
+]

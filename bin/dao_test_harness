@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+#
+# Collects the complexity metrics for a git repo
+#
+# Usage: $0 output_folder files
+#
+
+require_relative '../lib/ruby/metrics_dao'
+
+if ARGV.length != 1
+  $stderr.puts "Usage: #{File.basename($0)} input_folder"
+  exit 1
+end
+
+dao = MetricsDAO.new(ARGV[0])
+puts dao.get_all_commits
+
+myHashJson = JSON.parse(File.open("#{ARGV[0]}/temp.json").read)
+# myHashJson['another'] = Hash.new
+# myHashJson['another']['awooga'] = 'chrasss'
+h = {}
+h[:ref] = 'william'
+myHashJson << h
+puts myHashJson
+File.open("#{ARGV[0]}/temp.json", 'w') {|f| f.puts JSON.pretty_generate(myHashJson) }
+
+exit 0

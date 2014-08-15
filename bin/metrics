@@ -6,6 +6,7 @@
 #
 
 require_relative '../lib/ruby/local_git_repo'
+require_relative '../lib/ruby/metrics_dao'
 require_relative '../lib/ruby/report_folder'
 require_relative '../lib/ruby/bes_metrics'
 
@@ -16,6 +17,7 @@ end
 
 repo = LocalGitRepo.new
 reports_folder = ReportFolder.new(ARGV[0])
-bes = BesMetrics.new(repo, reports_folder, ARGV[1])
+metrics_dao = MetricsDAO.new(ARGV[0])
+bes = BesMetrics.new(repo, reports_folder, metrics_dao, ARGV[1])
 bes.collect
 exit 0
