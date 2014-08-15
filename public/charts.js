@@ -257,8 +257,18 @@ function projectFromDocumentLocation()
     return project;
 }
 
-$(document).ready(function() {
+function drawCharts() {
     draw_chart('recent_commits_by_author', '#recent_commits', recent_commits_plot);
     draw_chart('current_files', '#churn_vs_complexity', churn_vs_complexity_plot);
     draw_chart('commits', '#complexity_trend', ctrend_plot);
-});
+}
+
+$(document).ready(drawCharts);
+
+window.onhashchange = function(hashChangeEvent) {
+    drawCharts();
+}
+
+setInterval(function() {
+    drawCharts();
+}, 120000);
