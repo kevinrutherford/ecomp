@@ -36,21 +36,26 @@ The metrics tool requires two arguments, a report output directory (where JSON f
 
 Examples
 ========
-The following examples try to highlight typical usage of the metrics tool that ecomp provides.
+The following examples try to highlight typical usage of ecomp.
 
-The tools require projects to have a git repository, how to convert subversion projects to git repositories is not covered here, but can easily be found elsewhere. 
+Using run_ecomp.sh
+------------------
 
-When converting your git repository, it is important that the format of the author of commits be correct! If you have issues getting the tools to work, this may be the source of your problems.
+Ensuring that `run_ecomp.sh` is available in your PATH, complexity of a project can be calculated by issueing the following command:
 
-Example 1: Java
----------------
-
-In the root of a Java project, with the metrics tool accessible via your $PATH, the following commands will generate a complexity dataset:
 ```
-mkdir report_output
-metrics report_output **/*.java
+run_ecomp.sh SVN_REPOSITORY PROJECT_NAME '**/*.SOURCE_EXTENSION'
 ```
-  
+A concrete example could be:
+
+```
+run_ecomp.sh http://myrepo.org/myjavaproject/trunk myjavaproject '**/*.java'
+```
+
+The `run_ecomp.sh` script will then use git svn to clone the repository to the `myjavaproject`, correcting the author names as it does so and will then use the `metrics` tool to start analysing the source of the project.
+
+Once the complexity calculation is complete, the JSON files will then be made available to the `public/data/myjavaproject` directory, allowing for visualisation of the data to be accessible at `http://a.sinatra.host:9292/#myjavaproject`.
+
 NOTE: The process is time consuming and involves going through all the previous commits to calculate a play-by-play dataset of complexity changes to each of the source files.
 
 TODO
