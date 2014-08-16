@@ -1,4 +1,4 @@
-require_relative 'filebatch'
+require_relative 'file_batch'
 
 class LocalGitRepo
 
