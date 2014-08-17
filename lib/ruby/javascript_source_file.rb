@@ -12,7 +12,12 @@ class JavascriptSourceFile
     #puts(@path)
     json = JSON.parse(`node #{BIN}/../lib/js/js_parser.js #{@path}`)
     result = {}
-    json.first[1].each { |k, v| result[k.to_sym] = v }
+    begin
+      json.first[1].each { |k, v| result[k.to_sym] = v }
+    rescue
+      puts "WARN: Failed to parse JavaScript file: #{@path}"
+      result = nil
+    end
     result
   end
 
