@@ -7,12 +7,14 @@ class JavaScriptSourceBatch
   end
 
   def process
-    paths_as_list = @paths.join(' ')
-    json = JSON.parse(`node #{BIN}/../lib/js/js_parser.js #{paths_as_list}`)
     results = {}
-    json.each { |path, item|
-      results[path] = process_item(item)
-    }
+    if (@paths.length > 0)
+      paths_as_list = @paths.join(' ')
+      json = JSON.parse(`node #{BIN}/../lib/js/js_parser.js #{paths_as_list}`)
+      json.each { |path, item|
+        results[path] = process_item(item)
+      }
+    end
     results
   end
 
