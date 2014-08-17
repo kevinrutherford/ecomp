@@ -6,7 +6,7 @@ class CurrentHotspotsReport
   end
 
   def raw_data
-    @repo.current_files(@glob).map(&:complexity_report)
+    @repo.current_files(@glob).generate_reports
   end
 
 end
