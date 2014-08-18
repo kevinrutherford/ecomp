@@ -17,14 +17,17 @@ class BesMetrics
 
   def collect
     find_and_analyse_new_revisions
+    puts 'Creating reports...'
     @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(get_all_summaries_from_metrics))
     @report.update('current_files', CurrentHotspotsReport.new(@repo, @glob))
     @repo.reset
+    puts "...completed"
   end
 
   private
 
   def find_and_analyse_new_revisions
+    puts "Analysing #{@max_revisions} revisions..."
     latest_revision_metrics = @metrics_dao.get_latest_revision_metrics
     revision = find_oldest_unanalysed_revision(latest_revision_metrics)
     count = 0
@@ -37,6 +40,8 @@ class BesMetrics
       revision = find_oldest_unanalysed_revision(latest_revision_metrics)
       count += 1
     end
+
+    puts "...completed"
   end
 
   def find_oldest_unanalysed_revision(latest_revision_metrics)
