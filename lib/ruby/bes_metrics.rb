@@ -16,6 +16,7 @@ class BesMetrics
   end
 
   def collect
+    puts 'Gathering metrics...'
     find_and_analyse_new_revisions
     puts 'Creating reports...'
     @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(get_all_summaries_from_metrics))
@@ -27,12 +28,15 @@ class BesMetrics
   private
 
   def find_and_analyse_new_revisions
-    puts "Analysing #{@max_revisions} revisions..."
     latest_revision_metrics = @metrics_dao.get_latest_revision_metrics
     revision = find_oldest_unanalysed_revision(latest_revision_metrics)
     count = 0
 
+    revisions_to_analyse = get_number_of_revisions_to_analyse(latest_revision_metrics)
+    puts "There are #{revisions_to_analyse} revisions to analyse"
+
     while (not revision.nil? and (count < @max_revisions)) do
+      puts "Analysing #{count + 1}/#{revisions_to_analyse}..."
       summary = record_complexity_delta(RevisionSummary.new(revision, @repo, @glob), latest_revision_metrics)
       @metrics_dao.add_revision_summary(summary)
 
@@ -42,6 +46,31 @@ class BesMetrics
     end
 
     puts "...completed"
+  end
+
+  def get_number_of_revisions_to_analyse(latest_revision_metrics)
+    all_revisions = @repo.all_revisions_oldest_first
+    size = all_revisions.size
+
+    if latest_revision_metrics.nil?
+      return size
+    end
+
+    index = 0
+    all_revisions.each do |revision|
+      if revision[:ref] == latest_revision_metrics['ref']
+        break
+      end
+      index += 1
+    end
+
+    number_to_analyse = size - index
+
+    if @max_revisions < number_to_analyse
+      @max_revisions
+    else
+      number_to_analyse
+    end
   end
 
   def find_oldest_unanalysed_revision(latest_revision_metrics)
