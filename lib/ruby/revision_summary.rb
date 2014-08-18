@@ -41,8 +41,8 @@ class RevisionSummary
   end
 
   def summarise_all_files(files)
-    file_reports = files.map(&:complexity_report)
-      weights = []
+    file_reports = files.generate_reports
+    weights = []
     if (file_reports.empty?)
       weights.push(0)
     else
@@ -61,5 +61,4 @@ class RevisionSummary
       mean_of_file_weights: (weight_sum.to_f / weights.length).round(2)
     }
   end
-
 end
