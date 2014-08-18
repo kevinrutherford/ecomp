@@ -7,42 +7,40 @@ require_relative 'current_hotspots_report'
 
 class BesMetrics
 
-  def initialize(repo, report, metrics_dao, glob='*/**/*.*')
+  def initialize(repo, report, metrics_dao, max_revisions, glob='*/**/*.*')
     @repo = repo
     @report = report
     @metrics_dao = metrics_dao
     @glob = glob
+    @max_revisions = max_revisions
   end
 
   def collect
-    find_and_analyse_unanalysed_revisions
-    @repo.reset
+    find_and_analyse_new_revisions
     @report.update('recent_commits_by_author', DeveloperBehaviourReport.new(get_all_summaries_from_metrics))
     @report.update('current_files', CurrentHotspotsReport.new(@repo, @glob))
+    @repo.reset
   end
 
   private
 
-  def find_and_analyse_unanalysed_revisions
-    @repo.reset
+  def find_and_analyse_new_revisions
     latest_revision_metrics = @metrics_dao.get_latest_revision_metrics
     revision = find_oldest_unanalysed_revision(latest_revision_metrics)
+    count = 0
 
-    while revision
-      if revision.nil?
-        puts 'No revision to analyse'
-      else
-        summary = record_complexity_delta(RevisionSummary.new(revision, @repo, @glob), latest_revision_metrics)
-        @metrics_dao.add_revision_summary(summary)
-      end
+    while (not revision.nil? and (count < @max_revisions)) do
+      summary = record_complexity_delta(RevisionSummary.new(revision, @repo, @glob), latest_revision_metrics)
+      @metrics_dao.add_revision_summary(summary)
 
-      @repo.reset
       latest_revision_metrics = @metrics_dao.get_latest_revision_metrics
       revision = find_oldest_unanalysed_revision(latest_revision_metrics)
+      count += 1
     end
   end
 
   def find_oldest_unanalysed_revision(latest_revision_metrics)
+    @repo.reset
     all_revisions_oldest_first = @repo.all_revisions_oldest_first
     revision = nil
     if latest_revision_metrics.nil?

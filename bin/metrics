@@ -2,7 +2,7 @@
 #
 # Collects the complexity metrics for a git repo
 #
-# Usage: $0 output_folder files
+# Usage: $0 output_folder files [-n max_revisions]
 #
 
 require_relative '../lib/ruby/local_git_repo'
@@ -10,14 +10,28 @@ require_relative '../lib/ruby/metrics_dao'
 require_relative '../lib/ruby/report_folder'
 require_relative '../lib/ruby/bes_metrics'
 
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename($0)} output_folder files_glob [-n max_revisions]"
+
+  opts.on('-n', '--maxrevisions REVISIONS', 'Max revisions') { |v| options[:max_revisions] = v.to_i }
+end.parse!
+
+
 if ARGV.length != 2
-  $stderr.puts "Usage: #{File.basename($0)} output_folder files_glob"
+  $stderr.puts "Usage: #{File.basename($0)} output_folder files_glob [-n max_revisions]"
   exit 1
+end
+
+if options[:max_revisions] < 1
+  options[:max_revisions] = 9999
 end
 
 repo = LocalGitRepo.new
 reports_folder = ReportFolder.new(ARGV[0])
 metrics_dao = MetricsDAO.new(ARGV[0])
-bes = BesMetrics.new(repo, reports_folder, metrics_dao, ARGV[1])
+bes = BesMetrics.new(repo, reports_folder, metrics_dao, options[:max_revisions], ARGV[1])
 bes.collect
 exit 0
