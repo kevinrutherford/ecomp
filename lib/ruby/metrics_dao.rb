@@ -19,7 +19,12 @@ class MetricsDAO
 
   def add_revision_summary(revision_summary)
     @commits.get_content << revision_summary.raw_data
+    ensure_output_folder_exists
     @commits.write_file
+  end
+
+  def ensure_output_folder_exists
+    `mkdir -p #{@folder}`
   end
 
 end
