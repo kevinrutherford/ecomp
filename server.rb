@@ -6,11 +6,11 @@ get '/list' do
 	output = ""
 	for x in Dir.entries("public/data")
 		unless x.start_with?(".")
-			output += "<a href=\"/#"+x+"\">"+x+"</a><br>"
+			output += "<li><a href=\"/#"+x+"\">"+x+"</a></li>"
 		end
 	end
 
-	output
+	haml :list, :locals => { :project_list => output }
 end
 
 get '/' do
