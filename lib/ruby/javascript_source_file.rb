@@ -9,12 +9,14 @@ class JavascriptSourceFile
   end
 
   def complexity
-    #puts(@path)
+    begin
     json = JSON.parse(`node #{BIN}/../lib/js/js_parser.js #{@path}`)
-    #puts(json)
     result = {}
     json.each {|k,v| result[k.to_sym] = v }
     result
+    rescue
+      puts ">>> bad file "+@path
+    end
   end
 
 end
