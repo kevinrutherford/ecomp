@@ -11,7 +11,7 @@ class CurrentHotspotsReport
     if @summarised
       return @raw_data
     end
-    file_reports = @repo.current_files(@glob).map(&:complexity_report)
+    file_reports = @repo.current_files(@glob).generate_reports
     @summarised = true
     @raw_data = remove_nils(file_reports)
   end

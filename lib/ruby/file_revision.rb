@@ -5,22 +5,32 @@ require_relative 'objc_source_file'
 
 class FileRevision
 
-  def initialize(path, repo)
+  def initialize(path, repo, batchresults)
     @path = path
     @repo = repo
+    @batchresults = batchresults
+  end
+
+  def path
+    @path
   end
 
   def complexity_report
-    report = case @path
-             when /.*\.rb$/
-               RubySourceFile.new(@path).complexity
-             when /.*\.java$/
-               JavaSourceFile.new(@path).complexity
-             when /.*\.m$/
-               ObjCSourceFile.new(@path).complexity
-             when /.*\.js$/
-               JavascriptSourceFile.new(@path).complexity
-             end
+    report = @batchresults[@path]
+
+    if report.nil?
+      puts "WARN: No batch report for #{@path}"
+      report = case @path
+               when /.*\.rb$/
+                 RubySourceFile.new(@path).complexity
+               when /.*\.java$/
+                 JavaSourceFile.new(@path).complexity
+               when /.*\.m$/
+                 ObjCSourceFile.new(@path).complexity
+               when /.*\.js$/
+                 JavascriptSourceFile.new(@path).complexity
+               end
+    end
 
     if report.nil?
       puts "WARNING: Could not parse #{@path}"

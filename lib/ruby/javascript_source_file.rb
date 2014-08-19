@@ -9,13 +9,11 @@ class JavascriptSourceFile
   end
 
   def complexity
+    json = JSON.parse(`node #{BIN}/../lib/js/js_parser.js #{@path}`, :symbolize_names => true)
     begin
-      json = JSON.parse(`node #{BIN}/../lib/js/js_parser.js #{@path}`)
-      result = {}
-      json.each {|k,v| result[k.to_sym] = v }
-      result
+      json.first[1]
     rescue
-      puts ">>> bad file "+@path
+      puts "WARN: Failed to parse JavaScript file: #{@path}"
     end
   end
 

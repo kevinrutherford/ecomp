@@ -1,3 +1,5 @@
+require_relative 'file_batch'
+
 class LocalGitRepo
 
   def reset
@@ -51,7 +53,8 @@ class LocalGitRepo
   end
 
   def all_files_matching(files_glob)
-    Dir[files_glob].select {|p| p =~ /\.java$|\.rb$|\.js$|\.m$/}.map {|path| FileRevision.new(path, self) }
+    files = Dir[files_glob].select {|p| p =~ /\.java$|\.rb$|\.js$|\.m$/}
+    FileBatch.new(files, self)
   end
 
 end
