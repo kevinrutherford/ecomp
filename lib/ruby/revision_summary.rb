@@ -42,7 +42,7 @@ class RevisionSummary
 
   def summarise_all_files(files)
     file_reports = files.map(&:complexity_report)
-      weights = []
+    weights = []
     if (file_reports.empty?)
       weights.push(0)
     else

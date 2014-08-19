@@ -23,7 +23,7 @@ class FileRevision
              end
 
     if report.nil?
-      puts "nil report"
+      puts "WARNING: Could not parse #{@path}"
     else
       e = 1 + report[:num_dependencies]
       b = 1 + report[:num_branches]
