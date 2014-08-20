@@ -18,6 +18,10 @@ class JSONStorageFile
     return @content
   end
 
+  def set_content(content)
+    @content = content
+  end
+
   def write_file
     File.open(@filepath, 'w') {|f| f.puts JSON.pretty_generate(@content) }
     initialize(@filepath)

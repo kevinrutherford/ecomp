@@ -7,6 +7,9 @@ class MetricsDAO
   def initialize(folder)
     @folder = folder
     @commits = JSONStorageFile.new("#{@folder}/commits.json")
+    if @commits.get_content.nil?
+      @commits.set_content([])
+    end
   end
 
   def get_all_revision_metrics
