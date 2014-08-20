@@ -21,20 +21,28 @@ class LocalGitRepo
   end
 
   def all_revisions_oldest_first
-    raw_log = git_command('log --pretty="%h/%aN/%ci/%s" --shortstat')
+    raw_log = git_command('log -m --pretty="%h/%aN/%ci/%s" --shortstat')
     lines = raw_log.split("\n")
     result = []
     (0..(lines.length-1)).each do |i|
-      if lines[i].empty?
-        fields = lines[i-1].split('/')
-        count = lines[i+1].to_i
-        result << {
-          ref: fields[0],
-          author: fields[1],
-          date: fields[2],
-          comment: fields[3..-1].join,
-          num_files_touched: count
-        }
+      if lines[i] =~ /^\w{7}\/.+$/
+        fields = lines[i].split('/')
+        count = lines[i+2].to_i
+
+        last_result = result.last
+        commit_ref = fields[0]
+
+        if last_result.nil? or last_result[:ref] != commit_ref
+          result << {
+              ref: commit_ref,
+              author: fields[1],
+              date: fields[2],
+              comment: fields[3..-1].join,
+              num_files_touched: count
+          }
+        else
+          result.last[:num_files_touched] += count
+        end
       end
     end
     result.reverse
