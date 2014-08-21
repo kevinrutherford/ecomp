@@ -3,12 +3,22 @@
 # Script to start JavaNCSS.
 #
 
-JAVA_HOME=`which java 2>/dev/null || whence java`
-JAVA_HOME=`dirname "$JAVA_HOME"`/..
+# JAVA_HOME=`which java 2>/dev/null || whence java`
+# JAVA_HOME=`dirname "$JAVA_HOME"`/..
+
+JAVA=$JAVA_HOME/bin/java
+if [ ! -e "which $JAVA" ]; then
+   if [ -z "which java" ]; then
+	echo NO USABLE JAVA AVAILABLE
+	exit -1
+   else
+	JAVA=`which java`
+   fi
+fi	
 
 JAVANCSS_HOME=`dirname "$0"`/..
 lib="${JAVANCSS_HOME}/lib/java"
 
-classpath=${lib}/javancss.jar:${lib}/ccl.jar:${CLASSPATH}
+classpath=${lib}/javancss-1.1.jar:${lib}/ccl.jar:${CLASSPATH}
 
-$JAVA_HOME/bin/java -classpath $classpath javancss.Main $@
+$JAVA -classpath $classpath javancss.Main $@

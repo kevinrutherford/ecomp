@@ -6,6 +6,7 @@ function recent_commits_plot(target, data) {
         $.each(item.commits, function(i, c) {
             pts.push({
                 name: c.ref,
+                message: c.comment,
                 x: Date.parse(c.date),
                 y: c.complexity.delta_sum_of_file_weights,
                 z: c.num_files_touched
@@ -41,7 +42,8 @@ function draw_recent_commits_chart(div, data) {
             formatter: function() {
                 var header = '<b>'+ this.point.name + ' by ' + this.series.name + '</b><br>';
                 var detail = 'Files touched: ' + this.point.z + '<br>' + 'Complexity delta: ' + this.point.y;
-                return header + detail;
+                var commitMessage = '<br><i>' + this.point.message + '</i>';
+                return header + detail + commitMessage;
             }
         },
         series: data
@@ -52,25 +54,25 @@ function hsvToRgb(h, s, v) {
     var r, g, b;
     var i;
     var f, p, q, t;
-    
+
     // Make sure our arguments stay in-range
     h = Math.max(0, Math.min(360, h));
     s = Math.max(0, Math.min(100, s));
     v = Math.max(0, Math.min(100, v));
-    
+
     // We accept saturation and value arguments from 0 to 100 because that's
     // how Photoshop represents those values. Internally, however, the
     // saturation and value are calculated from a range of 0 to 1. We make
     // That conversion here.
     s /= 100;
     v /= 100;
-    
+
     if(s == 0) {
         // Achromatic (grey)
         r = g = b = v;
         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
     }
-    
+
     h /= 60; // sector 0 to 5
     i = Math.floor(h);
     f = h - i; // factorial part of h
@@ -84,37 +86,37 @@ function hsvToRgb(h, s, v) {
             g = t;
             b = p;
             break;
-            
+
         case 1:
             r = q;
             g = v;
             b = p;
             break;
-            
+
         case 2:
             r = p;
             g = v;
             b = t;
             break;
-            
+
         case 3:
             r = p;
             g = q;
             b = v;
             break;
-            
+
         case 4:
             r = t;
             g = p;
             b = v;
             break;
-            
+
         default: // case 5:
             r = v;
             g = p;
             b = q;
     }
-    
+
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 };
 
@@ -153,7 +155,7 @@ function churn_vs_complexity_plot(target, data) {
             name: item.filename
         });
     });
-    draw_churn_vs_complexity_chart(target, points, Math.max(max_churn, max_complexity));
+    draw_churn_vs_complexity_chart(target, points, Math.max(max_complexity, max_churn));
 };
 
 function draw_churn_vs_complexity_chart(div, data, max) {
@@ -240,13 +242,33 @@ function draw_complexity_trend_chart(div, data) {
 };
 
 function draw_chart(filename, target_div, charting_function) {
-  $.getJSON("/data/reek/" + filename + ".json", function(data) {
+  $.getJSON("/data/"+projectFromDocumentLocation()+"/" + filename + ".json", function(data) {
     charting_function(target_div, data);
   });
 };
 
-$(document).ready(function() {
+function projectFromDocumentLocation()
+{
+    var project = document.location.hash.substring(1);
+    if(project.length == 0)
+    {
+        alert("Append a # to the end of the URL followed by a project name (e.g. #iplayer). This will make the chart data load from the data/iplayer/ directory");
+    }
+    return project;
+}
+
+function drawCharts() {
     draw_chart('recent_commits_by_author', '#recent_commits', recent_commits_plot);
     draw_chart('current_files', '#churn_vs_complexity', churn_vs_complexity_plot);
     draw_chart('commits', '#complexity_trend', ctrend_plot);
-});
+}
+
+$(document).ready(drawCharts);
+
+window.onhashchange = function(hashChangeEvent) {
+    drawCharts();
+}
+
+setInterval(function() {
+    drawCharts();
+}, 120000);

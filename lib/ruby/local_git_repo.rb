@@ -1,3 +1,5 @@
+require_relative 'file_batch'
+
 class LocalGitRepo
 
   def reset
@@ -19,19 +21,19 @@ class LocalGitRepo
   end
 
   def all_revisions_oldest_first
-    raw_log = git_command('log --pretty="%h/%aN/%ci/%s" --shortstat')
+    raw_log = git_command('log --first-parent -m --pretty="%h/%aN/%ci/%s" --shortstat')
     lines = raw_log.split("\n")
     result = []
     (0..(lines.length-1)).each do |i|
-      if lines[i].empty?
-        fields = lines[i-1].split('/')
-        count = lines[i+1].to_i
+      if lines[i] =~ /^\w{7}\/.+$/
+        fields = lines[i].split('/')
+        count = lines[i+2].to_i
         result << {
-          ref: fields[0],
-          author: fields[1],
-          date: fields[2],
-          comment: fields[3..-1].join,
-          num_files_touched: count
+            ref: fields[0],
+            author: fields[1],
+            date: fields[2],
+            comment: fields[3..-1].join,
+            num_files_touched: count
         }
       end
     end
@@ -51,7 +53,8 @@ class LocalGitRepo
   end
 
   def all_files_matching(files_glob)
-    Dir[files_glob].select {|p| p =~ /\.java$|\.rb$|\.js$/}.map {|path| FileRevision.new(path, self) }
+    files = Dir[files_glob].select {|p| p =~ /\.java$|\.rb$|\.js$|\.m$/}
+    FileBatch.new(files, self)
   end
 
 end

@@ -1,0 +1,21 @@
+!!!
+%html(lang='en')
+  %head
+    %meta(charset='utf-8')
+    %title
+      Project List
+    %script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    %script(src='http://code.highcharts.com/highcharts.js')
+    %script(src='http://code.highcharts.com/highcharts-more.js')
+    %script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    %link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet')
+    %link(href='/styles.css' rel='stylesheet')
+
+  %body
+    .container-fluid
+      .row
+        %h2
+          Available Projects
+      .row
+        %ul
+          #{project_list}
